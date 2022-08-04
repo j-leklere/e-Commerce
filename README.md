@@ -7,6 +7,6 @@ Descripcion de productos/servicios:
 
 Descripción de los integrantes:
 - Javier Jazmin:
-- Jean Pérez Peralta:
+- Jean Pérez Peralta: Mi nombre es Jean Pérez Peralta, 43 años, de Cartagena - Colombia. Aficionado al Basket y a la Bici.
 - Joaquin Leklere: Me llamo Joaquin Leklere, tengo 18 años y vivo en San Isidro (Buenos Aires). Me gustan todos los deportes, tanto mirarlos como jugarlos, juego al tenis, fútbol, ping-pong, pool, padel, etc. Me gusta tocar el piano, la guitarra y de vez en cuando la bateria. Me gusta mucho programar.
 - Ivan Orencel:
