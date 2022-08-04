@@ -1,5 +1,5 @@
 # e-Commerce
-Pagina de Ventas Deportivas
+Pagina de Ventas de productos e indumentaria deportiva.
 
 Descripcion de productos/servicios:
 - Nuestra página ofrecera artículos deportivos (zapatillas, camisetas, gorras, pelotas, raquetas, etc..), categorizados por cada deporte (tenis, futbol, rugby, etc..).
