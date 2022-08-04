@@ -10,3 +10,12 @@ Descripción de los integrantes:
 - Jean Pérez Peralta: Mi nombre es Jean Pérez Peralta, 43 años, de Cartagena - Colombia. Aficionado al Basket y a la Bici.
 - Joaquin Leklere: Me llamo Joaquin Leklere, tengo 18 años y vivo en San Isidro (Buenos Aires). Me gustan todos los deportes, tanto mirarlos como jugarlos, juego al tenis, fútbol, ping-pong, pool, padel, etc. Me gusta tocar el piano, la guitarra y de vez en cuando la bateria. Me gusta mucho programar.
 - Ivan Orencel:
+
+Sitios de referencia: 
+- https://www.sannewijbenga.com/?ref=onepagelove (Por los efectos visuales y de interaccion).
+- https://www.dexter.com.ar/ (Por la distribucion grafica y por los clientes a los que apuntan).
+- https://litho.themezaa.com/one-page-navigation/ (Por la estetica que presenta, y la distribucion de imagenes).
+- https://www.useparallel.com/join?s=one-page-love?ref=onepagelove (Por la combinacion de los colores).
+- https://litho.themezaa.com/ (Por los efectos visuales, y la estetica).
+- https://www.nixon.com/ (Por las funcionalidades implementadas, y por la estetica).
+- https://www.orca.com/en-gb/m/summer-essentials (Por las funcionalidades implementadas).
