@@ -19,3 +19,9 @@ Sitios de referencia:
 - https://litho.themezaa.com/ (Por los efectos visuales, y la estetica).
 - https://www.nixon.com/ (Por las funcionalidades implementadas, y por la estetica).
 - https://www.orca.com/en-gb/m/summer-essentials (Por las funcionalidades implementadas).
+
+Link Trello:
+- https://trello.com/b/5c9yvIwm/sportswear-sprint1
+
+Link Repositorio:
+- https://github.com/j-leklere/grupo_6_SportsWear
