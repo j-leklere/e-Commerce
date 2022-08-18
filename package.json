@@ -1,0 +1,25 @@
+{
+  "name": "grupo_6_e-commerce",
+  "version": "1.0.0",
+  "description": "Pagina de Ventas de productos e indumentaria deportiva.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-leklere/grupo_6_e-Commerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/j-leklere/grupo_6_e-Commerce/issues"
+  },
+  "homepage": "https://github.com/j-leklere/grupo_6_e-Commerce#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
