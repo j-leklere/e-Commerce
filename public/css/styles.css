@@ -1,0 +1,148 @@
+/*
+--- Tipografía
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+--- Colores
+
+- Primario: #eafa35
+
+- Claros:
+#ecfb49
+#eefb5d
+#f0fc72
+#f2fc86
+#f7fdae
+#fbfed7
+#fdffeb
+
+- Oscuros: 
+#d3e130
+#bbc82a
+#a4af25
+#8c9620
+#5e6415
+#2f320b
+#171905
+
+- Grises
+
+#888
+#767676
+#6f6f6f
+#555
+#333
+
+--- Espacios en Blanco
+
+- Sistema(px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #555;
+}
+
+/******************/
+/* Sección Header */
+/******************/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.6rem 4.8rem;
+  height: 9.6rem;
+  /* background-color: #ffffff; */
+  font-weight: 500;
+
+  height: 100vh;
+
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.6),
+      rgba(34, 34, 34, 0.6)
+    ),
+    url(https://images.unsplash.com/photo-1496147539180-13929f8aa03a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-size: cover;
+}
+
+/* Logo */
+.logo {
+  height: 7.4rem;
+}
+
+/* Main Nav */
+.main-nav-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 6.4rem;
+  margin-top: 3.2rem;
+  line-height: 1;
+}
+
+.main-nav-link {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #fdffeb;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  color: #fdffeb;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #eafa35;
+  transition: all 0.5s;
+}
+
+/* Botones */
+.botones-header {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.6rem;
+}
+
+button {
+  border: none;
+  background-color: none;
+  font-size: 3rem;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+button a {
+  color: #fdffeb;
+}
+
+.iconos-header:link,
+.iconos-header:visited {
+  color: #fdffeb;
+}
+
+.iconos-header:hover,
+.iconos-header:active {
+  color: #eafa35;
+  transition: all 0.4s;
+}
