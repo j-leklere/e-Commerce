@@ -55,6 +55,7 @@ Bold: 700
 
 html {
   font-size: 62.5%;
+  /* 1rem = 10px */
   overflow-x: hidden;
 }
 
@@ -62,6 +63,14 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   color: #555;
+  height: 100vh;
+
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.6),
+      rgba(34, 34, 34, 0.6)
+    ),
+    url(https://images.unsplash.com/photo-1496147539180-13929f8aa03a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-size: cover;
 }
 
 /******************/
@@ -73,20 +82,16 @@ body {
   align-items: flex-start;
   padding: 1.6rem 4.8rem;
   height: 9.6rem;
-  /* background-color: #ffffff; */
   font-weight: 500;
-
-  height: 100vh;
-
-  background-image: linear-gradient(
-      rgba(34, 34, 34, 0.6),
-      rgba(34, 34, 34, 0.6)
-    ),
-    url(https://images.unsplash.com/photo-1496147539180-13929f8aa03a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-  background-size: cover;
+  background-color: #000000;
 }
 
 /* Logo */
+header a {
+  display: flex;
+  align-self: center;
+}
+
 .logo {
   height: 7.4rem;
 }
@@ -121,8 +126,8 @@ body {
 /* Botones */
 .botones-header {
   display: flex;
+  align-self: center;
   gap: 2rem;
-  margin-top: 1.6rem;
 }
 
 button {
