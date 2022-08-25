@@ -18,8 +18,9 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <link rel="stylesheet" href="\css\login.css" />
     <link rel="stylesheet" href="\css\styles.css" />
-    <title>SportsWear</title>
+        <title>SportsWear</title>
   </head>
   <body>
     <header class="header">
@@ -58,5 +59,27 @@
         </button>
       </div>
     </header>
+    <div class="login-container">
+      <h2 class="login-titulo">INICIAR SESIÓN</h2>
+      <form action="/" method="GET">
+          <div class="login-nombreUsuario">
+              <input type="text" class="inputUsuario" placeholder="Nombre de Usuario" required
+              autocomplete="username">
+          </div>
+          <div class="login-contraseña">
+              <input type="password" class="inputPassword" placeholder="Contraseña" required
+              autocomplete="current-password">
+          </div>
+          <div class="login-recordarme">
+              <input type="checkbox" value="recordarme" name="recordarme" id="recordarme">
+              <label class="recordarme">Recordarme</label>
+          </div>
+              <a href="#" class="forget-password">¿Olvidaste tu Contraseña?</a>
+          
+          <div class="login-buttonIngresar">
+              <button type="submit" class="button-ingresar">Iniciar Sesión</button>
+          </div>
+      </form>
+  </div>
   </body>
 </html>

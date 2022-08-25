@@ -1,0 +1,61 @@
+/*********************/
+/* Login y Registro */
+/********************/
+
+
+.login-container {
+    width: 55%;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    background-color: #666;
+    justify-content: center;
+    margin-top: 4em;
+    max-width: 35rem;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+  
+  .login-titulo{
+    color: #000000;
+    text-align: center;
+    padding: 1rem;
+    }
+  
+  .inputUsuario,
+  .inputPassword{
+    border-radius: 5px;
+    border: none;
+    height: 3rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  .button-ingresar{
+      border: none;
+      background-color: #eafa35;
+      color: #000000;
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: block;
+      margin: auto;
+      width: 100%;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;  
+  }
+  .login-recordarme{
+    padding: 1rem;
+    display: flex;
+    
+    
+    }
+  .recordarme{
+    color: #000000;
+    margin: 0.4rem;
+  }
+  .forget-password{
+    display: flex;
+    margin-bottom: 1rem; 
+    text-decoration: none;
+    color: #eafa35; 
+  }
