@@ -1,64 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <link rel="stylesheet" href="\css\styles.css" />
-    <title>SportsWear</title>
-  </head>
-  <body>
-    <header class="header">
-      <a href="#">
-        <img
-          src="\images\LogoSportsWear(2).png"
-          class="logo"
-          alt="Logo SportsWear"
-        />
-      </a>
-      <nav class="main-nav">
-        <ul class="main-nav-list">
-          <li><a href="/" class="main-nav-link">Home</a></li>
-          <li><a href="/productDetail" class="main-nav-link">Categorías</a></li>
-          <!-- Dentro de categorias, los 4 deportes elegidos, accesorios e indumentaria -->
-          <li><a href="#" class="main-nav-link">Hombres</a></li>
-          <li><a href="#" class="main-nav-link">Mujeres</a></li>
-          <li><a href="#" class="main-nav-link">Niñxs</a></li>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="\css\styles.css" />
+  <link rel="stylesheet" href="\css\register.css">
+  <title>SportsWear</title>
+</head>
+
+<body>
+  <header class="header">
+    <a href="#">
+      <img src="\images\LogoSportsWear(2).png" class="logo" alt="Logo SportsWear" />
+    </a>
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li><a href="/" class="main-nav-link">Home</a></li>
+        <li><a href="/productDetail" class="main-nav-link">Categorías</a></li>
+        <!-- Dentro de categorias, los 4 deportes elegidos, accesorios e indumentaria -->
+        <li><a href="#" class="main-nav-link">Hombres</a></li>
+        <li><a href="#" class="main-nav-link">Mujeres</a></li>
+        <li><a href="#" class="main-nav-link">Niñxs</a></li>
+      </ul>
+    </nav>
+    <div class="botones-header">
+      <button>
+        <a href="#">
+          <ion-icon name="search" class="iconos-header"></ion-icon>
+        </a>
+      </button>
+      <button>
+        <a href="/login">
+          <ion-icon name="person" class="iconos-header"></ion-icon>
+        </a>
+      </button>
+      <button>
+        <a href="/productCart">
+          <ion-icon name="cart" class="iconos-header"></ion-icon>
+        </a>
+      </button>
+    </div>
+  </header>
+  <main>
+    <div class="register-container">
+      <h2 class="register-titulo">REGISTRARME</h2>
+      <div class="register-navbar">
+        <ul class="register-nav">
+          <li>
+            <a href="/login" class="iniciar-sesion"> Iniciar Sesión </a>
+          </li>
+          <li><a href="/register" class="registrarme"> Registrarme </a></li>
         </ul>
-      </nav>
-      <div class="botones-header">
-        <button>
-          <a href="#"
-            ><ion-icon name="search" class="iconos-header"></ion-icon
-          ></a>
-        </button>
-        <button>
-          <a href="/login"
-            ><ion-icon name="person" class="iconos-header"></ion-icon
-          ></a>
-        </button>
-        <button>
-          <a href="/productCart"
-            ><ion-icon name="cart" class="iconos-header"></ion-icon
-          ></a>
-        </button>
       </div>
-    </header>
-    <main></main>
-    <footer></footer>
-  </body>
+      <form action="/" method="GET">
+        <div class="data-container">
+          <div class="datos-personales">
+            <h3>Datos personales</h3>
+
+            <div class="reg-nombreCompleto">
+              <input type="text" class="inputNombre" placeholder="Nombre" required>
+            </div>
+            <div class="reg-apellido">
+              <input type="text" class="inputApellido" placeholder="Apellido" required>
+            </div>
+            <div class="form-birthday">
+              <p>Fecha de Nacimiento</p>
+              <input type="date" class="inputFecha" id="fechaNac">
+            </div>
+            <div class="reg-genero">
+              <p>Género</p>
+              <input list="genero" class="inputGenero" placeholder="Seleccionar">
+              <datalist id="genero">
+                <option value="Mujer">
+                <option value="Hombre">
+                <option value="Otro">
+              </datalist>
+            </div>
+            <div class="reg-telefono">
+              <input type="tel" class="inputTelefono" placeholder="Telefono">
+            </div>
+          </div>
+
+          <div class="sobre-mi-cuenta">
+            <h3>Sobre mi cuenta</h3>
+
+            <div class="reg-email">
+              <input type="email" class="inputEmail" placeholder="Email" required>
+            </div>
+            <div class="reg-conf-email">
+              <input type="email" class="inputEmail" placeholder="Confirmar Email" required>
+            </div>
+            <div class="reg-contraseña">
+              <input type="password" class="inputPassword" placeholder="Contraseña" required>
+            </div>
+            <div class="reg-conf-contraseña">
+              <input type="password" class="inputPassword" placeholder="Confirmar contraseña" required>
+            </div>
+            <div class="deportes-favoritos">
+              <p>¿Cuál es tu deporte favorito?</p>
+              <input list="deporte-favorito" class="deporte-favorito" placeholder="Seleccionar">
+              <datalist id="deporte-favorito">
+                <option value="Futbol">
+                <option value="Tenis">
+                <option value="Basquet">
+                <option value="Running">
+              </datalist>
+            </div>
+          </div>
+        </div>
+        <div class="register-radio-button">
+          <input type="radio" name="newsletter" value="newsletter">
+          <label class="newsletter">Quiero recibir email con ofertas y promociones</label>
+        </div>
+        <div class="button-register">
+          <button type="submit" class="button-register">REGISTRARME</button>
+        </div>
+
+
+
+      </form>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
+</main>
+<footer></footer>
+</body>
+
 </html>
