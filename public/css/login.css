@@ -2,60 +2,112 @@
 /* Login y Registro */
 /********************/
 
-
 .login-container {
-    width: 55%;
-    display: block;
-    margin: auto;
-    padding: 10px;
-    background-color: #666;
-    justify-content: center;
-    margin-top: 4em;
-    max-width: 35rem;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
-  
-  .login-titulo{
-    color: #000000;
-    text-align: center;
-    padding: 1rem;
-    }
-  
-  .inputUsuario,
-  .inputPassword{
-    border-radius: 5px;
-    border: none;
-    height: 3rem;
-    margin-top: 1rem;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    width: 100%;
-  }
-  .button-ingresar{
-      border: none;
-      background-color: #eafa35;
-      color: #000000;
-      padding: 10px 20px;
-      border-radius: 5px;
-      display: block;
-      margin: auto;
-      width: 100%;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;  
-  }
-  .login-recordarme{
-    padding: 1rem;
-    display: flex;
-    
-    
-    }
-  .recordarme{
-    color: #000000;
-    margin: 0.4rem;
-  }
-  .forget-password{
-    display: flex;
-    margin-bottom: 1rem; 
-    text-decoration: none;
-    color: #eafa35; 
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  margin: auto;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #333;
+  color: #ffffffff;
+  justify-content: center;
+  margin-top: 10em;
+  height: 40rem;
+  max-width: 75rem;
+  box-shadow: 0px 0px 5px rgb(110, 110, 110);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 1rem;
+}
+
+.login-titulo {
+  /* color: #000000; */
+  font-size: 2.4rem;
+  display: flex;
+}
+
+.login-navbar {
+  width: 50%;
+}
+
+.login-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-size: 1.6rem;
+  padding: 1rem 0 2rem 0;
+}
+
+.login-nav a {
+  text-decoration: none;
+  color: #ffffffff;
+  padding: 2rem;
+}
+
+.iniciar-sesion {
+  border-bottom: 2px solid #eafa35;
+}
+
+.inputUsuario,
+.inputPassword {
+  border-radius: 5px;
+  border: none;
+  /* height: 3rem; */
+  margin-top: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.login-recordarme-contraseñaOlvidada {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+
+.login-recordardme {
+  display: flex;
+  align-items: center;
+}
+.recordarme {
+  /* color: #000000; */
+  margin: 0.4rem;
+}
+
+.forget-password {
+  display: flex;
+  /* margin-bottom: 1rem; */
+  text-decoration: none;
+  color: #eafa35;
+}
+
+.forget-password:hover {
+  text-decoration: underline;
+}
+
+.button-ingresar {
+  border: none;
+  background-color: #eafa35;
+  /* color: #000000; */
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  width: 100%;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.button-ingresar:hover {
+  cursor: pointer;
+  background-color: #eefb5d;
+}
