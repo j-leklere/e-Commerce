@@ -19,11 +19,14 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <link rel="stylesheet" href="\css\styles.css" />
+    <link rel="stylesheet" href="\css\register.css" />
+    <link rel="icon" href="\images\LogoSportsWear(4).png" />
     <title>SportsWear</title>
   </head>
+
   <body>
     <header class="header">
-      <a href="#">
+      <a href="/" class="header-ancor">
         <img
           src="\images\LogoSportsWear(2).png"
           class="logo"
@@ -42,21 +45,205 @@
       </nav>
       <div class="botones-header">
         <button>
-          <a href="#"
-            ><ion-icon name="search" class="iconos-header"></ion-icon
-          ></a>
+          <a href="#">
+            <ion-icon name="search" class="iconos-header"></ion-icon>
+          </a>
         </button>
         <button>
-          <a href="/login"
-            ><ion-icon name="person" class="iconos-header"></ion-icon
-          ></a>
+          <a href="/login">
+            <ion-icon name="person" class="iconos-header"></ion-icon>
+          </a>
         </button>
         <button>
-          <a href="/productCart"
-            ><ion-icon name="cart" class="iconos-header"></ion-icon
-          ></a>
+          <a href="/productCart">
+            <ion-icon name="cart" class="iconos-header"></ion-icon>
+          </a>
         </button>
       </div>
     </header>
+    <main>
+      <div class="register-container">
+        <h2 class="register-titulo">REGISTRARME</h2>
+        <div class="register-navbar">
+          <ul class="register-nav">
+            <li>
+              <a href="/login" class="iniciar-sesion"> Iniciar Sesión </a>
+            </li>
+            <li><a href="/register" class="registrarme"> Registrarme </a></li>
+          </ul>
+        </div>
+        <form action="/" method="GET">
+          <div class="data-container">
+            <div class="datos-personales">
+              <h3>Datos personales</h3>
+
+              <div class="reg-nombreCompleto">
+                <input
+                  type="text"
+                  class="inputNombre"
+                  placeholder="Nombre"
+                  required
+                />
+              </div>
+              <div class="reg-apellido">
+                <input
+                  type="text"
+                  class="inputApellido"
+                  placeholder="Apellido"
+                  required
+                />
+              </div>
+              <div class="form-birthday">
+                <p>Fecha de Nacimiento</p>
+                <input type="date" class="inputFecha" id="fechaNac" />
+              </div>
+              <div class="reg-genero">
+                <p>Género</p>
+                <input
+                  list="genero"
+                  class="inputGenero"
+                  placeholder="Seleccionar"
+                />
+                <datalist id="genero">
+                  <option value="Mujer"></option>
+                  <option value="Hombre"></option>
+                  <option value="Otro"></option>
+                </datalist>
+              </div>
+              <div class="reg-telefono">
+                <input
+                  type="tel"
+                  class="inputTelefono"
+                  placeholder="Telefono"
+                />
+              </div>
+            </div>
+
+            <div class="sobre-mi-cuenta">
+              <h3>Sobre mi cuenta</h3>
+
+              <div class="reg-email">
+                <input
+                  type="email"
+                  class="inputEmail"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="reg-conf-email">
+                <input
+                  type="email"
+                  class="inputEmail"
+                  placeholder="Confirmar Email"
+                  required
+                />
+              </div>
+              <div class="reg-contraseña">
+                <input
+                  type="password"
+                  class="inputPassword"
+                  placeholder="Contraseña"
+                  required
+                />
+              </div>
+              <div class="reg-conf-contraseña">
+                <input
+                  type="password"
+                  class="inputPassword"
+                  placeholder="Confirmar contraseña"
+                  required
+                />
+              </div>
+              <div class="deportes-favoritos">
+                <p>¿Cuál es tu deporte favorito?</p>
+                <input
+                  list="deporte-favorito"
+                  class="deporte-favorito"
+                  placeholder="Seleccionar"
+                />
+                <datalist id="deporte-favorito">
+                  <option value="Futbol"></option>
+                  <option value="Tenis"></option>
+                  <option value="Basquet"></option>
+                  <option value="Running"></option>
+                </datalist>
+              </div>
+            </div>
+            <div class="register-radio-button">
+              <input type="radio" name="newsletter" value="newsletter" />
+              <label class="newsletter"
+                >Quiero recibir email con ofertas y promociones</label
+              >
+            </div>
+          </div>
+          <div class="button-register">
+            <button type="submit" class="button-register">
+              Crear mi cuenta
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <div>
+          <a href="/">
+            <img
+              src="\images\LogoSportsWear(2).png"
+              class="logo-footer"
+              alt="Logo SportsWear"
+            />
+          </a>
+          <ul class="social-links">
+            <li>
+              <a href="#"
+                ><ion-icon
+                  class="iconos-social"
+                  name="logo-instagram"
+                ></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                ><ion-icon class="iconos-social" name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                ><ion-icon class="iconos-social" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+          <p class="copyright">
+            Copyright ©2022 SportsWear, all rights reserved.
+          </p>
+        </div>
+        <div>
+          <h3>Contacto</h3>
+          <ul class="footer-list">
+            <li>745 Mante Land Suite 042 - Coeur d'Alene, AL / 26054</li>
+            <li>+54 9 11-7297-8221</li>
+            <li>sportsweardh@gmail.com</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Empresa</h3>
+          <ul class="footer-list">
+            <li>Sobre SportsWear</li>
+            <li>Sponsors</li>
+            <li>Creadores</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Ayuda</h3>
+          <ul class="footer-list">
+            <li>Preguntas frecuentes</li>
+            <li>Atención al cliente</li>
+            <li>Metodos de pago</li>
+            <li>¿Cómo compro?</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

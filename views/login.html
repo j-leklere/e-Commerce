@@ -18,12 +18,14 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <link rel="stylesheet" href="\css\login.css" />
     <link rel="stylesheet" href="\css\styles.css" />
+    <link rel="icon" href="\images\LogoSportsWear(4).png" />
     <title>SportsWear</title>
   </head>
   <body>
     <header class="header">
-      <a href="#">
+      <a href="/" class="header-ancor">
         <img
           src="\images\LogoSportsWear(2).png"
           class="logo"
@@ -58,5 +60,117 @@
         </button>
       </div>
     </header>
+    <main>
+      <div class="login-container">
+        <h2 class="login-titulo">INICIAR SESIÓN</h2>
+        <div class="login-navbar">
+          <ul class="login-nav">
+            <li>
+              <a href="/login" class="iniciar-sesion"> Iniciar Sesión </a>
+            </li>
+            <li><a href="/register" class="registrarme"> Registrarme </a></li>
+          </ul>
+        </div>
+        <form action="/" method="GET">
+          <div class="login-nombreUsuario">
+            <input
+              type="text"
+              class="inputUsuario"
+              placeholder="Nombre de Usuario"
+              required
+              autocomplete="username"
+            />
+          </div>
+          <div class="login-contraseña">
+            <input
+              type="password"
+              class="inputPassword"
+              placeholder="Contraseña"
+              required
+              autocomplete="current-password"
+            />
+          </div>
+          <div class="login-recordarme-contraseñaOlvidada">
+            <div class="login-recordarme">
+              <input
+                type="checkbox"
+                value="recordarme"
+                name="recordarme"
+                id="recordarme"
+              />
+              <label class="recordarme">Recordarme</label>
+            </div>
+            <a href="#" class="forget-password">¿Olvidaste tu Contraseña?</a>
+          </div>
+
+          <div class="login-buttonIngresar">
+            <button type="submit" class="button-ingresar">
+              Iniciar Sesión
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <div>
+          <a href="/">
+            <img
+              src="\images\LogoSportsWear(2).png"
+              class="logo-footer"
+              alt="Logo SportsWear"
+            />
+          </a>
+          <ul class="social-links">
+            <li>
+              <a href="#"
+                ><ion-icon
+                  class="iconos-social"
+                  name="logo-instagram"
+                ></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                ><ion-icon class="iconos-social" name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                ><ion-icon class="iconos-social" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+          <p class="copyright">
+            Copyright ©2022 SportsWear, all rights reserved.
+          </p>
+        </div>
+        <div>
+          <h3>Contacto</h3>
+          <ul class="footer-list">
+            <li>745 Mante Land Suite 042 - Coeur d'Alene, AL / 26054</li>
+            <li>+54 9 11-7297-8221</li>
+            <li>sportsweardh@gmail.com</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Empresa</h3>
+          <ul class="footer-list">
+            <li>Sobre SportsWear</li>
+            <li>Sponsors</li>
+            <li>Creadores</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Ayuda</h3>
+          <ul class="footer-list">
+            <li>Preguntas frecuentes</li>
+            <li>Atención al cliente</li>
+            <li>Metodos de pago</li>
+            <li>¿Cómo compro?</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

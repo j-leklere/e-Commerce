@@ -1,0 +1,136 @@
+/*********************/
+/* Register */
+/********************/
+
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10rem auto 30rem;
+  gap: 1.6rem;
+  padding: 1.8rem;
+  background-color: #222;
+  max-width: 75rem;
+  box-shadow: 0px 0px 5px rgb(90, 90, 90);
+  border-radius: 8px;
+  color: #ffffffff;
+  height: 57rem;
+}
+
+.inputEmail,
+.inputPassword,
+.inputTelefono,
+.inputGenero,
+.inputNombre,
+.inputApellido,
+.inputFecha,
+.deporte-favorito {
+  border-radius: 5px;
+  border: none;
+  margin-top: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.button-register {
+  border: none;
+  background-color: #eafa35;
+  color: #000000;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  width: 94%;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.button-register:hover {
+  cursor: pointer;
+  background-color: #f0fc72;
+}
+
+form {
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.data-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 3rem;
+}
+
+.datos-personales,
+.sobre-mi-cuenta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45%;
+}
+
+.register-titulo {
+  font-size: 2.4rem;
+  display: flex;
+}
+
+.register-navbar {
+  width: 50%;
+}
+
+.register-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  font-size: 1.6rem;
+  padding: 1rem 0 2rem 0;
+}
+
+.register-nav a {
+  text-decoration: none;
+  color: #ffffffff;
+  padding: 2rem 4rem;
+}
+
+.registrarme {
+  border-bottom: 3px solid #eafa35;
+}
+
+p {
+  color: #ffffffff;
+  font-size: 11px;
+}
+
+form h3 {
+  color: #eafa35;
+  text-align: center;
+}
+
+.register-radio-button {
+  color: #ffffffff;
+  padding-bottom: 1rem;
+  font-size: 11px;
+  width: 94%;
+}
+
+.button-register {
+  border: none;
+  background-color: #eafa35;
+  /* color: #000000; */
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  width: 94%;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.button-ingresar:hover {
+  cursor: pointer;
+  background-color: #eefb5d;
+}
