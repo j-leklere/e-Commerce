@@ -5,7 +5,7 @@
   }
 main{
     background-color: #888;
-    padding: 10rem;
+    padding: 5rem;
 }
 .top-container{
     display: flex;
@@ -15,7 +15,6 @@ main{
     padding: 2rem;
 }
 .seguirComprando{
-       
     color: black;
     font-size: 14px;
     transition: all 450ms;

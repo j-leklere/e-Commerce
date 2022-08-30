@@ -1,0 +1,113 @@
+main {
+  height: 66rem;
+}
+
+.carrusel {
+  width: 50%;
+  height: 80%;
+  margin: 12.5rem auto;
+  padding: 3.2rem 4.8rem;
+
+  border-radius: 8px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8.6rem;
+}
+
+.zapatillas {
+  height: 100%;
+  border-radius: 8px;
+  transform: scale(1.5);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Botones */
+.botones {
+  background-color: #000;
+  border: none;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton--izquierdo {
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.boton--derecho {
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.boton-icono {
+  height: 24px;
+  width: 24px;
+  color: #eafa35;
+}
+/* Comprar - Más Info */
+.comprar,
+.mas-info {
+  position: absolute;
+  /* background-color: #eafa35;
+  color: #000; */
+  background-color: #111;
+  color: #eafa35;
+  font-weight: 600;
+  font-size: 1.6rem;
+  padding: 1rem 5rem;
+  border-radius: 8px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s;
+}
+
+.comprar {
+  top: -2.2rem;
+  right: 25rem;
+}
+
+.mas-info {
+  top: 3.6rem;
+  right: 12rem;
+}
+
+.comprar:hover,
+.mas-info:hover {
+  cursor: pointer;
+  background-color: #eafa35;
+  color: #000;
+}
+/* Puntos */
+.puntos {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 3.2rem);
+
+  display: flex;
+  gap: 12px;
+}
+
+.punto {
+  height: 12px;
+  width: 12px;
+  background-color: #000;
+  border: 2px solid #eafa35;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.punto--relleno {
+  background-color: #eafa35;
+}
