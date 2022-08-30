@@ -90,7 +90,6 @@ body {
 /* Logo */
 header a {
   display: flex;
-  align-self: center;
 }
 
 .logo {
@@ -152,4 +151,6 @@ button a {
   transition: all 0.4s;
 }
 
-
+/****************/
+/* Sección Main */
+/****************/
