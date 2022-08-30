@@ -11,7 +11,8 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="\css\styles.css" />
-    <link rel="stylesheet" href="\css\home.css" />
+    <link rel="stylesheet" href="\css\productdetail.css" />
+    <link rel="icon" type="image/png" href="/on/demandware.static/Sites-Dexter-Site/-/default/dw235d4871/images/favicons/favicon-196x196.png" sizes="196x196" />
     <link rel="icon" href="\images\LogoSportsWear(4).png" />
     <title>SportsWear</title>
 </head>
@@ -24,7 +25,7 @@
         <nav class="main-nav">
             <ul class="main-nav-list">
                 <li><a href="/" class="main-nav-link">Home</a></li>
-                <li><a href="/product" class="main-nav-link">Categorías</a></li>
+                <li><a href="/productDetail" class="main-nav-link">Categorías</a></li>
                 <!-- Dentro de categorias, los 4 deportes elegidos, accesorios e indumentaria -->
                 <li><a href="#" class="main-nav-link">Hombres</a></li>
                 <li><a href="#" class="main-nav-link">Mujeres</a></li>
@@ -50,49 +51,54 @@
         </div>
     </header>
     <main>
-        <div class="carrusel">
-            <img class="zapatillas" src="\images\zapatillas.jpg" alt="Imagen de zapatillas" />
-            <button class="botones boton--izquierdo">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="boton-icono"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-        </button>
-            <button class="botones boton--derecho">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="boton-icono"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </button>
-            <div class="comprar">
-                <p>Comprar</p>
+        <section class="offers">
+            <div class="products">
+                <article>
+                    <h2>Futbol</h2>
+                    <img src="images/futbol.png" alt="Cafetera" class="product_img" />
+
+                    <div class="main-article">
+                        Juego para ser feliz y la gente que valore lo que tenga que valorar. Si valoran mi trabajo, encantado, si no, no pasa nada.
+                        <br />
+                        <br />
+                        <div>
+                            “Aquí encontrarás los productos mas completos del mercado”
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h2>Tennis</h2>
+                    <img src="images/tennis.png" alt="Cafetera" class="product_img" />
+
+                    <div class="main-article">
+                        Todos los buenos atletas cometen errores; los grandes aprenden a cometer ese error solo una vez. Si caíste ayer, ponte en pie hoy
+                        <br />
+                        <br />
+                        <div>“Productos diferentes para alguien diferente”</div>
+                    </div>
+                </article>
+                <article>
+                    <h2>Basket</h2>
+                    <img src="images/basket.png" alt="Cafetera" class="product_img" />
+                    <div class="main-article">
+                        Da lo mejor cuando nadie esté mirando. Si haces eso, puedes ser exitoso en cualquier cosa que te propongas.
+                        <br />
+                        <br />
+                        <div>“Tu mejor decisión es estar aquí”</div>
+                    </div>
+                </article>
+                <article>
+                    <h2>Running</h2>
+                    <img src="images/running.png" alt="Cafetera" class="product_img" />
+                    <div class="main-article">
+                        Debes poner a prueba tus límites, saber hasta donde eres capaz de llegar y descubrirás que siempre puedes dar un poco más.
+                        <br />
+                        <br />
+                        <div>“Atrévete”</div>
+                    </div>
+                </article>
             </div>
-            <div class="mas-info">
-                <p>Más Info</p>
-            </div>
-            <div class="puntos">
-                <button class="punto punto--relleno"></button>
-                <button class="punto"></button>
-                <button class="punto"></button>
-                <button class="punto"></button>
-            </div>
-        </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="footer-container">
