@@ -71,7 +71,7 @@ body {
       rgba(34, 34, 34, 0.6)
     ),
     url(https://images.unsplash.com/photo-1496147539180-13929f8aa03a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-  background-size: cover;
+  background-size: 100vw;
 }
 
 /******************/
@@ -154,3 +154,84 @@ button a {
 /****************/
 /* Sección Main */
 /****************/
+.x {
+  font-size: 10rem;
+  visibility: hidden;
+}
+/******************/
+/* Sección Footer */
+/******************/
+
+.footer {
+  padding: 16rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 9.6rem;
+  font-weight: 500;
+  background-color: #111;
+}
+
+.footer-container {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 6.4rem;
+  color: #ffffffff;
+  font-size: 1.4rem;
+}
+.footer-container div {
+  width: 25%;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+.logo-footer {
+  display: block;
+  height: 5.2rem;
+  margin-bottom: 4.8rem;
+}
+
+.social-links {
+  list-style-type: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.iconos-social {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #ffffffff;
+}
+
+.iconos-social:link,
+.iconos-social:visited {
+  color: #fdffeb;
+}
+
+.iconos-social:hover,
+.iconos-social:active {
+  color: #eafa35;
+  transition: all 0.4s;
+}
+.copyright {
+  margin-top: auto;
+  font-size: 1.4rem;
+  color: #ffffffff;
+}
+
+.footer h3 {
+  color: #ffffffff;
+  margin-bottom: 3.2rem;
+  font-size: 1.8rem;
+}
+
+.footer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-list li {
+  font-size: 1.4rem;
+}
