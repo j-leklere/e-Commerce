@@ -253,6 +253,10 @@
   transform: rotate(360deg);
 }
 
+/***********/
+/* Queries */
+/***********/
+
 @media (max-width: 1200px) {
   .productos {
     justify-content: center;
