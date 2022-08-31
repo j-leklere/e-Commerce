@@ -160,6 +160,28 @@ button a {
   transition: all 0.4s;
 }
 
+.boton-nav {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+  color: #eafa35;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.75s;
+}
+.boton-nav:hover {
+  transform: rotate(360deg);
+  color: #111;
+  background-color: #eafa35;
+}
+.boton-nav ion-icon {
+  width: 3rem;
+  height: 3rem;
+}
 /****************/
 /* Sección Main */
 /****************/
@@ -178,7 +200,6 @@ button a {
 
 .footer-container {
   display: flex;
-  align-items: flex-start;
   column-gap: 6.4rem;
   color: #ffffffff;
   font-size: 1.4rem;
@@ -226,7 +247,7 @@ button a {
 .footer h3 {
   color: #ffffffff;
   margin-bottom: 3.2rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .footer-list {
@@ -239,3 +260,40 @@ button a {
 .footer-list li {
   font-size: 1.4rem;
 }
+
+/***********/
+/* Queries */
+/***********/
+
+@media (max-width: 1200px) {
+  .main-nav {
+    display: none;
+  }
+
+  .boton-nav {
+    display: flex;
+  }
+  .footer-container {
+    flex-wrap: wrap;
+    row-gap: 2.4rem;
+    justify-content: center;
+  }
+  .footer-container div {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .botones-header {
+    display: none;
+  }
+
+  .boton-nav {
+    display: flex;
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    z-index: 100;
+  }
+}
+
