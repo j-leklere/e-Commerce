@@ -150,6 +150,10 @@
   max-width: 25rem;
 }
 
+.producto:hover {
+  transform: translateY(-1.6rem);
+}
+
 .en-oferta::after {
   content: "En Oferta!";
   position: absolute;
