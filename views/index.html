@@ -1,58 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <link rel="stylesheet" href="\css\styles.css" />
     <link rel="stylesheet" href="\css\home.css" />
     <link rel="icon" href="\images\LogoSportsWear(4).png" />
     <title>SportsWear</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <a href="/" class="header-ancor">
-            <img src="\images\LogoSportsWear(2).png" class="logo" alt="Logo SportsWear" />
-        </a>
-        <nav class="main-nav">
-            <ul class="main-nav-list">
-                <li><a href="/" class="main-nav-link">Home</a></li>
-                <li><a href="/product" class="main-nav-link">Categorías</a></li>
-                <!-- Dentro de categorias, los 4 deportes elegidos, accesorios e indumentaria -->
-                <li><a href="#" class="main-nav-link">Hombres</a></li>
-                <li><a href="#" class="main-nav-link">Mujeres</a></li>
-                <li><a href="#" class="main-nav-link">Niñxs</a></li>
-            </ul>
-        </nav>
-        <div class="botones-header">
-            <button>
+      <a href="/" class="header-ancor">
+        <img
+          src="\images\LogoSportsWear(2).png"
+          class="logo"
+          alt="Logo SportsWear"
+        />
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="/" class="main-nav-link">Home</a></li>
+          <li><a href="/product" class="main-nav-link">Categorías</a></li>
+          <!-- Dentro de categorias, los 4 deportes elegidos, accesorios e indumentaria -->
+          <li><a href="#" class="main-nav-link">Hombres</a></li>
+          <li><a href="#" class="main-nav-link">Mujeres</a></li>
+          <li><a href="#" class="main-nav-link">Niñxs</a></li>
+        </ul>
+      </nav>
+      <div class="botones-header">
+        <button>
           <a href="#"
             ><ion-icon name="search" class="iconos-header"></ion-icon
           ></a>
         </button>
-            <button>
+        <button>
           <a href="/login"
             ><ion-icon name="person" class="iconos-header"></ion-icon
           ></a>
         </button>
-            <button>
+        <button>
           <a href="/productCart"
             ><ion-icon name="cart" class="iconos-header"></ion-icon
           ></a>
         </button>
-        </div>
+      </div>
     </header>
     <main>
-        <div class="carrusel">
-            <img class="zapatillas" src="\images\zapatillas.jpg" alt="Imagen de zapatillas" />
-            <button class="botones boton--izquierdo">
+      <div class="carrusel">
+        <img
+          class="botines"
+          src="\images\botines.jpg"
+          alt="Imagen de botines"
+        />
+        <button class="botones boton--izquierdo">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="boton-icono"
@@ -66,7 +82,7 @@
             />
           </svg>
         </button>
-            <button class="botones boton--derecho">
+        <button class="botones boton--derecho">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="boton-icono"
@@ -80,74 +96,163 @@
             />
           </svg>
         </button>
-            <div class="comprar">
-                <p>Comprar</p>
-            </div>
-            <div class="mas-info">
-                <p>Más Info</p>
-            </div>
-            <div class="puntos">
-                <button class="punto punto--relleno"></button>
-                <button class="punto"></button>
-                <button class="punto"></button>
-                <button class="punto"></button>
-            </div>
+        <div class="comprar">
+          <p>Comprar</p>
         </div>
+        <div class="mas-info">
+          <p>Más Info</p>
+        </div>
+        <div class="puntos">
+          <button class="punto punto--relleno"></button>
+          <button class="punto"></button>
+          <button class="punto"></button>
+          <button class="punto"></button>
+        </div>
+      </div>
+      <section class="seccion-productos">
+        <div class="container">
+          <p class="lo-mejor">Lo mejor de la temporada</p>
+          <h2 class="heading-secundario">Productos Destacados</h2>
+        </div>
+        <div class="container productos">
+          <article class="producto en-oferta">
+            <img
+              class="producto-img"
+              src="\images\zapatillas.jpg"
+              alt="Zapatillas"
+            />
+            <div class="detalle-productos">
+              <div class="producto-tags">
+                <span class="tag tag--general">Calzado</span>
+              </div>
+              <p class="producto-titulo">Adidas Z32</p>
+              <div class="precio-compra">
+                <div class="precio">
+                  <p>$45</p>
+                </div>
+                <div class="compra"><p>Comprar</p></div>
+              </div>
+            </div>
+          </article>
+          <article class="producto">
+            <img
+              class="producto-img"
+              src="\images\pelotadefutbol.jpg"
+              alt="Pelota de futbol"
+            />
+            <div class="detalle-productos">
+              <div class="producto-tags">
+                  <span class="tag tag--futbol">Fútbol</span>
+                  <span class="tag tag--pelotas">Pelotas</span>
+            </div>
+              <p class="producto-titulo">Pelota Champions</p>
+              <div class="precio-compra">
+                <div class="precio">
+                  <p>$45</p>
+                </div>
+                <div class="compra"><p>Comprar</p></div>
+              </div>
+            </div>
+          </article>
+          <article class="producto">
+            <img class="producto-img" src="\images\esqui2.jpg" alt="Esqui" />
+            <div class="detalle-productos">
+              <div class="producto-tags">
+                <span class="tag tag--esqui">Esqui</span>
+                <span class="tag tag--accesorios">Accesorios</span>
+              </div>
+              <p class="producto-titulo">Esquis</p>
+              <div class="precio-compra">
+                <div class="precio">
+                  <p>$45</p>
+                </div>
+                <div class="compra"><p>Comprar</p></div>
+              </div>
+            </div>
+          </article>
+          <article class="producto en-oferta">
+            <img
+              class="producto-img"
+              src="\images\pelotadetenis.jpg"
+              alt="Pelota de tenis"
+            />
+            <div class="detalle-productos">
+              <div class="producto-tags">
+                <span class="tag tag--tenis">Tenis</span>
+                <span class="tag tag--pelotas">Pelotas</span>
+              </div>
+              <p class="producto-titulo">Pelota de Tenis</p>
+              <div class="precio-compra">
+                <div class="precio">
+                  <p>$45</p>
+                </div>
+                <div class="compra"><p>Comprar</p></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
     <footer class="footer">
-        <div class="footer-container">
-            <div>
-                <a href="/">
-                    <img src="\images\LogoSportsWear(2).png" class="logo-footer" alt="Logo SportsWear" />
-                </a>
-                <ul class="social-links">
-                    <li>
-                        <a href="#">
-                            <ion-icon class="iconos-social" name="logo-instagram"></ion-icon>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <ion-icon class="iconos-social" name="logo-facebook"></ion-icon>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <ion-icon class="iconos-social" name="logo-twitter"></ion-icon>
-                        </a>
-                    </li>
-                </ul>
-                <p class="copyright">
-                    Copyright ©2022 SportsWear, all rights reserved.
-                </p>
-            </div>
-            <div>
-                <h3>Contacto</h3>
-                <ul class="footer-list">
-                    <li>745 Mante Land Suite 042 - Coeur d'Alene, AL / 26054</li>
-                    <li>+54 9 11-7297-8221</li>
-                    <li>sportsweardh@gmail.com</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Empresa</h3>
-                <ul class="footer-list">
-                    <li>Sobre SportsWear</li>
-                    <li>Sponsors</li>
-                    <li>Creadores</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Ayuda</h3>
-                <ul class="footer-list">
-                    <li>Preguntas frecuentes</li>
-                    <li>Atención al cliente</li>
-                    <li>Metodos de pago</li>
-                    <li>¿Cómo compro?</li>
-                </ul>
-            </div>
+      <div class="footer-container">
+        <div>
+          <a href="/">
+            <img
+              src="\images\LogoSportsWear(2).png"
+              class="logo-footer"
+              alt="Logo SportsWear"
+            />
+          </a>
+          <ul class="social-links">
+            <li>
+              <a href="#">
+                <ion-icon
+                  class="iconos-social"
+                  name="logo-instagram"
+                ></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <ion-icon class="iconos-social" name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <ion-icon class="iconos-social" name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">
+            Copyright ©2022 SportsWear, all rights reserved.
+          </p>
         </div>
+        <div>
+          <h3>Contacto</h3>
+          <ul class="footer-list">
+            <li>745 Mante Land Suite 042 - Coeur d'Alene, AL / 26054</li>
+            <li>+54 9 11-7297-8221</li>
+            <li>sportsweardh@gmail.com</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Empresa</h3>
+          <ul class="footer-list">
+            <li>Sobre SportsWear</li>
+            <li>Sponsors</li>
+            <li>Creadores</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Ayuda</h3>
+          <ul class="footer-list">
+            <li>Preguntas frecuentes</li>
+            <li>Atención al cliente</li>
+            <li>Metodos de pago</li>
+            <li>¿Cómo compro?</li>
+          </ul>
+        </div>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

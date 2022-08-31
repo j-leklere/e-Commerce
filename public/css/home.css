@@ -1,7 +1,3 @@
-main {
-  height: 66rem;
-}
-
 .carrusel {
   width: 50%;
   height: 80%;
@@ -17,11 +13,13 @@ main {
   gap: 8.6rem;
 }
 
-.zapatillas {
-  height: 100%;
+.botines {
+  width: 100%;
+  max-width: 90vw;
   border-radius: 8px;
   transform: scale(1.5);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  z-index: -1;
 }
 
 /* Botones */
@@ -40,13 +38,13 @@ main {
 }
 
 .boton--izquierdo {
-  left: 0;
+  left: -10rem;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
 .boton--derecho {
-  right: 0;
+  right: -10rem;
   top: 50%;
   transform: translate(50%, -50%);
 }
@@ -60,10 +58,10 @@ main {
 .comprar,
 .mas-info {
   position: absolute;
-  /* background-color: #eafa35;
-  color: #000; */
-  background-color: #111;
-  color: #eafa35;
+  background-color: #eafa35;
+  color: #000;
+  /* background-color: #111;
+  color: #eafa35; */
   font-weight: 600;
   font-size: 1.6rem;
   padding: 1rem 5rem;
@@ -73,21 +71,25 @@ main {
 }
 
 .comprar {
-  top: -2.2rem;
-  right: 25rem;
+  top: -4.2rem;
+  right: 5.2rem;
 }
 
 .mas-info {
-  top: 3.6rem;
-  right: 12rem;
+  top: 2.4rem;
+  right: -8.8rem;
 }
 
 .comprar:hover,
 .mas-info:hover {
   cursor: pointer;
-  background-color: #eafa35;
-  color: #000;
+  /* background-color: #eafa35;
+  color: #000; */
+  background-color: #111;
+  color: #eafa35;
+  transform: translateY(-1rem);
 }
+
 /* Puntos */
 .puntos {
   position: absolute;
@@ -110,4 +112,143 @@ main {
 
 .punto--relleno {
   background-color: #eafa35;
+}
+
+/* Seccion Productos */
+.seccion-productos {
+  padding: 9.6rem 0;
+  background-color: #111;
+  margin-bottom: 10rem;
+}
+
+.lo-mejor {
+  font-size: 1.4rem;
+  color: #eafa35;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.heading-secundario {
+  font-size: 4.4rem;
+  margin-bottom: 9.6rem;
+  color: #ffffffff;
+  text-align: center;
+}
+
+.productos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.producto {
+  background-color: #000;
+  position: relative;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.4s;
+  max-width: 25rem;
+}
+
+.en-oferta::after {
+  content: "En Oferta!";
+  position: absolute;
+  top: 6%;
+  right: -17%;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  background-color: #ffd43b;
+  padding: 0.4rem 4rem;
+  transform: rotate(45deg);
+}
+
+.producto-img {
+  max-height: 16rem;
+  width: 25rem;
+}
+
+.detalle-productos {
+  padding: 3.2rem;
+}
+
+.producto-tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.tag {
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #000;
+  border-radius: 100px;
+  font-weight: 700;
+}
+
+.tag--general {
+  background-color: #666;
+}
+.tag--futbol {
+  background-color: #0ca678;
+}
+.tag--esqui {
+  background-color: #ffffffff;
+}
+.tag--tenis {
+  background-color: #eafa35;
+}
+.tag--pelotas {
+  background-color: salmon;
+}
+.tag--accesorios {
+  background-color: #5c7cfa;
+}
+
+.producto-titulo {
+  font-size: 2rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+  color: #ffffffff;
+}
+
+.precio-compra {
+  display: flex;
+  gap: 1rem;
+  color: #000;
+  font-weight: 600;
+}
+
+.precio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.2rem;
+  width: 3.8rem;
+  border-radius: 50%;
+  background-color: #eafa35;
+  font-size: 1.4rem;
+}
+
+.compra {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.2rem;
+  background-color: #eafa35;
+  width: 15rem;
+  border-radius: 8px;
+  font-size: 1.8rem;
+  transition: all 1s;
+}
+
+.compra:hover{
+  cursor: pointer;
+  background-color: #000;
+  color: #eafa35;
+  border: 1px solid #eafa35;
+  transform: rotate(360deg);
 }
