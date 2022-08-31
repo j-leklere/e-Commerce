@@ -319,4 +319,7 @@
     right: auto;
     font-size: 1.4rem;
   }
+  .carrusel {
+    width: 60%;
+  }
 }
