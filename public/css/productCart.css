@@ -113,6 +113,9 @@ h5 {
     margin: 3rem 0;
     transition: all 450ms;
     color: #ffffffff;
+    background-color: #222;
+    border: none;
+
 }
 
 .button-eliminar:hover {
