@@ -69,10 +69,8 @@ body {
   font-weight: 400;
   color: #555;
 
-  background-image: linear-gradient(
-      rgba(34, 34, 34, 0.6),
-      rgba(34, 34, 34, 0.6)
-    ),
+  background-image: linear-gradient(rgba(34, 34, 34, 0.6),
+      rgba(34, 34, 34, 0.6)),
     url(https://images.unsplash.com/photo-1496147539180-13929f8aa03a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
   background-size: cover;
 }
@@ -142,7 +140,6 @@ button {
   border: none;
   background-color: none;
   font-size: 3rem;
-  background-color: rgba(255, 255, 255, 0);
 }
 
 button a {
@@ -173,15 +170,18 @@ button a {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
   transition: all 0.75s;
 }
+
 .boton-nav:hover {
   transform: rotate(360deg);
   color: #111;
   background-color: #eafa35;
 }
+
 .boton-nav ion-icon {
   width: 3rem;
   height: 3rem;
 }
+
 /****************/
 /* Sección Main */
 /****************/
@@ -204,12 +204,14 @@ button a {
   color: #ffffffff;
   font-size: 1.4rem;
 }
+
 .footer-container div {
   width: 25%;
   height: 20rem;
   display: flex;
   flex-direction: column;
 }
+
 .logo-footer {
   display: block;
   height: 5.2rem;
@@ -238,6 +240,7 @@ button a {
   color: #eafa35;
   transition: all 0.4s;
 }
+
 .copyright {
   margin-top: auto;
   font-size: 1.4rem;
@@ -273,11 +276,13 @@ button a {
   .boton-nav {
     display: flex;
   }
+
   .footer-container {
     flex-wrap: wrap;
     row-gap: 2.4rem;
     justify-content: center;
   }
+
   .footer-container div {
     width: 15rem;
   }
@@ -296,4 +301,3 @@ button a {
     z-index: 100;
   }
 }
-
