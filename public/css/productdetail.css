@@ -1,85 +1,176 @@
-    * {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-    }
-    
-    main section div.products {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-    
-    main section div.products article {
-        width: 45%;
-    }
-    
-    main {
-        width: 80%;
-        margin: 0 auto;
-    }
-    
-    main section div.products article {
-        width: 20%;
-    }
-    
-    main section article {
-        display: block;
-        margin: 10px 10px;
-        margin-top: 50px;
-    }
-    
-    main section article img {
-        width: 100%;
-    }
-    
-    article div.main-article,
-    p {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: baseline;
-        position: relative;
-        padding: 20px;
-        text-align: justify;
-        font-size: 15px;
-    }
-    
-    h2 {
-        color: #888;
-        text-align: center;
-        font-size: 20px;
-    }
-    
-    .product_img {
-        width: 300px;
-        height: 400px;
-    }
-    
-    main section article:hover {
-        box-shadow: 0px 0px 10px #555;
-        border-radius: 6%;
-        transition: 500ms;
-        color: #FFF;
-    }
-    
-    @media (min-width: 361px) {
-        main section article {
-            display: block;
-        }
-        main section div.products article {
-            width: 45%;
-        }
-    }
-    
-    @media (min-width: 769px) {
-        main section div.products article {
-            width: 22%;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-        }
-    }
+.section-product-detail {
+  padding: 6.4rem 0 9.6rem;
+}
+
+.container {
+  background-color: #111;
+}
+
+.main-container {
+  border-radius: 8px;
+  padding-bottom: 3.2rem;
+}
+
+/* Ruta */
+.ruta {
+  list-style: none;
+  font-size: 1.4rem;
+  padding: 1.4rem 0.6rem;
+}
+.ruta li {
+  display: inline-block;
+}
+.ruta a {
+  color: #ffffffff;
+  text-decoration: none;
+}
+.ruta li a::after {
+  content: " > ";
+}
+
+/* Main Container */
+.producto-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Imagen del Producto */
+.img {
+  width: 49%;
+}
+
+.producto-img {
+  width: 100%;
+}
+
+/* Detalles del Producto */
+.producto-detail {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+}
+
+/* Categorias */
+.producto-categorias {
+  margin: 1.2rem 0 0.8rem;
+}
+
+.tag {
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #000;
+  border-radius: 100px;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.tag--general {
+  background-color: #666;
+}
+
+/* Titulo del Producto */
+.producto-titulo {
+  font-size: 2.4rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Envio */
+.producto-envio {
+  width: fit-content;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.6rem;
+  background-color: #40c057;
+  text-transform: uppercase;
+  border-radius: 8px;
+  margin-bottom: 1.8rem;
+}
+
+/* Precio */
+.producto-precio {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.en-oferta {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  background-color: #ffd43b;
+  padding: 0.4rem;
+  margin-left: 0.8rem;
+}
+
+/* Pago */
+.producto-pago {
+  font-size: 1.2rem;
+}
+
+/* Talle */
+.producto-talle {
+  margin-top: 2.4rem;
+  font-size: 1.8rem;
+}
+
+/* Agregar al Carrito */
+.producto-agregarAlCarrito {
+  margin: auto 0 2rem;
+  padding: 0.8rem;
+  background-color: #e03131;
+  /* transition: all 0.5s; */
+}
+.producto-agregarAlCarrito button {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  column-gap: 0.8rem;
+  background-color: #e03131;
+  color: #ffffffff;
+  margin: auto;
+  /* transition: all 0.5s; */
+}
+
+.producto-agregarAlCarrito:hover {
+  /* background-color: #ffffffff; */
+  cursor: pointer;
+  animation: agregarAlCarritoColor 4s linear infinite;
+}
+
+.producto-agregarAlCarrito:hover button {
+  /* background-color: #ffffffff;
+  color: #e03131; */
+  cursor: pointer;
+  animation: agregarAlCarrito 4s linear infinite;
+}
+
+/* Testings */
+@keyframes agregarAlCarrito {
+  25% {
+    transform: translateX(80%);
+  }
+  50% {
+    background-color: #ffffffff;
+    color: #e03131;
+  }
+  75% {
+    transform: translateX(-80%);
+  }
+  100% {
+    background-color: #e03131;
+    color: #ffffffff;
+  }
+}
+@keyframes agregarAlCarritoColor {
+  50% {
+    background-color: #ffffffff;
+  }
+  100% {
+    background-color: #e03131;
+  }
+}
