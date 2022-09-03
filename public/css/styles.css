@@ -269,6 +269,10 @@ button a {
 /***********/
 
 @media (max-width: 1200px) {
+  body {
+    background-image: none;
+    background-color: #111;
+    }
   .main-nav {
     display: none;
   }

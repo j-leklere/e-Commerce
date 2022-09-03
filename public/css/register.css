@@ -134,3 +134,68 @@ form h3 {
   cursor: pointer;
   background-color: #eefb5d;
 }
+/***********/
+/* Queries */
+/***********/
+
+@media (max-width: 1200px) {
+  body {
+    background-image: none;
+    background-color: #111;
+    }
+  .main-nav {
+    display: none;
+  }
+
+  .boton-nav {
+    display: flex;
+  }
+
+  .footer-container {
+    flex-wrap: wrap;
+    row-gap: 2.4rem;
+    justify-content: center;
+  }
+
+  .footer-container div {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .register-container{
+    max-width: 98vw;
+    height: auto;
+    margin: auto;
+   
+   
+  }
+  form {
+    width: 98%;
+  }
+  .datos-personales, .sobre-mi-cuenta{
+    width: 80%;
+  }
+  .register-navbar{
+    width: 70%;
+  }
+  .register-nav{
+    justify-content: space-between;
+  }
+  .register-nav a {
+    
+    padding: 0;
+  }
+
+  .botones-header {
+    display: none;
+  }
+
+  .boton-nav {
+    display: flex;
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    z-index: 100;
+  }
+}

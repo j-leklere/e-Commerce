@@ -105,3 +105,65 @@ form {
   cursor: pointer;
   background-color: #f0fc72;
 }
+
+/***********/
+/* Queries */
+/***********/
+
+@media (max-width: 1200px) {
+  body {
+    background-image: none;
+    background-color: #111;
+    }
+  .main-nav {
+    display: none;
+  }
+
+  .boton-nav {
+    display: flex;
+  }
+
+  .footer-container {
+    flex-wrap: wrap;
+    row-gap: 2.4rem;
+    justify-content: center;
+  }
+
+  .footer-container div {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-container{
+    max-width: 98vw;
+    
+    
+  }
+  form {
+    width: 98%;
+  }
+  .botones-header {
+    display: none;
+  }
+
+  .boton-nav {
+    display: flex;
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    z-index: 100;
+  }
+  .login-navbar{
+    width: 70%;
+  }
+  .login-nav{
+    justify-content: space-between;
+  }
+  .login-nav a {
+    text-decoration: none;
+    color: #ffffffff;
+    padding: 0;
+        
+  }
+}
