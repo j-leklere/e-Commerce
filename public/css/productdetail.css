@@ -16,12 +16,13 @@
   list-style: none;
   font-size: 1.4rem;
   padding: 1.4rem 0.6rem;
+  color: #777;
 }
 .ruta li {
   display: inline-block;
 }
 .ruta a {
-  color: #ffffffff;
+  color: #777;
   text-decoration: none;
 }
 .ruta li a::after {
@@ -50,6 +51,9 @@
   width: 49%;
 }
 
+.subheadings {
+  margin-top: 0.8rem;
+}
 /* Categorias */
 .producto-categorias {
   margin: 1.2rem 0 0.8rem;
@@ -118,12 +122,59 @@
   font-size: 1.8rem;
 }
 
+.select-talle {
+  margin-top: 0.8rem;
+  width: 15%;
+}
+
+/* Color */
+.producto-color {
+  margin-top: 2.4rem;
+  font-size: 1.8rem;
+}
+
+.colores ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+}
+
+.color {
+  padding: 1.8rem;
+  border: 2px solid #333;
+  border-radius: 50%;
+  margin-right: 1.6rem;
+}
+.color--blanco {
+  background-color: white;
+}
+.color--negro {
+  background-color: black;
+}
+.color--rojo {
+  background-color: red;
+}
+.color--azul {
+  background-color: blue;
+}
+/* Cantidad */
+.producto-cantidad {
+  margin-top: 2.4rem;
+  font-size: 1.8rem;
+}
+
+.select-cant {
+  margin-top: 0.8rem;
+  width: 15%;
+}
+
 /* Agregar al Carrito */
 .producto-agregarAlCarrito {
   margin: auto 0 2rem;
   padding: 0.8rem;
   background-color: #e03131;
-  /* transition: all 0.5s; */
+  transition: all 0.5s;
 }
 .producto-agregarAlCarrito button {
   font-size: 2rem;
@@ -133,16 +184,18 @@
   background-color: #e03131;
   color: #ffffffff;
   margin: auto;
-  /* transition: all 0.5s; */
+  transition: all 0.5s;
 }
 
-.producto-agregarAlCarrito:hover {
+.producto-agregarAlCarrito:hover,
+.producto-agregarAlCarrito:link {
   /* background-color: #ffffffff; */
   cursor: pointer;
   animation: agregarAlCarritoColor 4s linear infinite;
 }
 
-.producto-agregarAlCarrito:hover button {
+.producto-agregarAlCarrito:hover button,
+.producto-agregarAlCarrito:link button {
   /* background-color: #ffffffff;
   color: #e03131; */
   cursor: pointer;
@@ -172,5 +225,39 @@
   }
   100% {
     background-color: #e03131;
+  }
+}
+
+/***********/
+/* Queries */
+/***********/
+
+@media (max-width: 1100px) {
+  .section-product-detail {
+    padding-bottom: 0;
+  }
+  .img,
+  .producto-detail {
+    width: 65%;
+  }
+  .ruta-container {
+    text-align: center;
+  }
+  .producto-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .producto-agregarAlCarrito:hover,
+  .producto-agregarAlCarrito:link {
+    background-color: #ffffffff;
+    animation: none;
+  }
+
+  .producto-agregarAlCarrito:hover button,
+  .producto-agregarAlCarrito:link button {
+    background-color: #ffffffff;
+    color: #e03131;
+    animation: none;
   }
 }

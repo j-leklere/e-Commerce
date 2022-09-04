@@ -76,7 +76,7 @@
     <main>
       <section class="section-product-detail">
         <div class="container main-container">
-          <div>
+          <div class="ruta-container">
             <ul class="ruta">
               <li><a href="/" title="Ir a inicio">Inicio</a></li>
               <li><p>Zapatillas Adidas Z32</p></li>
@@ -101,7 +101,39 @@
                 <p class="en-oferta">En oferta!</p>
               </div>
               <div class="producto-pago"><p>Hasta 6 cuotas sin interés</p></div>
-              <div class="producto-talle"><h4>Talle</h4></div>
+              <div class="producto-talle">
+                <h4 class="subheadings">Talle</h4>
+                <input list="talle" class="select-talle" />
+                <datalist id="talle">
+                  <option value="US 8"></option>
+                  <option value="US 8.5"></option>
+                  <option value="US 9"></option>
+                  <option value="US 10"></option>
+                  <option value="US 11"></option>
+                  <option value="US 10.5"></option>
+                </datalist>
+              </div>
+              <div class="producto-color">
+                <h4 class="subheadings">Color</h4>
+                <div class="colores">
+                  <ul>
+                    <li><button class="color color--blanco"></button></li>
+                    <li><button class="color color--negro"></button></li>
+                    <li><button class="color color--rojo"></button></li>
+                    <li><button class="color color--azul"></button></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="producto-cantidad">
+                <h4 class="subheadings">Cantidad</h4>
+                <input list="cantidad" class="select-cant" />
+                <datalist id="cantidad">
+                  <option value="1"></option>
+                  <option value="2"></option>
+                  <option value="3"></option>
+                </datalist>
+              </div>
+              <div class="producto-talle"><h4></h4></div>
               <div class="producto-agregarAlCarrito">
                 <button>
                   <ion-icon name="cart"></ion-icon>
