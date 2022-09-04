@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+main section div.products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.contenedor {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+aside {
+    padding: 0;
+}
+
+aside .titulo {
+    margin-top: 10px;
+}
+
+aside .contenedor-temario {
+    padding-top: 20px;
+    position: sticky;
+    top: 0;
+}
+
+aside .lista {
+    list-style: none;
+    border-right: 2px solid #eafa35;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+aside .lista li {
+    position: relative;
+}
+
+aside .lista li a {
+    display: block;
+    font-size: 15px;
+    color: #FFFF;
+    padding: 15px 10px;
+    text-decoration: none;
+    transition: .3s ease all;
+}
+
+aside .lista li.activo a,
+aside .lista li a:hover {
+    color: #eafa35;
+}
+
+aside .lista li::before {
+    content: "";
+    display: block;
+    height: 10px;
+    width: 10px;
+    /*background: white;*/
+    border: 2px solid #eafa35;
+    position: absolute;
+    left: -19px;
+    top: calc(50% - 6px);
+    transition: .3s ease all;
+}
+
+aside .lista li.activo::before {
+    border: 2px solid grey;
+}
+
+aside .lista li:hover::before {
+    border: 2px solid grey;
+}
+
+main {
+    min-height: 2000px;
+}
+
+.nombre {
+    font-size: 15px;
+    padding-right: 10px;
+    display: block;
+}
+
+.precio {
+    font-size: 22px;
+}
+
+.boton {
+    background-color: #eafa35;
+    border-radius: 6px;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 18px;
+}
