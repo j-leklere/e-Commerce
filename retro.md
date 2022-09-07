@@ -4,9 +4,7 @@
 
 COMENZAR A HACER: 
 
-* Reunirse con más frecuencia y aprovechar ese tiempo de lo máximo posible ya que a veces es difícil encontrar los tiempos para juntarse.
-* Aprovechar al máximo el discord y el whatsapp compartiendo ideas y código con los integrantes del grupo.
-* Tratar en lo posible de dedicarle más tiempo al proyecto.
+* Estamos muy contentos por el modo en que trabajamos en último sprint. Obviamente se pueden mejorar cosas pero estuvimos más organizados, la comunicación fue mas fluida y el clima de trabajo es óptimo.
 
 HACER MÁS:
 
@@ -17,6 +15,8 @@ CONTINUAR HACIENDO:
 
 * El ambiente de trabajo y la buena relación que hay entre los integrantes del grupo es muy importante. Cada uno aporta sus ideas y creatividad y escucha las opiniones de los demás sin problemas.
 * Seguir cumpliendo con la puntualidad y asistencia a las reuniones programadas.
+* Seguir dedicandole tiempo al proyecto para poder cumplir con los tiempos de entrega.
+* Aplicar los conocimientos que vamos adquiriendo a medida que avanza el curso.
 
 HACER MENOS:
 
@@ -25,8 +25,7 @@ HACER MENOS:
 
 DEJAR DE HACER:
 
-* Hacer las cosas de forma individual sin consultar al grupo ya que después las tareas se hacen de forma desordenada y sin coordinación.
-* Dejar las tareas para último momento y entregar un trabajo incompleto.
+* Estamos muy conformes por como trabajamos en el último sprint. Siempre hay cosas para mejorar pero no encontramos nada que tengamos que dejar de hacer.
 
 
  
