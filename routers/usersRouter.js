@@ -8,4 +8,6 @@ router.get('/login', usersController.login);
 
 router.get('/register', usersController.register);
 
+router.get('/crearEditar', usersController.crearEditar);
+
 module.exports = router;

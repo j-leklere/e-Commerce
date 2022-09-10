@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="\css\crearEditar.css" />
+
+  </head>
+
+  <body>
+    <%- include('../partials/header.ejs') %>
+    <main>
+      <div class="register-container">
+        <h2 class="register-titulo">EDICION DE ARTÍCULOS</h2>
+        <div class="register-navbar">
+          <ul class="register-nav">
+        
+           
+          </ul>
+        </div>
+        <form action="/" method="GET">
+          <div class="data-container">
+            <div class="datos-producto">
+              <h3>Datos del producto</h3>
+
+              <div class="nom-articulo">
+                <input
+                  type="text"
+                  class="inputNombre"
+                  placeholder="Nombre Articulo"
+                  required
+                />
+              </div>
+            
+             <div class="reg-apellido">
+                <input
+                  type="text"
+                  class="inputdescripcion"
+                  placeholder="Descripción"
+                  required
+                />
+              </div>
+              <div class="categoria">
+                <h3>Categoría</h3>
+                             
+                <select class="select">
+                <% categorias.forEach(categoria => {%>
+                <option><%= categoria.nombre %> 
+                <% }); %>
+                </option>
+                </select>
+              </div>
+              <div>
+                <h3>Inserte imagen</h3>
+                <div class="file-select" id="src-file2" >
+                <input class="inputfile" type="file" accept=".jpg,.png"  name>
+              </div>
+              <h3>Escoja Talla</h3>
+                <select class="select">
+                    <option> 7</option>
+                    <option> 7.5</option>
+                    <option> 8</option>
+                    <option> 9.5</option>
+                    <option> 10</option>
+                    <option> 11</option>
+                </select>
+
+              </div>
+        
+            </div>
+                    
+          </div>
+          <nav class="bot">
+            <center>
+                <input class="button" type="button" name="Crear" value="Crear" onclick="location.href='javascript:crear()'" />
+                <input class="button" type="button" name="Actualizar" value="Actualizar" onclick="location.href='javascript:actualizar()'" />
+                <input class="button" type="button" name="Borrar" value="Borrar" onclick="location.href='javascript:borrar()'" />
+            </center>
+          </nav>
+        </form>
+      </div>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>
+
+
+<!--
+                   <option value="Mujer"></option>
+                   <option value="Hombre"></option>
+                   <option value="Otro"></option>
+-->
