@@ -44,6 +44,7 @@
                 <h3>Categoría</h3>
                              
                 <select class="select">
+                  <option>Seleccione categoría</option>
                 <% categorias.forEach(categoria => {%>
                 <option><%= categoria.nombre %> 
                 <% }); %>
@@ -57,12 +58,11 @@
               </div>
               <h3>Escoja Talla</h3>
                 <select class="select">
-                    <option> 7</option>
-                    <option> 7.5</option>
-                    <option> 8</option>
-                    <option> 9.5</option>
-                    <option> 10</option>
-                    <option> 11</option>
+                  <option>Escoja La talla</option>
+                  <% tallas.forEach(talla => {%>
+                    <option><%= talla.numero %> 
+                    <% }); %>
+                    </option>
                 </select>
 
               </div>
