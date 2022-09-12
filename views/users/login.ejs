@@ -17,7 +17,7 @@
             <li><a href="/register" class="registrarme"> Registrarme </a></li>
           </ul>
         </div>
-        <form action="/" method="GET" autocomplete="on">
+        <form action="/" method="post" autocomplete="on" id="form">
           <div class="login-nombreUsuario">
             <input
               type="email"
@@ -25,6 +25,8 @@
               placeholder="Email"
               required
               autocomplete="username"
+              id = "email"
+              name = "nemail"
             />
           </div>
           <div class="login-contraseña">
@@ -34,6 +36,8 @@
               placeholder="Contraseña"
               required
               autocomplete="current-password"
+              id = "password"
+              name = "npassword"
             />
           </div>
           <div class="login-recordarme-contraseñaOlvidada">
@@ -50,13 +54,16 @@
           </div>
 
           <div class="login-buttonIngresar">
-            <button type="submit" class="button-ingresar">
-              Iniciar Sesión
-            </button>
+            <input onclick=ir() type="button" class="button-ingresar"
+              value="Iniciar Sesión">
+            
           </div>
         </form>
       </div>
     </main>
     <%- include('../partials/footer.ejs') %>
+    
+    <script src="\js\login.js"></script>
+
   </body>
 </html>
