@@ -1,426 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
+  <head>
     <%- include('../partials/head.ejs') %>
     <link rel="stylesheet" href="\css\productFutbol.css" />
-    
-</head>
+  </head>
 
-<body>
+  <body>
     <%- include('../partials/header.ejs') %>
-
     <div class="contenedor">
-        <aside>
-            <div class="contenedor-temario" id="temario">
-                <h2 class="titulo">Tipo de Producto</h2>
-                <ul class="lista">
-                    <li /*class="activo"*/><a href="#1">Zapatos</a></li>
-                    <li><a href="#2">Camisetas</a></li>
-                    <li><a href="#3">Cascos</a></li>
-                    <li><a href="#4">Accesorios</a></li>
-                </ul>
-                      
-                <h2 class="titulo">Género</h2>
-                <ul class="lista">
-                    <li ><a href="#5">Hombre</a></li>
-                    <li><a href="#6">Mujer</a></li>
-                    <li><a href="#7">Niña</a></li>
-                    <li><a href="#8">Niño</a></li>
-                </ul>
-                
-            </div>
-        </aside>
+      <aside>
+        <div class="contenedor-temario" id="temario">
+          <h2 class="titulo">Tipo de Producto</h2>
+          <ul class="lista">
+            <li class="activo"><a href="#1">Zapatos</a></li>
+            <li><a href="#2">Camisetas</a></li>
+            <li><a href="#3">Cascos</a></li>
+            <li><a href="#4">Accesorios</a></li>
+          </ul>
 
-        <main>
-            <section class="offers">
-                <div class="products" id="1">
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/NI_BQ5451-016-1.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Botines Nike Legend 9 Academy Tf
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 200
-                            </div>
-                            <button class="boton" type="button">Envio Gratis</button>
-                        </div>
-                    </article>
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/NI_CU9452-006-1.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Botines Nike Tiempo Legend 9 Club Tf
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 250
-                            </div>
-                        </div>
-                    </article>
-           
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/NI_CZ0220-111-1.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Zapatillas Nike Streetgato
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 185
-                            </div>
-                            <button class="boton" type="button">Envio Gratis</button>
-                        </div>
-                    </article>
-                </div>
-                <div class="products" id="2">
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/AD_GA7547-1.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Camiseta adidas Boca Juniors
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 33
-                            </div>
-                            
-                        </div>
-                    </article>
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/AD_GU9607-1.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Camiseta adidas River Plate
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 40
-                            </div>
-                        </div>
-                    </article>
-           
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/AD_HF1496-1.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Camiseta adidas Argentina
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 45
-                            </div>
-                            <button class="boton" type="button">Envio Gratis</button>
-                        </div>
-                    </article>
-                </div>
-                <div class="products" id="3">
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/CASCO1.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Casco Dribbling Bolt 21
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 20
-                            </div>
-                            <button class="boton" type="button">Envio Gratis</button>
-                        </div>
-                    </article>
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/CASCO2.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Casco Dribbling Starsport 21
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 25
-                            </div>
-                            <button class="boton" type="button">Envio Gratis</button>
-                        </div>
-                    </article>
-           
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/CASCO3.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Casco M-Wave Standard
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 18
-                            </div>
-                            
-                        </div>
-                    </article>
-                </div>
-                <div class="products" id="4">
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/BK01.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Pelota Basket Molten
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 43
-                            </div>
-                            <button class="boton" type="button">Envio Gratis</button>
-                        </div>
-                    </article>
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/RQ01.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Raqueta Wilson 2 generación
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 46
-                            </div>
-                        </div>
-                    </article>
-           
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/MR01.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Medias Running femenino
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 12
-                            </div>
-                            <button class="boton" type="button">Envio Gratis</button>
-                        </div>
-                    </article>
-                </div>
-                
-                <div class="products" id="5">
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/CH01.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Conjunto blanco-gris masculino
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 82.5
-                            </div>
-                            <button class="boton" type="button">Envio Gratis</button>
-                        </div>
-                    </article>
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/CH02.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Conjunto azul-negro masculino
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 85
-                            </div>
-                        </div>
-                    </article>
-           
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/CH03.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Conjunto blanco-azul masculino
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 90
-                            </div>
-                            <button class="boton" type="button">Envio Gratis</button>
-                        </div>
-                    </article>
-                </div>
-                 
-                <div class="products" id="6">
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/CM01.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Conjunto GYM corto femenino
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 100
-                            </div>
-                           
-                        </div>
-                    </article>
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/CM02.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Conjunto GYM largo femenino
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 98
-                            </div>
-                        </div>
-                    </article>
-           
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/CM03.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Conjunto femenino sin manga
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 78
-                            </div>
-                            
-                        </div>
-                    </article>
-                </div>
+          <h2 class="titulo">Género</h2>
+          <ul class="lista">
+            <li><a href="#5">Hombre</a></li>
+            <li><a href="#6">Mujer</a></li>
+            <li><a href="#7">Niña</a></li>
+            <li><a href="#8">Niño</a></li>
+          </ul>
+        </div>
+      </aside>
 
-                <div class="products" id="7">
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/CN01.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Niña conjunto pantalon corto
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 46.8
-                            </div>
-                            
-                        </div>
-                    </article>
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/CN02.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Conjunto completo futbol niña
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 132
-                            </div>
-                        </div>
-                    </article>
-           
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/CN03.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Conjunto completo pantalon largo niña
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 185
-                            </div>
-                            
-                        </div>
-                    </article>
-                </div>
+      <main>
+        <section class="offers">
+          <div class="products" id="1">
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img
+                  src="images/NI_BQ5451-016-1.png"
+                  alt="Cafetera"
+                  class="product_img"
+                />
+              </a>
+              <div class="nombre">Botines Nike Legend 9 Academy Tf</div>
+              <div class="main-article">
+                <div class="precio">$ 200</div>
+                <button class="boton" type="button">Envio Gratis</button>
+              </div>
+            </article>
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img
+                  src="images/NI_CU9452-006-1.png"
+                  alt="Cafetera"
+                  class="product_img"
+                />
+              </a>
+              <div class="nombre">Botines Nike Tiempo Legend 9 Club Tf</div>
+              <div class="main-article">
+                <div class="precio">$ 250</div>
+              </div>
+            </article>
 
-                <div class="products" id="8">
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/CNO01.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Conjunto tennis niño
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 66
-                            </div>
-                            <button class="boton" type="button">Envio Gratis</button>
-                        </div>
-                    </article>
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/CNO02.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Conjunto deporte al parque niño
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 77
-                            </div>
-                        </div>
-                    </article>
-           
-                    <article>
-                        <h2></h2>
-                        <a href="/productFutbol">
-                            <img src="images/CNO03.png" alt="Cafetera" class="product_img" />
-                        </a>
-                        <div class="nombre">
-                            Conjunto completo niño
-                        </div>
-                        <div class="main-article">
-                            <div class="precio">
-                                $ 110
-                            </div>
-                            <button class="boton" type="button">Envio Gratis</button>
-                        </div>
-                    </article>
-                </div>
-                
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img
+                  src="images/NI_CZ0220-111-1.png"
+                  alt="Cafetera"
+                  class="product_img"
+                />
+              </a>
+              <div class="nombre">Zapatillas Nike Streetgato</div>
+              <div class="main-article">
+                <div class="precio">$ 185</div>
+                <button class="boton" type="button">Envio Gratis</button>
+              </div>
+            </article>
+          </div>
+          <div class="products" id="2">
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img
+                  src="images/AD_GA7547-1.png"
+                  alt="Cafetera"
+                  class="product_img"
+                />
+              </a>
+              <div class="nombre">Camiseta adidas Boca Juniors</div>
+              <div class="main-article">
+                <div class="precio">$ 33</div>
+              </div>
+            </article>
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img
+                  src="images/AD_GU9607-1.png"
+                  alt="Cafetera"
+                  class="product_img"
+                />
+              </a>
+              <div class="nombre">Camiseta adidas River Plate</div>
+              <div class="main-article">
+                <div class="precio">$ 40</div>
+              </div>
+            </article>
 
-            </section>
-        </main>
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img
+                  src="images/AD_HF1496-1.png"
+                  alt="Cafetera"
+                  class="product_img"
+                />
+              </a>
+              <div class="nombre">Camiseta adidas Argentina</div>
+              <div class="main-article">
+                <div class="precio">$ 45</div>
+                <button class="boton" type="button">Envio Gratis</button>
+              </div>
+            </article>
+          </div>
+          <div class="products" id="3">
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img
+                  src="images/CASCO1.png"
+                  alt="Cafetera"
+                  class="product_img"
+                />
+              </a>
+              <div class="nombre">Casco Dribbling Bolt 21</div>
+              <div class="main-article">
+                <div class="precio">$ 20</div>
+                <button class="boton" type="button">Envio Gratis</button>
+              </div>
+            </article>
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img
+                  src="images/CASCO2.png"
+                  alt="Cafetera"
+                  class="product_img"
+                />
+              </a>
+              <div class="nombre">Casco Dribbling Starsport 21</div>
+              <div class="main-article">
+                <div class="precio">$ 25</div>
+                <button class="boton" type="button">Envio Gratis</button>
+              </div>
+            </article>
+
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img
+                  src="images/CASCO3.png"
+                  alt="Cafetera"
+                  class="product_img"
+                />
+              </a>
+              <div class="nombre">Casco M-Wave Standard</div>
+              <div class="main-article">
+                <div class="precio">$ 18</div>
+              </div>
+            </article>
+          </div>
+          <div class="products" id="4">
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img src="images/BK01.png" alt="Cafetera" class="product_img" />
+              </a>
+              <div class="nombre">Pelota Basket Molten</div>
+              <div class="main-article">
+                <div class="precio">$ 43</div>
+                <button class="boton" type="button">Envio Gratis</button>
+              </div>
+            </article>
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img src="images/RQ01.png" alt="Cafetera" class="product_img" />
+              </a>
+              <div class="nombre">Raqueta Wilson 2 generación</div>
+              <div class="main-article">
+                <div class="precio">$ 46</div>
+              </div>
+            </article>
+
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img src="images/MR01.png" alt="Cafetera" class="product_img" />
+              </a>
+              <div class="nombre">Medias Running femenino</div>
+              <div class="main-article">
+                <div class="precio">$ 12</div>
+                <button class="boton" type="button">Envio Gratis</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="products" id="5">
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img src="images/CH01.png" alt="Cafetera" class="product_img" />
+              </a>
+              <div class="nombre">Conjunto blanco-gris masculino</div>
+              <div class="main-article">
+                <div class="precio">$ 82.5</div>
+                <button class="boton" type="button">Envio Gratis</button>
+              </div>
+            </article>
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img src="images/CH02.png" alt="Cafetera" class="product_img" />
+              </a>
+              <div class="nombre">Conjunto azul-negro masculino</div>
+              <div class="main-article">
+                <div class="precio">$ 85</div>
+              </div>
+            </article>
+
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img src="images/CH03.png" alt="Cafetera" class="product_img" />
+              </a>
+              <div class="nombre">Conjunto blanco-azul masculino</div>
+              <div class="main-article">
+                <div class="precio">$ 90</div>
+                <button class="boton" type="button">Envio Gratis</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="products" id="6">
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img src="images/CM01.png" alt="Cafetera" class="product_img" />
+              </a>
+              <div class="nombre">Conjunto GYM corto femenino</div>
+              <div class="main-article">
+                <div class="precio">$ 100</div>
+              </div>
+            </article>
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img src="images/CM02.png" alt="Cafetera" class="product_img" />
+              </a>
+              <div class="nombre">Conjunto GYM largo femenino</div>
+              <div class="main-article">
+                <div class="precio">$ 98</div>
+              </div>
+            </article>
+
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img src="images/CM03.png" alt="Cafetera" class="product_img" />
+              </a>
+              <div class="nombre">Conjunto femenino sin manga</div>
+              <div class="main-article">
+                <div class="precio">$ 78</div>
+              </div>
+            </article>
+          </div>
+
+          <div class="products" id="7">
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img src="images/CN01.png" alt="Cafetera" class="product_img" />
+              </a>
+              <div class="nombre">Niña conjunto pantalon corto</div>
+              <div class="main-article">
+                <div class="precio">$ 46.8</div>
+              </div>
+            </article>
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img src="images/CN02.png" alt="Cafetera" class="product_img" />
+              </a>
+              <div class="nombre">Conjunto completo futbol niña</div>
+              <div class="main-article">
+                <div class="precio">$ 132</div>
+              </div>
+            </article>
+
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img src="images/CN03.png" alt="Cafetera" class="product_img" />
+              </a>
+              <div class="nombre">Conjunto completo pantalon largo niña</div>
+              <div class="main-article">
+                <div class="precio">$ 185</div>
+              </div>
+            </article>
+          </div>
+
+          <div class="products" id="8">
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img
+                  src="images/CNO01.png"
+                  alt="Cafetera"
+                  class="product_img"
+                />
+              </a>
+              <div class="nombre">Conjunto tennis niño</div>
+              <div class="main-article">
+                <div class="precio">$ 66</div>
+                <button class="boton" type="button">Envio Gratis</button>
+              </div>
+            </article>
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img
+                  src="images/CNO02.png"
+                  alt="Cafetera"
+                  class="product_img"
+                />
+              </a>
+              <div class="nombre">Conjunto deporte al parque niño</div>
+              <div class="main-article">
+                <div class="precio">$ 77</div>
+              </div>
+            </article>
+
+            <article>
+              <h2></h2>
+              <a href="/productFutbol">
+                <img
+                  src="images/CNO03.png"
+                  alt="Cafetera"
+                  class="product_img"
+                />
+              </a>
+              <div class="nombre">Conjunto completo niño</div>
+              <div class="main-article">
+                <div class="precio">$ 110</div>
+                <button class="boton" type="button">Envio Gratis</button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
     </div>
-<%- include('../partials/footer.ejs') %>
-</body>
-
+    <%- include('../partials/footer.ejs') %>
+  </body>
 </html>

@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
     <%- include('../partials/head.ejs') %>
     <link rel="stylesheet" href="\css\crearEditar.css" />
-
   </head>
 
   <body>
@@ -13,10 +11,7 @@
       <div class="register-container">
         <h2 class="register-titulo">EDICION DE ARTÍCULOS</h2>
         <div class="register-navbar">
-          <ul class="register-nav">
-        
-           
-          </ul>
+          <ul class="register-nav"></ul>
         </div>
         <form action="/" method="GET">
           <div class="data-container">
@@ -31,8 +26,8 @@
                   required
                 />
               </div>
-            
-             <div class="reg-apellido">
+
+              <div class="reg-apellido">
                 <input
                   type="text"
                   class="inputdescripcion"
@@ -42,39 +37,55 @@
               </div>
               <div class="categoria">
                 <h3>Categoría</h3>
-                             
+
                 <select class="select">
                   <option>Seleccione categoría</option>
-                <% categorias.forEach(categoria => {%>
-                <option><%= categoria.nombre %> 
-                <% }); %>
-                </option>
+                  <% categorias.forEach(categoria => {%>
+                  <option><%= categoria.nombre %> <% }); %></option>
                 </select>
               </div>
               <div>
                 <h3>Inserte imagen</h3>
-                <div class="file-select" id="src-file2" >
-                <input class="inputfile" type="file" accept=".jpg,.png"  name>
-              </div>
-              <h3>Escoja Talla</h3>
+                <div class="file-select" id="src-file2">
+                  <input
+                    class="inputfile"
+                    type="file"
+                    accept=".jpg,.png"
+                    name
+                  />
+                </div>
+                <h3>Escoja Talla</h3>
                 <select class="select">
                   <option>Seleccionar la talla</option>
                   <% tallas.forEach(talla => {%>
-                    <option><%= talla.numero %> 
-                    <% }); %>
-                    </option>
+                  <option><%= talla.numero %> <% }); %></option>
                 </select>
-
               </div>
-        
             </div>
-                    
           </div>
           <nav class="bot">
             <center>
-                <input class="button" type="button" name="Crear" value="Crear" onclick="location.href='javascript:crear()'" />
-                <input class="button" type="button" name="Actualizar" value="Actualizar" onclick="location.href='javascript:actualizar()'" />
-                <input class="button" type="button" name="Borrar" value="Borrar" onclick="location.href='javascript:borrar()'" />
+              <input
+                class="button"
+                type="button"
+                name="Crear"
+                value="Crear"
+                onclick="location.href='javascript:crear()'"
+              />
+              <input
+                class="button"
+                type="button"
+                name="Actualizar"
+                value="Actualizar"
+                onclick="location.href='javascript:actualizar()'"
+              />
+              <input
+                class="button"
+                type="button"
+                name="Borrar"
+                value="Borrar"
+                onclick="location.href='javascript:borrar()'"
+              />
             </center>
           </nav>
         </form>
@@ -83,7 +94,6 @@
     <%- include('../partials/footer.ejs') %>
   </body>
 </html>
-
 
 <!--
                    <option value="Mujer"></option>
