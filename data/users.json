@@ -1,3 +1,4 @@
+[
 {
     "id": 1,
     "Nombre": "Onfroi",
@@ -8,7 +9,7 @@
     "genero": "Hombre",
     "deporte Favorito": "futbol",
     "telefono": "526 308 1341"
-}
+},
 {
     "id": 2,
     "Nombre": "Hebert",
@@ -19,7 +20,7 @@
     "genero": "otro",
     "deporte Favorito": "basquet",
     "telefono": "417 246 6684"
-}
+},
 {
     "id": 3,
     "Nombre": "Billy",
@@ -30,7 +31,7 @@
     "genero": "mujer",
     "deporte Favorito": "futbol",
     "telefono": "502 388 2908"
-}
+},
 {
     "id": 4,
     "Nombre": "Waly",
@@ -41,7 +42,7 @@
     "genero": "mujer",
     "deporte Favorito": "tenis",
     "telefono": "946 928 5354"
-}
+},
 {
     "id": 5,
     "Nombre": "Binky",
@@ -52,7 +53,7 @@
     "genero": "Hombre",
     "deporte Favorito": "running",
     "telefono": "844 278 4909"
-}
+},
 {
     "id": 6,
     "Nombre": "Ned",
@@ -63,7 +64,7 @@
     "genero": "hombre",
     "deporte Favorito": "tenis",
     "telefono": "731 418 2876"
-}
+},
 {
     "id": 7,
     "Nombre": "Lanie",
@@ -74,7 +75,7 @@
     "genero": "hombre",
     "deporte Favorito": "running",
     "telefono": "413 724 8908"
-}
+},
 {
     "id": 8,
     "Nombre": "Alphonso",
@@ -85,7 +86,7 @@
     "genero": "mujer",
     "deporte Favorito": "running",
     "telefono": "697 881 1049"
-}
+},
 {
     "id": 9,
     "Nombre": "Amble",
@@ -96,7 +97,7 @@
     "genero": "hombre",
     "deporte Favorito": "futbol",
     "telefono": "596 183 4130"
-}
+},
 {
     "id": 10,
     "Nombre": "Granville",
@@ -107,7 +108,7 @@
     "genero": "hombre",
     "deporte Favorito": "basquet",
     "telefono": "278 493 0476"
-}
+},
 {
     "id": 11,
     "Nombre": "Dillon",
@@ -118,7 +119,7 @@
     "genero": "otro",
     "deporte Favorito": "running",
     "telefono": "442 308 1617"
-}
+},
 {
     "id": 12,
     "Nombre": "Lucille",
@@ -129,7 +130,7 @@
     "genero": "mujer",
     "deporte Favorito": "tenis",
     "telefono": "849 535 4492"
-}
+},
 {
     "id": 13,
     "Nombre": "Chere",
@@ -140,7 +141,7 @@
     "genero": "mujer",
     "deporte Favorito": "futbol",
     "telefono": "318 117 5406"
-}
+},
 {
     "id": 14,
     "Nombre": "Yasmin",
@@ -151,7 +152,7 @@
     "genero": "mujer",
     "deporte Favorito": "running",
     "telefono": "461 281 5844"
-}
+},
 {
     "id": 15,
     "Nombre": "Ginnifer",
@@ -162,7 +163,7 @@
     "genero": "mujer",
     "deporte Favorito": "tenis",
     "telefono": "952 233 0512"
-}
+},
 {
     "id": 16,
     "Nombre": "Tabbitha",
@@ -173,7 +174,7 @@
     "genero": "mujer",
     "deporte Favorito": "basquet",
     "telefono": "285 111 3654"
-}
+},
 {
     "id": 17,
     "Nombre": "Raymond",
@@ -184,7 +185,7 @@
     "genero": "hombre",
     "deporte Favorito": "futbol",
     "telefono": "342 738 7729"
-}
+},
 {
     "id": 18,
     "Nombre": "Romeo",
@@ -195,7 +196,7 @@
     "genero": "hombre",
     "deporte Favorito": "running",
     "telefono": "222 205 2785"
-}
+},
 {
     "id": 19,
     "Nombre": "Thomasa",
@@ -206,7 +207,7 @@
     "genero": "hombre",
     "deporte Favorito": "basquet",
     "telefono": "202 289 0271"
-}
+},
 {
     "id": 20,
     "Nombre": "Tory",
@@ -218,3 +219,4 @@
     "deporte Favorito": "futbol",
     "telefono": "125 184 0379"
 }
+]
