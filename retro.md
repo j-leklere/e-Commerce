@@ -3,17 +3,18 @@
 
 
 COMENZAR A HACER: 
+* En este sprint vamos a empezar a detallar en el archivo weekly.md las novedades de cada reunión semanal.
 
-* Estamos muy contentos por el modo en que trabajamos en último sprint. Obviamente se pueden mejorar cosas pero estuvimos más organizados, la comunicación fue mas fluida y el clima de trabajo es óptimo.
+* Estamos muy contentos por el modo en que trabajamos en el sprint#3. nos organizamos muy bien con las tareas y cumplimos con todas las consignas en tiempo y forma.
 
 HACER MÁS:
 
-* Organizarnos mejor utilizando por ejemplo la herramienta Trello con sus notificaciones. Es de gran ayuda para el cumplimiento de las tareas.
 * Hacer más investigación acerca de nuestro proyecto para abarcarlo de la mejor manera para que los posibles clientes tengan una buena experiencia en la página.
 
 CONTINUAR HACIENDO:
 
-* El ambiente de trabajo y la buena relación que hay entre los integrantes del grupo es muy importante. Cada uno aporta sus ideas y creatividad y escucha las opiniones de los demás sin problemas.
+* Es de mucha ayuda la herramienta Trello con sus notificaciones para el cumplimiento de las tareas.
+* El ambiente de trabajo y la buena relación que hay entre los integrantes del grupo es muy importante.  * Cada uno aporta sus ideas y creatividad y escucha las opiniones de los demás sin problemas.
 * Seguir cumpliendo con la puntualidad y asistencia a las reuniones programadas.
 * Seguir dedicandole tiempo al proyecto para poder cumplir con los tiempos de entrega.
 * Aplicar los conocimientos que vamos adquiriendo a medida que avanza el curso.
