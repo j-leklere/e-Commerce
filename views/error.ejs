@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error!!!</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: black;
+      font-family: sans-serif;
+    }
+    header {
+      background-color: black;
+      padding: 1rem;
+      width: 100vw;
+    }
+    .logo {
+      max-height:5rem;
+    }
+    .img-arbitro {
+      width: 40vw;
+        }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: space-between;
+    }
+    h2 {
+      text-decoration: none;
+      color: aliceblue;
+    }
+    a {
+      text-decoration: none;
+      font-size: 2rem;
+      font-weight: 600;
+      color: #ffffffff;
+    }
+    a:hover {
+      color: #eafa35;
+    }
+    .msg-error {
+      display: block;
+      margin: auto;
+      padding: 2rem;
+    }
+    .link-al-home {
+      
+      margin-top: 2rem;
+      display: block;
+      margin: auto;
+      padding: 1rem;
+    }
+    .msg-error-404 {
+      color: #ffffffff;
+      padding: 1rem;
+      max-width: 90vw;
+    }
+  </style>
+  <header>
+    <div class="img-logo">
+      <img src="\images\LogoSportsWear(2).png" class="logo" alt="logo" />
+    </div>
+  </header>
+  <body>
+    <main>
+      <div class="msg-error">
+        <h2>Usted esta fuera de juego.</h2>
+      </div>
+      <div class="cont-img">
+        <img
+          src="\images\arbitroTarjetaRoja.jpg"
+          class="img-arbitro"
+          alt="arbitroTarjetaRoja"
+        />
+      </div>
+      <div class="link-al-home">
+        <a href="/">Volver al HOME</a>
+      </div>
+      <div class="msg-error-404">
+        <h3><%= message %></h3>
+        <h4><%= error.status %></h4>
+        <p>Error trying to access to: <b><%= path %></b></p>
+        <pre><i><%= error.stack %></i></pre>
+      </div>
+    </main>
+  </body>
+</html>

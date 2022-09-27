@@ -26,6 +26,7 @@
               <div class="reg-nombreCompleto">
                 <input
                   type="text"
+                  name="nombre"
                   class="inputNombre"
                   placeholder="Nombre"
                   required
@@ -34,6 +35,7 @@
               <div class="reg-apellido">
                 <input
                   type="text"
+                  name="apellido"
                   class="inputApellido"
                   placeholder="Apellido"
                   required
@@ -41,13 +43,14 @@
               </div>
               <div class="form-birthday">
                 <p>Fecha de Nacimiento</p>
-                <input type="date" class="inputFecha" id="fechaNac" />
+                <input type="date" name="fechaDeNacimiento" class="inputFecha" id="fechaNac" />
               </div>
               <div class="reg-genero">
                 <p>Género</p>
                 <input
                   list="genero"
                   class="inputGenero"
+                  name="genero"
                   placeholder="Seleccionar"
                 />
                 <datalist id="genero">
@@ -59,6 +62,7 @@
               <div class="reg-telefono">
                 <input
                   type="tel"
+                  name="telefono"
                   class="inputTelefono"
                   placeholder="Telefono"
                 />
@@ -71,6 +75,7 @@
               <div class="reg-email">
                 <input
                   type="email"
+                  name="email"
                   class="inputEmail"
                   placeholder="Email"
                   required
@@ -79,6 +84,7 @@
               <div class="reg-conf-email">
                 <input
                   type="email"
+                  name="email"
                   class="inputEmail"
                   placeholder="Confirmar Email"
                   required
@@ -87,6 +93,7 @@
               <div class="reg-contraseña">
                 <input
                   type="password"
+                  name="password"
                   class="inputPassword"
                   placeholder="Contraseña"
                   required
@@ -95,6 +102,7 @@
               <div class="reg-conf-contraseña">
                 <input
                   type="password"
+                  name="password"
                   class="inputPassword"
                   placeholder="Confirmar contraseña"
                   required
@@ -103,11 +111,12 @@
               <div class="deportes-favoritos">
                 <p>¿Cuál es tu deporte favorito?</p>
                 <input
-                  list="deporte-favorito"
+                  list="deporteFavorito"
+                  name="deporteFavorito"
                   class="deporte-favorito"
                   placeholder="Seleccionar"
                 />
-                <datalist id="deporte-favorito">
+                <datalist id="deporteFavorito">
                   <option value="Futbol"></option>
                   <option value="Tenis"></option>
                   <option value="Basquet"></option>
