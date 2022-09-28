@@ -1,6 +1,6 @@
 [
   {
-    "idarticulo": 1,
+    "id": 1,
     "codigo": "swn-01",
     "nombre": "Nike Lebron",
     "descripcion": "Zapatos Basket",
@@ -12,7 +12,7 @@
     "image": " "
   },
   {
-    "idarticulo": 2,
+    "id": 2,
     "codigo": "swn-02",
     "nombre": "Nike Jordan",
     "descripcion": "Zapatos Jordan",
@@ -24,7 +24,7 @@
     "image": " "
   },
   {
-    "idarticulo": 3,
+    "id": 3,
     "codigo": "swua-01",
     "nombre": "Under Armour X",
     "descripcion": "Zapatos Curry",
@@ -36,7 +36,7 @@
     "image": " "
   },
   {
-    "idarticulo": 4,
+    "id": 4,
     "codigo": "swua-02",
     "nombre": "Under Armour +",
     "descripcion": "Zapatos Basket Femenino",
@@ -48,7 +48,7 @@
     "image": " "
   },
   {
-    "idarticulo": 11,
+    "id": 11,
     "codigo": "swc-04",
     "nombre": "Camiseta Cuello V",
     "descripcion": "Camiseta Cuello V Tennis Mujer",
@@ -60,7 +60,7 @@
     "image": " "
   },
   {
-    "idarticulo": 12,
+    "id": 12,
     "codigo": "swc-05",
     "nombre": "Camiseta Cuello Redondo",
     "descripcion": "Camiseta Cuello Redondo Tennis",
@@ -72,7 +72,7 @@
     "image": " "
   },
   {
-    "idarticulo": 13,
+    "id": 13,
     "codigo": "swcn-01",
     "nombre": "Camiseta Niños",
     "descripcion": "Camiseta Niños Nike Futbol",
@@ -84,7 +84,7 @@
     "image": " "
   },
   {
-    "idarticulo": 15,
+    "id": 15,
     "codigo": "swcn-02",
     "nombre": "Camiseta Niñas",
     "descripcion": "Camiseta Niñas Nike Running",
@@ -96,7 +96,7 @@
     "image": " "
   },
   {
-    "idarticulo": 16,
+    "id": 16,
     "codigo": "swcn-03",
     "nombre": "Camiseta Unisex",
     "descripcion": "Camiseta Unisex Under Armour",
@@ -108,7 +108,7 @@
     "image": " "
   },
   {
-    "idarticulo": 17,
+    "id": 17,
     "codigo": "swcf-01",
     "nombre": "Camiseta Futbol",
     "descripcion": "Camiseta Futbol Boca Junior",
@@ -120,7 +120,7 @@
     "image": " "
   },
   {
-    "idarticulo": 18,
+    "id": 18,
     "codigo": "swcf-02",
     "nombre": "Camiseta Futbol",
     "descripcion": "Camiseta Futbol River Plate",
@@ -132,7 +132,7 @@
     "image": " "
   },
   {
-    "idarticulo": 19,
+    "id": 19,
     "codigo": "swcr-01",
     "nombre": "Zapatos Running",
     "descripcion": "Zapatos Running Nike-Star",
@@ -144,7 +144,7 @@
     "image": " "
   },
   {
-    "idarticulo": 20,
+    "id": 20,
     "codigo": "swcr-02",
     "nombre": "Zapatos Running",
     "descripcion": "Zapatos Running Under-Armour",
@@ -156,7 +156,7 @@
     "image": " "
   },
   {
-    "idarticulo": 5,
+    "id": 21,
     "codigo": "swc-01",
     "nombre": "Camiseta Blanca Nike",
     "descripcion": "Camiseta Blanca Nike GYM",
@@ -168,7 +168,7 @@
     "image": " "
   },
   {
-    "idarticulo": 6,
+    "id": 22,
     "codigo": "swc-02",
     "nombre": "Camiseta Lila Under Armour",
     "descripcion": "Camiseta Lila Under Armour Tennis",
@@ -180,7 +180,7 @@
     "image": " "
   },
   {
-    "idarticulo": 10,
+    "id": 23,
     "codigo": "swc-03",
     "nombre": "Camiseta Azul",
     "descripcion": "Camiseta Azul Runner",
