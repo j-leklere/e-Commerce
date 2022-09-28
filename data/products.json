@@ -7,9 +7,8 @@
     "anio": "2022",
     "categoria": "Hombres",
     "talla": "11",
-    "precio": 152.0,
-    "estado": true,
-    "image": " "
+    "precio": 152,
+    "estado": true
   },
   {
     "id": 2,
@@ -19,9 +18,8 @@
     "anio": "2021",
     "categoria": "Hombres",
     "talla": "10.5",
-    "precio": 100.0,
-    "estado": true,
-    "image": " "
+    "precio": 100,
+    "estado": true
   },
   {
     "id": 3,
@@ -31,9 +29,8 @@
     "anio": "2020",
     "categoria": "Hombres",
     "talla": "9",
-    "precio": 85.0,
-    "estado": true,
-    "image": " "
+    "precio": 85,
+    "estado": true
   },
   {
     "id": 4,
@@ -43,152 +40,139 @@
     "anio": "2022",
     "categoria": "Mujeres",
     "talla": "7",
-    "precio": 110.0,
-    "estado": true,
-    "image": " "
+    "precio": 110,
+    "estado": true
   },
   {
-    "id": 11,
+    "id": 5,
     "codigo": "swc-04",
     "nombre": "Camiseta Cuello V",
     "descripcion": "Camiseta Cuello V Tennis Mujer",
     "anio": "2020",
     "categoria": "Mujeres",
     "talla": "L",
-    "precio": 35.0,
-    "estado": true,
-    "image": " "
+    "precio": 35,
+    "estado": true
   },
   {
-    "id": 12,
+    "id": 6,
     "codigo": "swc-05",
     "nombre": "Camiseta Cuello Redondo",
     "descripcion": "Camiseta Cuello Redondo Tennis",
     "anio": "2021",
     "categoria": "Hombre",
     "talla": "L",
-    "precio": 30.0,
-    "estado": true,
-    "image": " "
+    "precio": 30,
+    "estado": true
   },
   {
-    "id": 13,
+    "id": 7,
     "codigo": "swcn-01",
     "nombre": "Camiseta Niños",
     "descripcion": "Camiseta Niños Nike Futbol",
     "anio": "2022",
     "categoria": "Niños",
     "talla": "XS",
-    "precio": 25.0,
-    "estado": true,
-    "image": " "
+    "precio": 25,
+    "estado": true
   },
   {
-    "id": 15,
+    "id": 8,
     "codigo": "swcn-02",
     "nombre": "Camiseta Niñas",
     "descripcion": "Camiseta Niñas Nike Running",
     "anio": "2022",
     "categoria": "Niñas",
     "talla": "XS",
-    "precio": 36.0,
-    "estado": true,
-    "image": " "
+    "precio": 36,
+    "estado": true
   },
   {
-    "id": 16,
+    "id": 9,
     "codigo": "swcn-03",
     "nombre": "Camiseta Unisex",
     "descripcion": "Camiseta Unisex Under Armour",
     "anio": "2022",
     "categoria": "Niños",
     "talla": "XS",
-    "precio": 37.0,
-    "estado": true,
-    "image": " "
+    "precio": 37,
+    "estado": true
   },
   {
-    "id": 17,
+    "id": 10,
     "codigo": "swcf-01",
     "nombre": "Camiseta Futbol",
     "descripcion": "Camiseta Futbol Boca Junior",
     "anio": "2022",
     "categoria": "Hombre",
     "talla": "L",
-    "precio": 40.0,
-    "estado": true,
-    "image": " "
+    "precio": 40,
+    "estado": true
   },
   {
-    "id": 18,
+    "id": 11,
     "codigo": "swcf-02",
     "nombre": "Camiseta Futbol",
     "descripcion": "Camiseta Futbol River Plate",
     "anio": "2022",
     "categoria": "Mujer",
     "talla": "S",
-    "precio": 45.0,
-    "estado": true,
-    "image": " "
+    "precio": 45,
+    "estado": true
   },
   {
-    "id": 19,
+    "id": 12,
     "codigo": "swcr-01",
     "nombre": "Zapatos Running",
     "descripcion": "Zapatos Running Nike-Star",
     "anio": "2022",
     "categoria": "Hombre",
     "talla": "10",
-    "precio": 120.0,
-    "estado": true,
-    "image": " "
+    "precio": 120,
+    "estado": true
   },
   {
-    "id": 20,
+    "id": 13,
     "codigo": "swcr-02",
     "nombre": "Zapatos Running",
     "descripcion": "Zapatos Running Under-Armour",
     "anio": "2022",
     "categoria": "Mujer",
     "talla": "6",
-    "precio": 125.0,
-    "estado": true,
-    "image": " "
+    "precio": 125,
+    "estado": true
   },
   {
-    "id": 21,
+    "id": 14,
     "codigo": "swc-01",
     "nombre": "Camiseta Blanca Nike",
     "descripcion": "Camiseta Blanca Nike GYM",
     "anio": "2022",
     "categoria": "Mujeres",
     "talla": "S",
-    "precio": 20.0,
-    "estado": true,
-    "image": " "
+    "precio": 20,
+    "estado": true
   },
   {
-    "id": 22,
+    "id": 15,
     "codigo": "swc-02",
     "nombre": "Camiseta Lila Under Armour",
     "descripcion": "Camiseta Lila Under Armour Tennis",
     "anio": "2022",
     "categoria": "Mujeres",
     "talla": "M",
-    "precio": 35.0,
-    "estado": true,
-    "image": " "
+    "precio": 35,
+    "estado": true
   },
   {
-    "id": 23,
+    "id": 16,
     "codigo": "swc-03",
     "nombre": "Camiseta Azul",
     "descripcion": "Camiseta Azul Runner",
     "anio": "2021",
     "categoria": "Mujeres",
     "talla": "S",
-    "precio": 40.0,
-    "estado": true,
-    "image": " "
+    "precio": 40,
+    "estado": true
   }
 ]

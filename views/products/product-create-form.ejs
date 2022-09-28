@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="\css\product.css" />
+  </head>
+
+  <body>
+    <nav class="ps-top">
+      <div class="ps-bar ps-white ps-padding ps-card ps-nav">
+        <a href="/" class="ps-bar-item ps-button">Pimienta & Sal</a>
+        <!-- Right-sided navbar links. Hide them on small screens -->
+        <div class="ps-right ps-hide-small">
+          <a href="/" class="ps-bar-item ps-button">About</a>
+          <a href="/" class="ps-bar-item ps-button">Menu</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <h1 class="title">Creacion de producto:</h1>
+      <div class="form-container">
+        <form
+          action="/products/create"
+          enctype="multipart/form-data"
+          method="POST"
+        >
+          <div class="field-wrap">
+            <label for="code">Código:</label>
+            <input type="text" name="code" id="code" />
+          </div>
+
+          <div class="field-wrap">
+            <label for="name">Nombre:</label>
+            <input type="text" name="name" id="name" />
+          </div>
+
+          <div class="field-wrap">
+            <label for="description">Descripcion:</label>
+            <textarea name="description" id="description"></textarea>
+          </div>
+
+          <div class="field-wrap">
+            <label for="year">Año:</label>
+            <textarea name="year" id="year"></textarea>
+          </div>
+
+          <div class="field-wrap">
+            <label for="category">Categoría:</label>
+            <textarea name="category" id="category"></textarea>
+          </div>
+          <div class="field-wrap">
+            <label for="size">Talla:</label>
+            <textarea name="size" id="size"></textarea>
+          </div>
+
+          <div class="field-wrap">
+            <label for="price">Precio:</label>
+            <textarea name="price" id="price"></textarea>
+          </div>
+
+          <div class="field-name">
+            <label for="image"></label>
+            <input type="file" name="image" id="image" />
+          </div>
+
+          <div class="field-wrap">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
