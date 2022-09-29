@@ -25,7 +25,7 @@ const productsController = {
     const productFound = data.find(function (product) {
       return product.id == req.params.id;
     });
-    res.render("../views/products/product-detail", { product: productFound });
+    res.render("../views/products/productDetail", { product: productFound });
   },
 
   create: (req, res) => {
@@ -35,22 +35,22 @@ const productsController = {
   store: (req, res) => {
     const data = findAll();
     const newProduct = {
-      id: data.length + 1,
-      codigo: req.body.code,
-      nombre: req.body.name,
-      descripcion: req.body.description,
-      anio: Number(req.body.year),
-      categoria: req.body.category,
-      talla: req.body.size,
-      precio: Number(req.body.price),
-      estado: true,
-      image: req.file.filename,
+        id: data.length + 1,
+        codigo: req.body.code,
+        nombre: req.body.name,
+        descripcion: req.body.description,
+        anio: Number(req.body.year),
+        categoria: req.body.category,
+        talla: req.body.size,
+        precio: Number(req.body.price),
+        estado: true,
+        image: req.file.filename,
     };
     data.push(newProduct);
     writeFile(data);
 
     res.redirect("/products");
-  },
+    },
 
   edit: (req, res) => {
     const data = findAll();
@@ -91,15 +91,15 @@ const productsController = {
     res.redirect("../views/products/products/list");
   },
 
-  product: (req, res) => {
-    res.render("../views/products/product");
+  categories: (req, res) => {
+    res.render("categories");
   },
   productCart: (req, res) => {
     res.render("../views/products/productCart");
   },
-  productDetail: (req, res) => {
+ /* productDetail: (req, res) => {
     res.render("../views/products/productDetail");
-  },
+  },*/
   productFutbol: (req, res) => {
     res.render("../views/products/productFutbol");
   },

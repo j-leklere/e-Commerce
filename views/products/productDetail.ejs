@@ -13,14 +13,14 @@
           <div class="ruta-container">
             <ul class="ruta">
               <li><a href="/" title="Ir a inicio">Inicio</a></li>
-              <li><p>Zapatillas Adidas Z32</p></li>
+              <li><p><%= product.nombre %></p></li>
             </ul>
           </div>
           <div class="producto-container">
             <div class="img">
               <img
                 class="producto-img"
-                src="\images\zapatillas.jpg"
+                src="/images/<%= product.image %> "
                 alt="Zapatillas"
               />
             </div>
@@ -28,10 +28,10 @@
               <div class="producto-categorias tag tag--general">
                 <h4>Calzado</h4>
               </div>
-              <div class="producto-titulo"><h2>Adidas Z32</h2></div>
+              <div class="producto-titulo"><h2><%= product.nombre %></h2></div>
               <div class="producto-envio"><p>Envío gratis</p></div>
               <div class="producto-precio">
-                <h1>$30</h1>
+                <h1>$<%= product.precio %></h1>
                 <p class="en-oferta">En oferta!</p>
               </div>
               <div class="producto-pago"><p>Hasta 6 cuotas sin interés</p></div>

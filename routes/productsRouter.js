@@ -38,11 +38,11 @@ router.put("/products/:id", productsController.update);
 router.delete("/products/:id", productsController.destroy);
 
 // Vistas creadas pre-Sprint4
-router.get("/product", productsController.product);
+router.get("/products/categories", productsController.categories);
 
 router.get("/productCart", productsController.productCart);
 
-router.get("/productDetail", productsController.productDetail);
+// router.get("/productDetail", productsController.productDetail);
 
 router.get("/productFutbol", productsController.productFutbol);
 
