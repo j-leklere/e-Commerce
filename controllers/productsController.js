@@ -35,22 +35,22 @@ const productsController = {
   store: (req, res) => {
     const data = findAll();
     const newProduct = {
-        id: data.length + 1,
-        codigo: req.body.code,
-        nombre: req.body.name,
-        descripcion: req.body.description,
-        anio: Number(req.body.year),
-        categoria: req.body.category,
-        talla: req.body.size,
-        precio: Number(req.body.price),
-        estado: true,
-        image: req.file.filename,
+      id: data.length + 1,
+      code: req.body.code,
+      name: req.body.name,
+      description: req.body.description,
+      year: Number(req.body.year),
+      category: req.body.category,
+      size: req.body.size,
+      price: Number(req.body.price),
+      status: true,
+      image: req.file.filename,
     };
     data.push(newProduct);
     writeFile(data);
 
     res.redirect("/products");
-    },
+  },
 
   edit: (req, res) => {
     const data = findAll();
@@ -68,12 +68,12 @@ const productsController = {
       return product.id == req.params.id;
     });
     productFound.nombre = req.body.name;
-    productFound.codigo = req.body.code;
-    productFound.descripcion = req.body.description;
-    productFound.anio = req.body.year;
-    productFound.categoria = req.body.category;
-    productFound.talla = req.body.size;
-    productFound.precio = req.body.price;
+    productFound.code = req.body.code;
+    productFound.description = req.body.description;
+    productFound.year = req.body.year;
+    productFound.category = req.body.category;
+    productFound.size = req.body.size;
+    productFound.price = req.body.price;
     productFound.image = req.body.image;
 
     writeFile(data);
@@ -97,7 +97,7 @@ const productsController = {
   productCart: (req, res) => {
     res.render("../views/products/productCart");
   },
- /* productDetail: (req, res) => {
+  /* productDetail: (req, res) => {
     res.render("../views/products/productDetail");
   },*/
   productFutbol: (req, res) => {
