@@ -17,7 +17,7 @@ function writeFile(data) {
 const productsController = {
   list: (req, res) => {
     const data = findAll();
-    res.render("../views/products/productFutbol", { products: data });
+    res.render("../views/products/products", { products: data });
   },
 
   detail: (req, res) => {
@@ -41,7 +41,7 @@ const productsController = {
       descripcion: req.body.description,
       anio: Number(req.body.year),
       categoria: req.body.category,
-      talla: Number(req.body.size),
+      talla: req.body.size,
       precio: Number(req.body.price),
       estado: true,
       image: req.file.filename,

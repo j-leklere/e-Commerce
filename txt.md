@@ -1,1 +1,0 @@
-Cumplimos con todos los requisitos del sprint, lo único que nos sugirieron fue agregar un archivo weekly o daily, incluyendo las cosas que hicimos y lo que queda pendiente. Igualmente, como grupo cumplimos con las reuniones semanales, pero no llevamos un seguimiento de las mismas.

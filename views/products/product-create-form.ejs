@@ -6,6 +6,7 @@
   </head>
 
   <body>
+    <%- include('../partials/header.ejs') %>
     <nav class="ps-top">
       <div class="ps-bar ps-white ps-padding ps-card ps-nav">
         <a href="/" class="ps-bar-item ps-button">Pimienta & Sal</a>
@@ -18,7 +19,7 @@
     </nav>
 
     <main>
-      <h1 class="title">Creacion de producto:</h1>
+      <h1 class="title">Creación de producto:</h1>
       <div class="form-container">
         <form
           action="/products/create"
@@ -70,5 +71,6 @@
         </form>
       </div>
     </main>
+    <%- include('../partials/footer.ejs') %>
   </body>
 </html>

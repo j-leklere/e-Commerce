@@ -4,21 +4,21 @@ const path = require("path");
 const methodOverride = require("method-override");
 const createError = require("http-errors");
 
-const mainRouters = require("./routers/indexRouter");
+const mainRoutes = require("./routes/indexRouter");
 
-const usersRouters = require("./routers/usersRouter");
+const usersRoutes = require("./routes/usersRouter");
 
-const productsRouters = require("./routers/productsRouter");
+const productsRoutes = require("./routes/productsRouter");
 
 const publicPath = path.resolve(__dirname, "./public");
 
 app.use(express.static(publicPath));
 
-app.use(mainRouters);
+app.use(mainRoutes);
 
-app.use(usersRouters);
+app.use(usersRoutes);
 
-app.use(productsRouters);
+app.use(productsRoutes);
 
 // ************ catch 404 and forward to error handler ************
 app.use((req, res, next) => next(createError(404)));
