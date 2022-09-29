@@ -18,8 +18,10 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+// Vista de todos los productos
 router.get("/products", productsController.list);
 
+// Vista de creación de producto
 router.get("/products/create", productsController.create);
 router.post(
   "/products/create",
@@ -27,13 +29,15 @@ router.post(
   productsController.store
 );
 
+// Vista de detalle de producto
 router.get("/products/:id", productsController.detail);
 
+// Vista de edición de producto
 router.get("/products/:id/edit", productsController.edit);
 router.put("/products/:id", productsController.update);
 router.delete("/products/:id", productsController.destroy);
 
-//
+// Vistas creadas pre-Sprint4
 router.get("/product", productsController.product);
 
 router.get("/productCart", productsController.productCart);

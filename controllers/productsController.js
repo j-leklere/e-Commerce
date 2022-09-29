@@ -49,7 +49,7 @@ const productsController = {
     data.push(newProduct);
     writeFile(data);
 
-    res.redirect("/products/create");
+    res.redirect("/products");
   },
 
   edit: (req, res) => {
