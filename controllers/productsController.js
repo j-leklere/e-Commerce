@@ -92,14 +92,14 @@ const productsController = {
   },
 
   categories: (req, res) => {
-    res.render("categories");
+    res.render("../views/products/categories");
   },
   productCart: (req, res) => {
     res.render("../views/products/productCart");
   },
-  /* productDetail: (req, res) => {
-    res.render("../views/products/productDetail");
-  },*/
+  // productDetail: (req, res) => {
+  //   res.render("../views/products/productDetail");
+  // },
   productFutbol: (req, res) => {
     res.render("../views/products/productFutbol");
   },

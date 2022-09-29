@@ -7,7 +7,7 @@
   <body>
     <%- include('../partials/header.ejs') %>
     <main>
-      <h1 class="title">Edición del producto: "<%=product.nombre%>"</h1>
+      <h1 class="title">Edición del producto: "<%=product.name%>"</h1>
       <div class="form-container">
         <form
           action="/products/edit/<%= product.id %> ?_method=PUT"
@@ -17,7 +17,7 @@
             <label for="name">Nombre de producto:</label>
             <input
               type="text"
-              value="<%= product.nombre %>"
+              value="<%= product.name %>"
               name="name"
               id="name"
             />
@@ -27,7 +27,7 @@
             <label for="price">Precio:</label>
             <input
               type="text"
-              value="<%= product.precio %>"
+              value="<%= product.price %>"
               name="price"
               id="price"
             />
@@ -36,24 +36,19 @@
           <div class="field-wrap">
             <label for="description">Descripción:</label>
             <textarea name="description" class="" id="description">
-            <%= product.descripcion %></textarea
+            <%= product.description %></textarea
             >
           </div>
 
           <div class="field-wrap">
             <label for="code">Código:</label>
-            <input
-              name="code"
-              class=""
-              id="code"
-              value="<%=product.codigo%> "
-            />
+            <input name="code" class="" id="code" value="<%=product.code%> " />
             />
           </div>
 
           <div class="field-wrap">
             <label for="year">Año:</label>
-            <input name="year" class="" id="year" value="<%=product.anio%>" />
+            <input name="year" class="" id="year" value="<%=product.year%>" />
           </div>
 
           <div class="field-wrap">
@@ -62,13 +57,13 @@
               name="category"
               class=""
               id="category"
-              value="<%=product.categoria%>"
+              value="<%=product.category%>"
             />
           </div>
 
           <div class="field-wrap">
             <label for="size">Talla:</label>
-            <input name="size" class="" id="size" value="<%=product.talla%>" />
+            <input name="size" class="" id="size" value="<%=product.size%>" />
           </div>
 
           <div class="field-wrap">
