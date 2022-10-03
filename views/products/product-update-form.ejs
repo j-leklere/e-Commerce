@@ -10,7 +10,8 @@
   <body>
     <%- include('../partials/header.ejs') %>
     <main>
-      <h1 class="title">Edición del articulo: "#<%=product.code%>"</h1>
+      <center>
+      
       <div class="form-container">
         <form
           action="/products/edit/<%= product.id %> ?_method=PUT"
@@ -22,7 +23,7 @@
         <div class="register-navbar">
           <ul class="register-nav"></ul>
         </div>
-        
+        <h1 class="register-title">Edición del articulo #<%=product.code%></h1>
           <div class="data-container">
             <div class="article-data ">
               <h3>Datos del producto</h3>
@@ -35,6 +36,7 @@
                   value="<%=product.name%>"
                   type="text"
                   class="inputNombre"
+                  id="name"
                   
                   required
                   
@@ -51,7 +53,6 @@
                   value="<%= product.description %>"
                   type="text"
                   class="inputdescripcion"
-                  placeholder="Descripción"
                   required
                   id="description"
                   name="description"
@@ -64,7 +65,6 @@
                   value="<%=product.year%>"
                   type="text"
                   class="inputdescripcion"
-                  placeholder="Descripción"
                   required
                   id="year"
                   name="year"
@@ -97,17 +97,30 @@
                   value="$<%= product.price %>"
                   type="text"
                   class="inputdescripcion"
-                  placeholder="Descripción"
                   required
                   id="price"
                   name="price"
                 />
               </div>
-              
-              
-              <div>
+              <div class="field-name">
                 
-            </div>
+                <img src="images/<%=product.image%>" name="image" id="image">
+              
+              </div>
+            
+              <div>
+                <label class="properties-label">Cambiar imagen</label>
+                
+                  <div class="file-select" id="src-file2">
+                    <input
+                      class="inputfile"
+                      type="file"
+                      accept=".jpg,.png"
+                      name="image"
+                      id="image"
+                    />
+                </div>
+              </div>
 
                 <button type="submit" class="button">
                 Actualizar
@@ -120,7 +133,6 @@
           <form
             action="/products/edit/<%= product.id %> ?_method=DELETE"
             method="POST"
-          
           >
             <button type="submit" class="button">Borrar</button>
         </form>
@@ -128,8 +140,9 @@
         
         
       </div>
-    </main>
     </center>
+    </main>
+    
     <%- include('../partials/footer.ejs') %>
 
    
