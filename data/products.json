@@ -238,17 +238,5 @@
                     "price": 18,
                     "status": true,
                     "image": "image-1664416735818.jpg"
-          },
-          {
-                    "id": 22,
-                    "code": "333",
-                    "name": "pelota",
-                    "description": "pelota del mundial",
-                    "year": 2022,
-                    "category": "futbol",
-                    "size": "s",
-                    "price": 22222222,
-                    "status": true,
-                    "image": "image-1664837144023.jpg"
           }
 ]
