@@ -240,15 +240,15 @@
                     "image": "image-1664416735818.jpg"
           },
           {
-                    "id": 21,
+                    "id": 22,
                     "code": "333",
-                    "name": "Converse",
-                    "description": "zapatillas negras con plataforma",
-                    "year": 2021,
-                    "category": "Mujer",
-                    "size": "38",
-                    "price": 18,
+                    "name": "pelota",
+                    "description": "pelota del mundial",
+                    "year": 2022,
+                    "category": "futbol",
+                    "size": "s",
+                    "price": 22222222,
                     "status": true,
-                    "image": "image-1664814583501.jpg"
+                    "image": "image-1664837144023.jpg"
           }
 ]

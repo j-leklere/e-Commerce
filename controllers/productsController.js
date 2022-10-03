@@ -63,6 +63,7 @@ const productsController = {
   },
 
   update: (req, res) => {
+    console.log('llegue hasta aca')
     const data = findAll();
     const productFound = data.find(function (product) {
       return product.id == req.params.id;
@@ -74,11 +75,11 @@ const productsController = {
     productFound.category = req.body.category;
     productFound.size = req.body.size;
     productFound.price = req.body.price;
-    productFound.image = req.body.image;
+    productFound.image = req.file ? req.file.filename : productFound.image
 
     writeFile(data);
 
-    res.redirect("../views/products/products");
+    res.redirect('/products');
   },
 
   destroy: (req, res) => {
@@ -88,20 +89,20 @@ const productsController = {
     });
     data.splice(productFound, 1);
     writeFile(data);
-    res.redirect("../views/products/products");
+    res.redirect("/products");
   },
 
   categories: (req, res) => {
-    res.render("../views/products/categories");
+    res.render("./products/categories");
   },
   productCart: (req, res) => {
-    res.render("../views/products/productCart");
+    res.render("./products/productCart");
   },
   // productDetail: (req, res) => {
   //   res.render("../views/products/productDetail");
   // },
   productFutbol: (req, res) => {
-    res.render("../views/products/productFutbol");
+    res.render("./products/productFutbol");
   },
 };
 

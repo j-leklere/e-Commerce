@@ -30,8 +30,7 @@ router.post(
   productsController.store
 );
 
-// Vista de detalle de producto
-router.get("/products/:id", productsController.detail);
+
 
 // Vista de edición de producto
 router.get("/products/edit/:id", productsController.edit);
@@ -44,6 +43,10 @@ router.delete("/products/delete/:id", productsController.destroy);
 router.get("/products/categories", productsController.categories);
 
 router.get("/productCart", productsController.productCart);
+
+// Vista de detalle de producto
+
+router.get("/products/:id", productsController.detail);
 
 // router.get("/productDetail", productsController.productDetail);
 
