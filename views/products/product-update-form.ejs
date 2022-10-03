@@ -10,14 +10,15 @@
   <body>
     <%- include('../partials/header.ejs') %>
     <main>
-      <center>
-      <form
-          action="/products/edit/<%= product.id %>?_method=PUT"
+      <h1 class="title">Edición del articulo: "#<%=product.code%>"</h1>
+      <div class="form-container">
+        <form
+          action="/products/edit/<%= product.id %> ?_method=PUT"
           method="POST"
           enctype="multipart/form-data"
         >
       <div class="register-container">
-        <h2 class="register-title">Edición del artículo #<%=product.codigo%></h2>
+        
         <div class="register-navbar">
           <ul class="register-nav"></ul>
         </div>
@@ -31,7 +32,7 @@
               <div class="properties-label">
                 <label>Nombre del articulo</label>
                 <input
-                  value="<%=product.nombre%>"
+                  value="<%=product.name%>"
                   type="text"
                   class="inputNombre"
                   
@@ -47,7 +48,7 @@
               <div class="properties-label">
                 <label>Descripcion</label>
                 <input
-                  value="<%= product.descripcion %>"
+                  value="<%= product.description %>"
                   type="text"
                   class="inputdescripcion"
                   placeholder="Descripción"
@@ -60,7 +61,7 @@
               <div class="properties-label">
                 <label>Año</label>
                 <input
-                  value="<%=product.anio%>"
+                  value="<%=product.year%>"
                   type="text"
                   class="inputdescripcion"
                   placeholder="Descripción"
@@ -73,7 +74,7 @@
               <div class="properties-label" >
                 <label>Categoría</label>
                 <input
-                value="<%= product.categoria %>"
+                value="<%= product.category %>"
                   type="text"
                   class="inputdescripcion"
                   placeholder="Descripción"
@@ -87,13 +88,13 @@
                 <input name="size" 
                 class="inputdescripcion" 
                 id="size"
-                value="<%= product.talla%>" />
+                value="<%= product.size%>" />
               
             </div>
               <div class="properties-label">
                 <label>Precio</label>
                 <input
-                  value="$<%= product.precio %>"
+                  value="$<%= product.price %>"
                   type="text"
                   class="inputdescripcion"
                   placeholder="Descripción"
