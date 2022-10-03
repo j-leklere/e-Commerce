@@ -67,7 +67,7 @@ const productsController = {
     const productFound = data.find(function (product) {
       return product.id == req.params.id;
     });
-    productFound.nombre = req.body.name;
+    productFound.name = req.body.name;
     productFound.code = req.body.code;
     productFound.description = req.body.description;
     productFound.year = req.body.year;
@@ -83,7 +83,7 @@ const productsController = {
 
   destroy: (req, res) => {
     const data = findAll();
-    const productFound = data.find(function (product) {
+    const productFound = data.findIndex(function (product) {
       return product.id == req.params.id;
     });
     data.splice(productFound, 1);
