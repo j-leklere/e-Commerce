@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <%- include('../partials/head.ejs') %>
-    <link rel="stylesheet" href="\css\product.css" />
+    <link rel="stylesheet" href="\css\creation-edition.css" />
   </head>
 
   <body>
     <%- include('../partials/header.ejs') %>
     <nav class="ps-top">
       <div class="ps-bar ps-white ps-padding ps-card ps-nav">
-        <a href="/" class="ps-bar-item ps-button">Pimienta & Sal</a>
+        <a href="/" class="ps-bar-item ps-button">Home</a>
         <!-- Right-sided navbar links. Hide them on small screens -->
         <div class="ps-right ps-hide-small">
           <a href="/" class="ps-bar-item ps-button">About</a>
@@ -19,57 +19,134 @@
     </nav>
 
     <main>
-      <h1 class="title">Creación de producto:</h1>
+      <center>
       <div class="form-container">
         <form
           action="/products/create"
           enctype="multipart/form-data"
-          method="POST"
-        >
-          <div class="field-wrap">
-            <label for="code">Código:</label>
-            <input type="text" name="code" id="code" />
+          method="POST">
+          <div class="register-container">
+            <h1 class="register-title">Crea un nuevo producto</h1>
+            <div class="register-navbar">
+              <ul class="register-nav"></ul>
+            </div>
+            
+              <div class="data-container">
+                <div class="article-data ">
+                  
+                  <div class="properties-label">
+                    <label>Código</label>
+                    <input
+                      
+                      type="text"
+                      class="inputNombre"
+                      name="code"
+                      id="code"
+                      required
+                      
+                    />
+                  </div>
+                  
+                  <div class="properties-label">
+                    <label>Nombre del articulo</label>
+                    <input
+                      
+                      type="text"
+                      class="inputNombre"
+                      name="name"
+                      id="name"
+                      required
+                      
+                    />
+                  </div>
+                  
+                  <div class="properties-label">
+                    <label>Descripcion</label>
+                    <input
+                      
+                      type="text"
+                      class="inputdescripcion"
+                      placeholder="Descripción"
+                      required
+                      id="description"
+                      name="description"
+                    />
+                  </div>
+    
+                  <div class="properties-label">
+                    <label>Año</label>
+                    <input
+                      
+                      type="text"
+                      class="inputdescripcion"
+                      placeholder="Descripción"
+                      required
+                      id="year"
+                      name="year"
+                    />
+                  </div>
+    
+                  <div class="properties-label" >
+                    
+                    <label>Categoría</label>
+                    <input
+                    
+                      type="text"
+                      class="inputdescripcion"
+                      placeholder="Descripción"
+                      required
+                      id="category"
+                      name="category"
+                    />
+                  </div>
+                  <div class="properties-label">
+                    <label>Seleccionar la talla</label>
+                    <input name="size" 
+                    class="inputdescripcion" 
+                    id="size"
+                    />
+                  
+                </div>
+                  <div class="properties-label">
+                    <label>Precio</label>
+                    <input
+                      value=""
+                      type="text"
+                      class="inputdescripcion"
+                      placeholder="Descripción"
+                      required
+                      id="price"
+                      name="price"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label class="properties-label">Cambiar imagen</label>
+                    
+                      <div class="file-select" id="src-file2">
+                        <input
+                          class="inputfile"
+                          type="file"
+                          accept=".jpg,.png"
+                          name="image"
+                          id="image"
+                        />
+                    </div>
+              </div>
+              <nav class="bot">
+                <center>
+                  <input
+                    class="button"
+                    name="Crear"
+                    value="Crear"
+                    type="submit"
+                  />
+            </form>
+    
+                </center>
+              
+            
           </div>
-
-          <div class="field-wrap">
-            <label for="name">Nombre:</label>
-            <input type="text" name="name" id="name" />
-          </div>
-
-          <div class="field-wrap">
-            <label for="description">Descripcion:</label>
-            <textarea name="description" id="description"></textarea>
-          </div>
-
-          <div class="field-wrap">
-            <label for="year">Año:</label>
-            <textarea name="year" id="year"></textarea>
-          </div>
-
-          <div class="field-wrap">
-            <label for="category">Categoría:</label>
-            <textarea name="category" id="category"></textarea>
-          </div>
-          <div class="field-wrap">
-            <label for="size">Talla:</label>
-            <textarea name="size" id="size"></textarea>
-          </div>
-
-          <div class="field-wrap">
-            <label for="price">Precio:</label>
-            <textarea name="price" id="price"></textarea>
-          </div>
-
-          <div class="field-name">
-            <label for="image"></label>
-            <input type="file" name="image" id="image" />
-          </div>
-
-          <div class="field-wrap">
-            <button type="submit">Enviar</button>
-          </div>
-        </form>
-      </div>
     </main>
     <%- include('../partials/footer.ejs') %>
   </body>

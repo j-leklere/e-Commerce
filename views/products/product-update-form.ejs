@@ -1,95 +1,136 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <%- include('../partials/head.ejs') %>
-    <link rel="stylesheet" href="\css\product-update-form.css" />
+    <link rel="stylesheet" href="\css\creation-edition.css" />
   </head>
+
   <body>
     <%- include('../partials/header.ejs') %>
     <main>
-      <h1 class="title">Edición del producto: "<%=product.nombre%>"</h1>
-      <div class="form-container">
-        <form
-          action="/products/edit/<%= product.id %> ?_method=PUT"
+      <center>
+      <form
+          action="/products/edit/<%= product.id %>?_method=PUT"
           method="POST"
+          enctype="multipart/form-data"
         >
-          <div class="field-wrap">
-            <label for="name">Nombre de producto:</label>
-            <input
-              type="text"
-              value="<%= product.nombre %>"
-              name="name"
-              id="name"
-            />
-          </div>
+      <div class="register-container">
+        <h2 class="register-title">Edición del artículo #<%=product.codigo%></h2>
+        <div class="register-navbar">
+          <ul class="register-nav"></ul>
+        </div>
+        
+          <div class="data-container">
+            <div class="article-data ">
+              <h3>Datos del producto</h3>
 
-          <div class="field-wrap">
-            <label for="price">Precio:</label>
-            <input
-              type="text"
-              value="<%= product.precio %>"
-              name="price"
-              id="price"
-            />
-          </div>
 
-          <div class="field-wrap">
-            <label for="description">Descripción:</label>
-            <textarea name="description" class="" id="description">
-            <%= product.descripcion %></textarea
-            >
-          </div>
+              </div>
+              <div class="properties-label">
+                <label>Nombre del articulo</label>
+                <input
+                  value="<%=product.nombre%>"
+                  type="text"
+                  class="inputNombre"
+                  
+                  required
+                  
+                />
+              </div>
 
-          <div class="field-wrap">
-            <label for="code">Código:</label>
-            <input
-              name="code"
-              class=""
-              id="code"
-              value="<%=product.codigo%> "
-            />
-            />
-          </div>
+              
 
-          <div class="field-wrap">
-            <label for="year">Año:</label>
-            <input name="year" class="" id="year" value="<%=product.anio%>" />
-          </div>
+              
 
-          <div class="field-wrap">
-            <label for="category">Categoría:</label>
-            <input
-              name="category"
-              class=""
-              id="category"
-              value="<%=product.categoria%>"
-            />
-          </div>
+              <div class="properties-label">
+                <label>Descripcion</label>
+                <input
+                  value="<%= product.descripcion %>"
+                  type="text"
+                  class="inputdescripcion"
+                  placeholder="Descripción"
+                  required
+                  id="description"
+                  name="description"
+                />
+              </div>
 
-          <div class="field-wrap">
-            <label for="size">Talla:</label>
-            <input name="size" class="" id="size" value="<%=product.talla%>" />
-          </div>
+              <div class="properties-label">
+                <label>Año</label>
+                <input
+                  value="<%=product.anio%>"
+                  type="text"
+                  class="inputdescripcion"
+                  placeholder="Descripción"
+                  required
+                  id="year"
+                  name="year"
+                />
+              </div>
 
-          <div class="field-wrap">
-            <label for="image">Imagen:</label><br />
-            <img class="image" src="\images\<%=product.image%>" /><br />
-            <input type="file" name="image" id="image" />
-          </div>
+              <div class="properties-label" >
+                <label>Categoría</label>
+                <input
+                value="<%= product.categoria %>"
+                  type="text"
+                  class="inputdescripcion"
+                  placeholder="Descripción"
+                  required
+                  id="category"
+                  name="category"
+                />
+              </div>
+              <div class="properties-label">
+                <label>Seleccionar la talla</label>
+                <input name="size" 
+                class="inputdescripcion" 
+                id="size"
+                value="<%= product.talla%>" />
+              
+            </div>
+              <div class="properties-label">
+                <label>Precio</label>
+                <input
+                  value="$<%= product.precio %>"
+                  type="text"
+                  class="inputdescripcion"
+                  placeholder="Descripción"
+                  required
+                  id="price"
+                  name="price"
+                />
+              </div>
+              
+              
+              <div>
+                
+            </div>
 
-          <div class="field-wrap">
-            <button type="submit">Actualizar</button>
-          </div>
+                <button type="submit" class="button">
+                Actualizar
+                </button>
+        
+            
+            
+          </form>
+
+          <form
+            action="/products/edit/<%= product.id %> ?_method=DELETE"
+            method="POST"
+          
+          >
+            <button type="submit" class="button">Borrar</button>
         </form>
 
-        <form
-          action="/products/delete/<%= product.id %>?_method=DELETE"
-          method="POST"
-        >
-          <button type="submit">Borrar</button>
-        </form>
+        
+        
       </div>
     </main>
+    </center>
     <%- include('../partials/footer.ejs') %>
+
+   
   </body>
 </html>

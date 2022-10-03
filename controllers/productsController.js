@@ -44,7 +44,7 @@ const productsController = {
         talla: req.body.size,
         precio: Number(req.body.price),
         estado: true,
-        image: req.file.filename,
+        image: req.file.filename
     };
     data.push(newProduct);
     writeFile(data);
@@ -74,11 +74,11 @@ const productsController = {
     productFound.categoria = req.body.category;
     productFound.talla = req.body.size;
     productFound.precio = req.body.price;
-    productFound.image = req.body.image;
+    productFound = req.file ?  req.file.params : productFound.image
 
     writeFile(data);
 
-    res.redirect("../views/products/products/list");
+    res.redirect("../views/products/products");
   },
 
   destroy: (req, res) => {
@@ -88,11 +88,11 @@ const productsController = {
     });
     data.splice(productFound, 1);
     writeFile(data);
-    res.redirect("../views/products/products/list");
+    res.redirect("../views/products/products");
   },
 
   categories: (req, res) => {
-    res.render("categories");
+    res.render("../views/products/categories");
   },
   productCart: (req, res) => {
     res.render("../views/products/productCart");

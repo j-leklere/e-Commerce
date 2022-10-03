@@ -4,6 +4,7 @@ const productsController = require("../controllers/productsController");
 const multer = require("multer");
 const path = require("path");
 
+
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, path.join(__dirname, "../public/images"));
@@ -33,9 +34,9 @@ router.post(
 router.get("/products/:id", productsController.detail);
 
 // Vista de edición de producto
-router.get("/products/:id/edit", productsController.edit);
-router.put("/products/:id", productsController.update);
-router.delete("/products/:id", productsController.destroy);
+router.get("/products/edit/:id", productsController.edit);
+router.put("products/edit/:id", productsController.update);
+router.delete("products/edit/:id", productsController.destroy);
 
 // Vistas creadas pre-Sprint4
 router.get("/products/categories", productsController.categories);
