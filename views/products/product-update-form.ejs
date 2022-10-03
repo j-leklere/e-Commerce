@@ -84,7 +84,7 @@
                 />
               </div>
               <div class="properties-label">
-                <label>Seleccionar la talla</label>
+                <label>Talla</label>
                 <input name="size" 
                 class="inputdescripcion" 
                 id="size"
@@ -102,12 +102,12 @@
                   name="price"
                 />
               </div>
-              <div class="field-name">
-                
-                <img src="images/<%=product.image%>" name="image" id="image">
-              
-              </div>
-            
+              <div>
+                <img
+                  class="producto-img"
+                  src="/images/<%= product.image %> "
+                  width="250px"
+                />
               <div>
                 <label class="properties-label">Cambiar imagen</label>
                 
@@ -127,7 +127,8 @@
                 </button>
         
             
-            
+              </div>
+          </div>
           </form>
 
           <form
