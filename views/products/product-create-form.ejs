@@ -16,113 +16,105 @@
           action="/products/create"
           enctype="multipart/form-data"
           method="POST">
+
           <div class="register-container">
             <h1 class="register-title">Crea un nuevo producto</h1>
-            <div class="register-navbar">
-              <ul class="register-nav"></ul>
-            </div>
+        
             
-              <div class="data-container">
-                <div class="article-data ">
+          <div class="data-container">
+            <div class="article-data ">
                   
-                  <div class="properties-label">
-                    <label>Código</label>
-                    <input
-                      
-                      type="text"
-                      class="inputNombre"
-                      name="code"
-                      id="code"
-                      required
-                      
-                    />
-                  </div>
-                  
-                  <div class="properties-label">
-                    <label>Nombre del articulo</label>
-                    <input
-                      
-                      type="text"
-                      class="inputNombre"
-                      name="name"
-                      id="name"
-                      required
-                      
-                    />
-                  </div>
-                  
-                  <div class="properties-label">
-                    <label>Descripcion</label>
-                    <input
-                      
-                      type="text"
-                      class="inputdescripcion"
-                  
-                      required
-                      id="description"
-                      name="description"
-                    />
-                  </div>
-    
-                  <div class="properties-label">
-                    <label>Año</label>
-                    <input
-                      
-                      type="text"
-                      class="inputdescripcion"
-                      
-                      required
-                      id="year"
-                      name="year"
-                    />
-                  </div>
-    
-                  <div class="properties-label" >
-                    
-                    <label>Categoría</label>
-                    <input
-                    
-                      type="text"
-                      class="inputdescripcion"
-                      
-                      required
-                      id="category"
-                      name="category"
-                    />
-                  </div>
-                  <div class="properties-label">
-                    <label>Seleccionar la talla</label>
-                    <input name="size" 
-                    class="inputdescripcion" 
-                    id="size"
-                    />
-                  
-                </div>
-                  <div class="properties-label">
-                    <label>Precio</label>
-                    <input
-                      value=""
-                      type="text"
-                      class="inputdescripcion"
-                      id="price"
-                      name="price"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label class="properties-label">Agregar imagen</label>
-                    
-                      <div class="file-select" id="src-file2">
-                        <input
-                          class="inputfile"
-                          type="file"
-                          accept=".jpg,.png"
-                          name="image"
-                          id="image"
-                        />
-                    </div>
+              <div class="properties-label">
+                <label>Código</label>
+                  <input
+                    type="text"
+                    class="inputNombre"
+                    id="code"
+                    name="code"
+                    required
+                  />
               </div>
+                  
+              <div class="properties-label">
+                <label>Nombre del articulo</label>
+                <input
+                  type="text"
+                  class="inputNombre"
+                  id="name"
+                  name="name"
+                  required
+                />
+              </div>
+                  
+              <div class="properties-label">
+                <label>Descripcion</label>
+                <input
+                  type="text"
+                  class="inputdescripcion"
+                  id="description"
+                  name="description"
+                  required
+                />
+              </div>
+    
+              <div class="properties-label">
+                <label>Año</label>
+                <input
+                  type="text"
+                  class="inputdescripcion"
+                  id="year"
+                  name="year"
+                  required
+                />
+              </div>
+
+              <div class="properties-label" >
+                <label>Categoría</label>
+                <input
+                  type="text"
+                  class="inputdescripcion"
+                  id="category"
+                  name="category"
+                  required
+                />
+              </div>
+                  
+              <div class="properties-label">
+                <label>Seleccionar la talla</label>
+                <input 
+                  type="text"
+                  name="size" 
+                  class="inputdescripcion" 
+                  id="size"
+                  required
+                />
+              </div>
+                  
+              <div class="properties-label">
+                <label>Precio</label>
+                <input
+                  value=""
+                  type="text"
+                  class="inputdescripcion"
+                  id="price"
+                  name="price"
+                  required
+                />
+              </div>
+                  
+              <div>
+                <label class="properties-label">Agregar imagen</label>
+                  <div class="file-select" id="src-file2">
+                    <input
+                      class="inputfile"
+                      type="file"
+                      accept=".jpg,.png"
+                      name="image"
+                      id="image"
+                    />
+                  </div>
+              </div>
+
               <nav class="bot">
                 <center>
                   <input
@@ -131,9 +123,9 @@
                     value="Crear"
                     type="submit"
                   />
-            </form>
-          </div>
-          </center>
+          </form>
+        </div>
+      </center>
     </main>
     <%- include('../partials/footer.ejs') %>
   </body>

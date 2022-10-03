@@ -117,14 +117,18 @@
                     /> 
             </div>
 
-            <button type="submit" class="button">
-              Actualizar
-            </button>
-
+            <nav class="bot">
+              <center>
+                <input
+                  class="button"
+                  name="Crear"
+                  value="Actualizar"
+                  type="submit"
+                />
         </form>
 
       <form
-          action="/products/edit/<%= product.id %> ?_method=DELETE"
+          action="/products/edit/<%= product.id %>?_method=DELETE"
           method="POST">
         <button 
           type="submit" 

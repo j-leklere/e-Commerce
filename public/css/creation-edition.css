@@ -120,7 +120,6 @@ input[type="submit"] {
   border-radius: 8px;
   font-size: 14px;
   text-align: center;
-  width: 50%;
   font-family: "Inter", sans-serif;
 }
 .button:hover {
