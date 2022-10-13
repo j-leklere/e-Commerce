@@ -30,6 +30,11 @@ router.post(
   productsController.store
 );
 
+// Vistas creadas pre-Sprint4
+router.get("/products/categories", productsController.categories);
+
+router.get("/productCart", productsController.productCart);
+
 
 
 // Vista de edición de producto

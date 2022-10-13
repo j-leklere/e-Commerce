@@ -238,5 +238,29 @@
                     "price": 18,
                     "status": true,
                     "image": "image-1664416735818.jpg"
+          },
+          {
+                    "id": 21,
+                    "code": "spw-343",
+                    "name": "ASICS GT-1000",
+                    "description": "Zapatllas ASICS running",
+                    "year": 2022,
+                    "category": "running",
+                    "size": "42",
+                    "price": 75,
+                    "status": true,
+                    "image": "image-1665689423659.jpg"
+          },
+          {
+                    "id": 22,
+                    "code": "asw-456",
+                    "name": "Camiseta ADIDAS AFA",
+                    "description": "Camiseta Selección Argentina de Fútbol",
+                    "year": 2022,
+                    "category": "futbol",
+                    "size": "L",
+                    "price": 89,
+                    "status": true,
+                    "image": "image-1665689703902.jpg"
           }
 ]

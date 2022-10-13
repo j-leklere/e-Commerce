@@ -13,3 +13,16 @@ Javier se ocupará del punto 2(campos de usuarios y archivo.json) y actualizar r
 Igualmente todos los integrantes nos comprometimos a ayudarnos en las tareas si fuera necesario.
 
 A trabajar!!
+
+*******************************************************************************************************************
+
+Miércoles 28 de Septiembre de 2022 tuvimos la segunda reunión del sprint#4. 
+
+Todos los integrantes del grupo participamos del meeting. Cada uno conto como les fue con sus tareas asignadas.
+
+Se cumplieron las tareas en tiempo y forma. Unicamente se presento una problemática con la creación de productos 
+pero lo solucionamos con la ayuda del Profesor Matías durante la clase de ese mismo día.
+
+Habiendo alcanzado con todos los objetivos propuestos damos por finalizado el sprint #4.
+
+********************************************************************************************************************
