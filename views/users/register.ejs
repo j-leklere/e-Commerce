@@ -31,6 +31,9 @@
                   placeholder="Nombre"
                   required
                 />
+                <% if(locals.errors && locals.errors.nombre){ %>
+                <p><%= errors.email.msg %></p>
+                <% } %>
               </div>
               <div class="reg-apellido">
                 <input
@@ -40,10 +43,21 @@
                   placeholder="Apellido"
                   required
                 />
+                <% if(locals.errors && locals.errors.apellido){ %>
+                <p><%= errors.email.msg %></p>
+                <% } %>
               </div>
               <div class="form-birthday">
                 <p>Fecha de Nacimiento</p>
-                <input type="date" name="fechaDeNacimiento" class="inputFecha" id="fechaNac" />
+                <input
+                  type="date"
+                  name="fechaDeNacimiento"
+                  class="inputFecha"
+                  id="fechaNac"
+                />
+                <% if(locals.errors && locals.errors.fechaDeNacimiento){ %>
+                <p><%= errors.email.msg %></p>
+                <% } %>
               </div>
               <div class="reg-genero">
                 <p>Género</p>
@@ -53,6 +67,9 @@
                   name="genero"
                   placeholder="Seleccionar"
                 />
+                <% if(locals.errors && locals.errors.genero){ %>
+                <p><%= errors.email.msg %></p>
+                <% } %>
                 <datalist id="genero">
                   <option value="Mujer"></option>
                   <option value="Hombre"></option>
@@ -66,6 +83,9 @@
                   class="inputTelefono"
                   placeholder="Telefono"
                 />
+                <% if(locals.errors && locals.errors.telefono){ %>
+                <p><%= errors.email.msg %></p>
+                <% } %>
               </div>
             </div>
 
@@ -80,15 +100,21 @@
                   placeholder="Email"
                   required
                 />
+                <% if(locals.errors && locals.errors.email){ %>
+                <p><%= errors.email.msg %></p>
+                <% } %>
               </div>
               <div class="reg-conf-email">
                 <input
-                  type="email"
-                  name="email"
+                  type="file"
+                  name="image"
                   class="inputEmail"
-                  placeholder="Confirmar Email"
+                  placeholder="Subir foto de perfil"
                   required
                 />
+                <% if(locals.errors && locals.errors.image){ %>
+                <p><%= errors.email.msg %></p>
+                <% } %>
               </div>
               <div class="reg-contraseña">
                 <input
@@ -98,6 +124,9 @@
                   placeholder="Contraseña"
                   required
                 />
+                <% if(locals.errors && locals.errors.password){ %>
+                <p><%= errors.email.msg %></p>
+                <% } %>
               </div>
               <div class="reg-conf-contraseña">
                 <input
@@ -107,6 +136,9 @@
                   placeholder="Confirmar contraseña"
                   required
                 />
+                <% if(locals.errors && locals.errors.password){ %>
+                  <p> <%= errors.email.msg %>  </p>
+                <% } %>
               </div>
               <div class="deportes-favoritos">
                 <p>¿Cuál es tu deporte favorito?</p>
