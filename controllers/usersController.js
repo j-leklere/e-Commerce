@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
-const bcrypt = require("bcryptjs");
-const { validationResult } = require("express-validator");
+const bcryptjs = require("bcryptjs");
+const {validationResult} = require("express-validator");
 
 let categorias = [
   {
@@ -67,15 +67,16 @@ const usersController = {
     res.render("../views/users/register");
   },
   crearEditar: (req, res) => {
-    res.render("../views/users/crearEditar.ejs", {
+    res.render("../views/users/crearEditar", {
       categorias: categorias,
       tallas: tallas,
     });
   },
   processRegister: (req, res) => {
     const error = validationResult(req);
+    console.log(error);
     if (!error.isEmpty()) {
-      return res.render("register", {
+      return res.render("../views/users/register", {
         errors: error.mapped(),
         old: req.body,
       });
@@ -91,7 +92,7 @@ const usersController = {
       telefono: req.body.telefono,
       email: req.body.email,
       image: req.file.filename,
-      password: bcryptjs.hashSync(req.body.password, 10),
+      password: bcryptjs.hashSync(req.body.password, 10)
     };
 
     users.push(newUser);

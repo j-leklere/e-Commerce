@@ -1,4 +1,4 @@
-const { body } = require("express-validator");
+const {body} = require("express-validator");
 const fs = require("fs");
 const path = require("path");
 
@@ -16,19 +16,17 @@ const validations = [
     .isEmail()
     .withMessage("Debe ingresar un email válido"),
   body("password").notEmpty().withMessage("Debe ingresar su contraseña"),
-  body("image").custom((value, { req }) => {
-    let file = req.file;
-    let acceptedExtensions = [".jpg", ".png", ".gif"];
-    if (!file) {
-      throw new Error("Debes subir una imagen");
-    } else {
-      let fileExtension = path.extname(file.originalname);
-      if (!acceptedExtensions.includes(fileExtension)) {
-        throw new Error("Debe ser un archivo con extension .jpg/.png/.gif");
-      }
-    }
-    return true;
-  }),
+  body("image").custom(function(value, {req}){
+    return req.file;
+})
+.withMessage('Debe ingresar una imagen de perfil')
+.bail()
+.custom(function(value, {req}){
+    const extensionesAceptadas = ['.jpg', '.png', '.gif'];
+    const extension = path.extname(req.file.originalname);
+    console.log(extensionesAceptadas.includes(extension))
+    return extensionesAceptadas.includes(extension);
+}).withMessage('Imagen invalida. Las extensiones aceptadas son jpg, png y gif')
 ];
 
 module.exports = validations;

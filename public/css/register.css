@@ -134,6 +134,19 @@ form h3 {
   cursor: pointer;
   background-color: #eefb5d;
 }
+.msg-error{
+  color: red;
+  outline-color: red;
+}
+.inputfile
+{
+  border-radius: 5px;
+  border: none;
+  margin-top: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
 /***********/
 /* Queries */
 /***********/

@@ -20,32 +20,32 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // Vista de todos los productos
-router.get("/products", productsController.list);
+router.get("/", productsController.list);
 
 // Vista de creación de producto
-router.get("/products/create", productsController.create);
+router.get("/create", productsController.create);
 router.post(
-  "/products/create",
+  "/create",
   upload.single("image"),
   productsController.store
 );
 
 // Vistas creadas pre-Sprint4
-router.get("/products/categories", productsController.categories);
+router.get("/categories", productsController.categories);
 
 router.get("/productCart", productsController.productCart);
 
 
 
 // Vista de edición de producto
-router.get("/products/edit/:id", productsController.edit);
-router.put("/products/edit/:id", upload.single("image"), productsController.update);
+router.get("/edit/:id", productsController.edit);
+router.put("/edit/:id", upload.single("image"), productsController.update);
 
-router.delete("/products/delete/:id", productsController.destroy);
+router.delete("/delete/:id", productsController.destroy);
 
 
 // Vistas creadas pre-Sprint4
-router.get("/products/categories", productsController.categories);
+router.get("/categories", productsController.categories);
 
 router.get("/productCart", productsController.productCart);
 

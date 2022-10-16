@@ -13,12 +13,12 @@
         <div class="register-navbar">
           <ul class="register-nav">
             <li>
-              <a href="/login" class="iniciar-sesion"> Iniciar Sesión </a>
+              <a href="/users/login" class="iniciar-sesion"> Iniciar Sesión </a>
             </li>
-            <li><a href="/register" class="registrarme"> Registrarme </a></li>
+            <li><a href="/users/register" class="registrarme"> Registrarme </a></li>
           </ul>
         </div>
-        <form action="/" method="GET">
+        <form action="/users/register" method="post" enctype="multipart/form-data">
           <div class="data-container">
             <div class="datos-personales">
               <h3>Datos personales</h3>
@@ -32,7 +32,7 @@
                   required
                 />
                 <% if(locals.errors && locals.errors.nombre){ %>
-                <p><%= errors.email.msg %></p>
+                <p class="msg-error"><%= errors.nombre.msg %></p>
                 <% } %>
               </div>
               <div class="reg-apellido">
@@ -44,7 +44,7 @@
                   required
                 />
                 <% if(locals.errors && locals.errors.apellido){ %>
-                <p><%= errors.email.msg %></p>
+                <p class="msg-error"><%= errors.apellido.msg %></p>
                 <% } %>
               </div>
               <div class="form-birthday">
@@ -56,7 +56,7 @@
                   id="fechaNac"
                 />
                 <% if(locals.errors && locals.errors.fechaDeNacimiento){ %>
-                <p><%= errors.email.msg %></p>
+                <p class="msg-error"><%= errors.fechaDeNacimiento.msg %></p>
                 <% } %>
               </div>
               <div class="reg-genero">
@@ -68,7 +68,7 @@
                   placeholder="Seleccionar"
                 />
                 <% if(locals.errors && locals.errors.genero){ %>
-                <p><%= errors.email.msg %></p>
+                <p class="msg-error"><%= errors.genero.msg %></p>
                 <% } %>
                 <datalist id="genero">
                   <option value="Mujer"></option>
@@ -84,7 +84,7 @@
                   placeholder="Telefono"
                 />
                 <% if(locals.errors && locals.errors.telefono){ %>
-                <p><%= errors.email.msg %></p>
+                <p class="msg-error"><%= errors.telefono.msg %></p>
                 <% } %>
               </div>
             </div>
@@ -101,21 +101,10 @@
                   required
                 />
                 <% if(locals.errors && locals.errors.email){ %>
-                <p><%= errors.email.msg %></p>
+                <p class="msg-error"><%= errors.email.msg %></p>
                 <% } %>
               </div>
-              <div class="reg-conf-email">
-                <input
-                  type="file"
-                  name="image"
-                  class="inputEmail"
-                  placeholder="Subir foto de perfil"
-                  required
-                />
-                <% if(locals.errors && locals.errors.image){ %>
-                <p><%= errors.email.msg %></p>
-                <% } %>
-              </div>
+              
               <div class="reg-contraseña">
                 <input
                   type="password"
@@ -125,21 +114,24 @@
                   required
                 />
                 <% if(locals.errors && locals.errors.password){ %>
-                <p><%= errors.email.msg %></p>
+                <p class="msg-error"><%= errors.password.msg %></p>
                 <% } %>
               </div>
-              <div class="reg-conf-contraseña">
+              <div class="file-select">
+                <label class="form-img-avatar" for="files"><p>Seleccionar imagen de perfil</p></label>
                 <input
-                  type="password"
-                  name="password"
-                  class="inputPassword"
-                  placeholder="Confirmar contraseña"
+                  type="file"
+                  name="image"
+                  class="inputfile"
+                  id="files"
+                 
                   required
                 />
-                <% if(locals.errors && locals.errors.password){ %>
-                  <p> <%= errors.email.msg %>  </p>
+                <% if(locals.errors && locals.errors.image){ %>
+                <p class="msg-error"><%= errors.image.msg %></p>
                 <% } %>
               </div>
+              
               <div class="deportes-favoritos">
                 <p>¿Cuál es tu deporte favorito?</p>
                 <input
