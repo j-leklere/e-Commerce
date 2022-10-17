@@ -246,7 +246,7 @@
   width: 15rem;
   border-radius: 8px;
   font-size: 1.8rem;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .compra:hover {
@@ -254,7 +254,6 @@
   background-color: #000;
   color: #eafa35;
   border: 1px solid #eafa35;
-  transform: rotate(360deg);
 }
 
 .compra a {
@@ -266,7 +265,6 @@
 .compra:hover a {
   color: #eafa35;
 }
-
 
 /***********/
 /* Queries */
