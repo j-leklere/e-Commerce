@@ -44,14 +44,10 @@ router.put("/edit/:id", upload.single("image"), productsController.update);
 router.delete("/delete/:id", productsController.destroy);
 
 
-// Vistas creadas pre-Sprint4
-router.get("/categories", productsController.categories);
-
-router.get("/productCart", productsController.productCart);
 
 // Vista de detalle de producto
 
-router.get("/products/:id", productsController.detail);
+router.get("/:id", productsController.detail);
 
 // router.get("/productDetail", productsController.productDetail);
 

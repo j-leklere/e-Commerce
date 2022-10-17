@@ -223,11 +223,11 @@
         "id": 21,
         "nombre": "javier",
         "apellido": "jazmin",
-        "fechaDeNacimiento": "0081-01-16",
+        "fechaDeNacimiento": "1981-01-16",
         "genero": "Hombre",
         "telefono": "12345667878",
         "email": "javjazmin@yahoo.com.ar",
-        "image": "image-1665873716307.jpg",
-        "password": "$2a$10$Ns1bXVyOI8Hgd1KyoEyObOxfuBRW6qqDbMNOsmoDMp9UeFzJGztri"
+        "image": "image-1666034910162.jpg",
+        "password": "$2a$10$bjBKxk.zD2HvXpWNBtZGDuUmKqumpBjxniES6Ht/BAdZyrVv0Wpaa"
     }
 ]
