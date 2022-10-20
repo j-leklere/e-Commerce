@@ -4,16 +4,11 @@ const path = require("path");
 const methodOverride = require("method-override");
 const createError = require("http-errors");
 
-
-
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./views"));
 app.use(methodOverride("_method"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
-
-
 
 const publicPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicPath));
@@ -44,13 +39,11 @@ app.use((err, req, res, next) => {
   res.render("error");
 });
 
-
-
 app.listen(3000, () => {
   console.log("Servidor corriendo en el puerto 3000");
 });
 
 // Para Heroku
-app.listen(process.env.PORT || 3030, function () {
-  console.log("Puerto funcionando en el 3030!");
-});
+// app.listen(process.env.PORT || 3030, function () {
+//   console.log("Puerto funcionando en el 3030!");
+// });
