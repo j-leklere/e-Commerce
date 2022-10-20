@@ -18,7 +18,18 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage });
+const upload = multer({
+  storage: storage,
+  fileFilter: function (req, file, cb) {
+    let acceptedExtensions = [".jpg", ".png", ".gif"];
+    let info = path.extname(file.originalname);
+    let result = acceptedExtensions.includes(info);
+    if (!result) {
+      req.file = file;
+    }
+    cb(null, result);
+  },
+});
 
 router.get("/login", usersController.login);
 router.get("/register", usersController.register);
