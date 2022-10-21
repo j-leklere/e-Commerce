@@ -10,7 +10,9 @@
   <nav class="main-nav">
     <ul class="main-nav-list">
       <li><a href="/" class="main-nav-link">Home</a></li>
-      <li><a href="/products/categories" class="main-nav-link">Categorías</a></li>
+      <li>
+        <a href="/products/categories" class="main-nav-link">Categorías</a>
+      </li>
       <!-- Dentro de categorias, los 4 deportes elegidos, accesorios e indumentaria -->
       <li><a href="#" class="main-nav-link">Hombres</a></li>
       <li><a href="#" class="main-nav-link">Mujeres</a></li>
@@ -26,11 +28,20 @@
     <button>
       <a href="#"><ion-icon name="search" class="iconos-header"></ion-icon></a>
     </button>
+    <% if(!locals.usuario){ %>
     <button>
       <a href="/users/login"
         ><ion-icon name="person" class="iconos-header"></ion-icon
       ></a>
     </button>
+    <% }else{ %>
+    <p class="msg-login">Hola <%= usuario.name %>!</p>
+    <div class="button-logout-container">
+      <form action="/users/logout" method="post">
+        <button type="submit" class="logout-button">Salir</button>
+      </form>
+    </div>
+    <% } %>
     <button>
       <a href="/products/productCart"
         ><ion-icon name="cart" class="iconos-header"></ion-icon
