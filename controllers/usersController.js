@@ -77,7 +77,7 @@ const usersController = {
         bcryptjs.compareSync(req.body.password, user.password);
     });
     if (!userFound) {
-      return res.render("../views/users/login", {errorLogin: "Email o usuario incorrecto"});
+      return res.render("../views/users/login", {errorLogin: "Email o contraseña incorrectos"});
     } else {
       req.session.usuarioLogueado = {
         id: userFound.id,

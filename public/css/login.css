@@ -105,7 +105,7 @@ form {
   cursor: pointer;
   background-color: #f0fc72;
 }
-.msg-error p{
+.msg-error{
   color: red;
   font-size: 10px;
 }
