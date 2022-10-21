@@ -229,7 +229,16 @@
         "email": "javjazmin@yahoo.com.ar",
         "image": "image-1666302913220.jpg",
         "password": "$2a$10$Jywhn938Zono66UQ7FIkoeSwK0QY8W6ai12ZPzX4ekrNs3jLyiv0K"
+    },
+    {
+        "id": 22,
+        "nombre": "Valentina",
+        "apellido": "Adle",
+        "fechaDeNacimiento": "2002-01-25",
+        "genero": "Mujer",
+        "telefono": "3816976925",
+        "email": "valentinaadle1@gmail.com",
+        "image": "image-1666380014229.jpg",
+        "password": "$2a$10$rM0AUn7GVPSLI6UFSxzZm.1OKBSscyoBdVyhuVQiZBca7ZWGqBNja"
     }
-    
-    
 ]
