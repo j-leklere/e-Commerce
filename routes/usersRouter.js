@@ -5,6 +5,7 @@ const usersController = require("../controllers/usersController");
 
 const multer = require("multer");
 const registerValidation = require("../validations/registerValidation");
+const loginValidation = require("../validations/loginValidation");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -32,6 +33,12 @@ const upload = multer({
 });
 
 router.get("/login", usersController.login);
+router.post(
+  "/login",
+  loginValidation,
+  usersController.processLogin
+);
+router.post("/logout", usersController.logout);
 router.get("/register", usersController.register);
 router.get("/crearEditar", usersController.crearEditar);
 

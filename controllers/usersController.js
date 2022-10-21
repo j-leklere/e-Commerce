@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const bcryptjs = require("bcryptjs");
-const {validationResult} = require("express-validator");
+const { validationResult } = require("express-validator");
 
 let categorias = [
   {
@@ -63,6 +63,34 @@ const usersController = {
   login: (req, res) => {
     res.render("../views/users/login", { usuarios: usuarios });
   },
+  processLogin: (req, res) => {
+    const error = validationResult(req);
+    if (!error.isEmpty()) {
+      return res.render("../views/users/login", {
+        errors: error.mapped(),
+      });
+    }
+    const users = findAll();
+    const userFound = users.find(function (user) {
+      return user.email ==
+        req.body.email &&
+        bcryptjs.compareSync(req.body.password, user.password);
+    });
+    if (!userFound) {
+      return res.render("../views/users/login", {errorLogin: "Email o contraseña incorrectos"});
+    } else {
+      req.session.usuarioLogueado = {
+        id: userFound.id,
+        name: userFound.nombre,
+        email: userFound.email,
+      };
+      res.redirect("/");
+    }
+  },
+  logout: (req, res) => {
+    req.session.destroy();
+    res.redirect("/");
+  },
   register: (req, res) => {
     res.render("../views/users/register");
   },
@@ -92,7 +120,7 @@ const usersController = {
       telefono: req.body.telefono,
       email: req.body.email,
       image: req.file.filename,
-      password: bcryptjs.hashSync(req.body.password, 10)
+      password: bcryptjs.hashSync(req.body.password, 10),
     };
 
     users.push(newUser);
