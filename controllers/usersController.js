@@ -84,11 +84,17 @@ const usersController = {
         name: userFound.nombre,
         email: userFound.email,
       };
+
+      if(req.body.remember){
+        res.cookie('recordame', userFound.id)
+      }
+
       res.redirect("/");
     }
   },
   logout: (req, res) => {
     req.session.destroy();
+    res.clearCookie('recordame');
     res.redirect("/");
   },
   register: (req, res) => {

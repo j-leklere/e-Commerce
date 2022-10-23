@@ -1,22 +1,31 @@
+// Módulos
 const express = require("express");
 const app = express();
 const path = require("path");
 const methodOverride = require("method-override");
 const createError = require("http-errors");
 const session = require("express-session");
-const localsMiddleware = require("./middlewares/localsMiddleware");
+const cookieParser = require("cookie-parser");
 
+//Middlewares
+const localsMiddleware = require("./middlewares/localsMiddleware");
+const recordameMiddleware = require('./middlewares/recordameMiddleware');
+
+// Configuración
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./views"));
 app.use(methodOverride("_method"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(cookieParser());
 app.use(session({
   secret: 'secret',
   resave: false,
   saveUninitialized: true,
 }));
+
 app.use(localsMiddleware);
+app.use(recordameMiddleware);
 
 const publicPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicPath));
@@ -26,11 +35,11 @@ const mainRoutes = require("./routes/indexRouter");
 const usersRoutes = require("./routes/usersRouter");
 const productsRoutes = require("./routes/productsRouter");
 
+// app.use("/products", productsRouter);
 app.use("/", mainRoutes);
 app.use("/users", usersRoutes);
 app.use("/products", productsRoutes);
 
-// app.use("/products", productsRouter);
 
 // ************ Catch 404 and forward to error handler ************
 app.use((req, res, next) => next(createError(404)));
