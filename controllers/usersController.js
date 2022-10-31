@@ -72,12 +72,15 @@ const usersController = {
     }
     const users = findAll();
     const userFound = users.find(function (user) {
-      return user.email ==
-        req.body.email &&
-        bcryptjs.compareSync(req.body.password, user.password);
+      return (
+        user.email == req.body.email &&
+        bcryptjs.compareSync(req.body.password, user.password)
+      );
     });
     if (!userFound) {
-      return res.render("../views/users/login", {errorLogin: "Email o contraseña incorrectos"});
+      return res.render("../views/users/login", {
+        errorLogin: "Email o contraseña incorrectos",
+      });
     } else {
       req.session.usuarioLogueado = {
         id: userFound.id,
@@ -85,8 +88,8 @@ const usersController = {
         email: userFound.email,
       };
 
-      if(req.body.remember){
-        res.cookie('recordame', userFound.id)
+      if (req.body.remember) {
+        res.cookie("recordame", userFound.id);
       }
 
       res.redirect("/");
@@ -94,18 +97,18 @@ const usersController = {
   },
   logout: (req, res) => {
     req.session.destroy();
-    res.clearCookie('recordame');
+    res.clearCookie("recordame");
     res.redirect("/");
   },
   register: (req, res) => {
     res.render("../views/users/register");
   },
-  crearEditar: (req, res) => {
-    res.render("../views/users/crearEditar", {
-      categorias: categorias,
-      tallas: tallas,
-    });
-  },
+  // crearEditar: (req, res) => {
+  //   res.render("../views/users/crearEditar", {
+  //     categorias: categorias,
+  //     tallas: tallas,
+  //   });
+  // },
   processRegister: (req, res) => {
     const error = validationResult(req);
     console.log(error);

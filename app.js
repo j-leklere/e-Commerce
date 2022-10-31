@@ -9,7 +9,7 @@ const cookieParser = require("cookie-parser");
 
 //Middlewares
 const localsMiddleware = require("./middlewares/localsMiddleware");
-const recordameMiddleware = require('./middlewares/recordameMiddleware');
+const recordameMiddleware = require("./middlewares/recordameMiddleware");
 
 // Configuración
 app.set("view engine", "ejs");
@@ -18,11 +18,13 @@ app.use(methodOverride("_method"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());
-app.use(session({
-  secret: 'secret',
-  resave: false,
-  saveUninitialized: true,
-}));
+app.use(
+  session({
+    secret: "secret",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
 
 app.use(localsMiddleware);
 app.use(recordameMiddleware);
@@ -39,7 +41,6 @@ const productsRoutes = require("./routes/productsRouter");
 app.use("/", mainRoutes);
 app.use("/users", usersRoutes);
 app.use("/products", productsRoutes);
-
 
 // ************ Catch 404 and forward to error handler ************
 app.use((req, res, next) => next(createError(404)));
