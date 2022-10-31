@@ -36,7 +36,7 @@ const productsController = {
     const data = findAll();
     const newProduct = {
       id: data.length + 1,
-      code: req.body.code,
+      brand: req.body.brand,
       name: req.body.name,
       description: req.body.description,
       year: Number(req.body.year),
@@ -69,7 +69,7 @@ const productsController = {
       return product.id == req.params.id;
     });
     productFound.name = req.body.name;
-    productFound.code = req.body.code;
+    productFound.brand = req.body.brand;
     productFound.description = req.body.description;
     productFound.year = req.body.year;
     productFound.category = req.body.category;

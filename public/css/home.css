@@ -56,6 +56,11 @@
 }
 /* Comprar - Más Info */
 .comprar,
+.mas-info, a {
+  text-decoration: none;
+  color: #000;
+}
+.comprar,
 .mas-info {
   position: absolute;
   background-color: #eafa35;
@@ -68,16 +73,18 @@
   border-radius: 8px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   transition: all 0.5s;
+  
 }
 
 .comprar {
   top: -4.2rem;
-  right: 5.2rem;
+  right: 18.2rem;
+  
 }
 
 .mas-info {
   top: 2.4rem;
-  right: -8.8rem;
+ 
 }
 
 .comprar:hover,
@@ -89,6 +96,15 @@
   color: #eafa35;
   transform: translateY(-1rem);
 }
+
+.comprar:hover a {
+  color: #eafa35;
+}
+.mas-info:hover a {
+  color: #eafa35;
+}
+
+
 
 /* Puntos */
 .puntos {
