@@ -1,6 +1,6 @@
 function loggedMiddleware(req, res, next) {
-  if (req.session.userLogged) {
-    return res.redirect("/products");
+  if (req.session.usuarioLogueado) {
+    return res.redirect("/");
   }
   next();
 }
