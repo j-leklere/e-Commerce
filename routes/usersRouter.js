@@ -42,8 +42,8 @@ router.get("/register", authMiddleware, usersController.register);
 router.get('/profileView', authMiddleware, usersController.editView);
 
 // Edición de datos del perfil
-router.get('/profile', authMiddleware, usersController.edit);
-router.put('/profile', authMiddleware, upload.single("image"),usersController.update)
+router.get('/profileEdition', authMiddleware, usersController.edit);
+router.put('/profileEdition', authMiddleware, upload.single("image"),usersController.update)
 
 
 router.post(

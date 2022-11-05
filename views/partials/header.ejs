@@ -35,11 +35,18 @@
       ></a>
     </button>
     <% }else{ %>
-    <a class="msg-login" href="/users/profileView">Hola <%=user.nombre%>!</a>
+    <a class="msg-login" href="/users/profileView" name="nombre">Hola <%=usuario.name%>!</a>
 
+    <div>
     <img
     class="img-header"
-    src="/images/avatars/<%=user.image%> ">
+    src="/images/avatars/<%= usuario.image %> " 
+    name="image"
+    id="image"
+    />
+  </div>
+   
+    
 
     <div class="button-logout-container">
       <form action="/users/logout" method="post">
