@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="\css\creation-edition.css" />
+  </head>
+
+  <body>
+    <%- include('../partials/header.ejs') %>
+    <main>
+      <center>
+      
+      <div class="form-container">
+        <form
+          action="/users/profile?_method=PUT"
+          method="POST"
+          enctype="multipart/form-data">
+        
+          <h1 class="profile-title"> Mi perfil </h1>
+      <div class="profile-container">
+        
+    
+          <div class="data-container">
+
+            <div class="article-data ">
+              <h3 class="user-name"><%= user.nombre %> <%= user.apellido %></h3>
+            </div>
+
+            <div>
+              <img
+                class="producto-img"
+                src="/images/avatars/<%= user.image %> "
+                width="150px"
+              />
+          </div>
+            
+          <div class="file-select" id="src-file2">
+                <input
+                
+                  class="inputfile"
+                  type="file"
+                  accept=".jpg,.png"
+                  name="image"
+                  id="image">
+                </input>
+          </div>
+
+            <div class="properties-label">
+              <label>Nombre</label>
+              <input
+                  value="<%=user.nombre%>"
+                  type="text"
+                  class="inputNombre"
+                  id="nombre"
+                  name="nombre"
+                  required
+                />
+            </div>
+
+            <div class="properties-label">
+              <label>Apellido</label>
+              <input
+                value="<%= user.apellido %>"
+                type="text"
+                class="inputdescripcion"
+                id="apellido"
+                name="apellido"
+                required
+              />
+            </div>
+
+            <div class="properties-label">
+              <label>Fecha de nacimiento</label>
+              <input
+                value="<%=user.fechaDeNacimiento%>"
+                type="text"
+                class="inputdescripcion"
+                id="fechaDeNacimiento"
+                name="fechaDeNacimiento"
+                required
+              />
+            </div>
+
+            <div class="properties-label" >
+              <label>Genero</label>
+              <input
+                value="<%= user.genero %>"
+                type="text"
+                class="inputdescripcion"
+                id="genero"
+                name="genero"
+                required
+              />
+            </div>
+
+            <div class="properties-label">
+              <label>Telefono</label>
+              <input
+                value="<%= user.telefono%>"
+                type="text"
+                class="inputdescripcion"
+                id="telefono"
+                name="telefono" 
+                required
+              />
+            </div>
+
+            <div class="properties-label">
+              <label>Direccion de correo electrónico</label>
+              <input
+                value="<%= user.email%>"
+                type="text"
+                class="inputdescripcion"
+                id="email"
+                name="email" 
+                required
+              />
+            </div>
+
+            <div class="properties-label">
+              <label>Deporte favorito</label>
+              <input
+                list="deporteFavorito"
+                name="deporteFavorito"
+                class="inputdescripcion"
+                placeholder="Seleccionar"
+                value="<%= user.deporteFavorito %>"
+              />
+              <datalist id="deporteFavorito">
+                <option value="Futbol"></option>
+                <option value="Tenis"></option>
+                <option value="Basquet"></option>
+                <option value="Running"></option>
+              </datalist>
+            </div>
+          </div>
+
+            
+
+            <nav class="bot">
+              <center>
+                <input
+                  class="button"
+                  name="Crear"
+                  value="Actualizar"
+                  type="submit"
+                />
+        </form>
+
+  </div>
+  </center>
+    </main>
+    
+    <%- include('../partials/footer.ejs') %>
+
+  </body>
+</html>

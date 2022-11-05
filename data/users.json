@@ -233,13 +233,14 @@
     {
         "id": 22,
         "nombre": "Valentina",
+        "image": "image-1667616600265.jpg",
+        "password": "$2a$10$rM0AUn7GVPSLI6UFSxzZm.1OKBSscyoBdVyhuVQiZBca7ZWGqBNja",
+        "deporteFavorito": "Running",
         "apellido": "Adle",
         "fechaDeNacimiento": "2002-01-25",
         "genero": "Mujer",
         "telefono": "3816976925",
-        "email": "valentinaadle1@gmail.com",
-        "image": "image-1666380014229.jpg",
-        "password": "$2a$10$rM0AUn7GVPSLI6UFSxzZm.1OKBSscyoBdVyhuVQiZBca7ZWGqBNja"
+        "email": "valentinaadle1@gmail.com"
     },
     {
         "id": 23,

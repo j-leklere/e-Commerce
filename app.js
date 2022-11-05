@@ -9,7 +9,7 @@ const cookieParser = require("cookie-parser");
 
 //Middlewares
 const localsMiddleware = require("./middlewares/localsMiddleware");
-const recordameMiddleware = require("./middlewares/recordameMiddleware");
+const rememberMiddleware = require("./middlewares/rememberMiddleware");
 
 // Configuración
 app.set("view engine", "ejs");
@@ -27,7 +27,7 @@ app.use(
 );
 
 app.use(localsMiddleware);
-app.use(recordameMiddleware);
+app.use(rememberMiddleware);
 
 const publicPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicPath));

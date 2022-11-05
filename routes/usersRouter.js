@@ -6,7 +6,7 @@ const usersController = require("../controllers/usersController");
 const multer = require("multer");
 const registerValidation = require("../validations/registerValidation");
 const loginValidation = require("../validations/loginValidation");
-const loggedMiddleware = require("../middlewares/loggedMiddleware");
+const authMiddleware = require("../middlewares/authMiddleware");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -33,11 +33,18 @@ const upload = multer({
   },
 });
 
-router.get("/login", loggedMiddleware, usersController.login);
+router.get("/login", authMiddleware, usersController.login);
 router.post("/login", loginValidation, usersController.processLogin);
 router.post("/logout", usersController.logout);
-router.get("/register", loggedMiddleware, usersController.register);
-// router.get("/crearEditar", usersController.crearEditar);
+router.get("/register", authMiddleware, usersController.register);
+
+// Vista de datos del perfil
+router.get('/profileView', authMiddleware, usersController.editView);
+
+// Edición de datos del perfil
+router.get('/profile', authMiddleware, usersController.edit);
+router.put('/profile', authMiddleware, upload.single("image"),usersController.update)
+
 
 router.post(
   "/register",

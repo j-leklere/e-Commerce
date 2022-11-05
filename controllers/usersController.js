@@ -138,6 +138,47 @@ const usersController = {
 
     res.redirect("/users/login");
   },
+  editView: (req, res) => {
+    const data = findAll();
+    const userFound = data.find(function (user) {
+
+      return user.id == req.session.usuarioLogueado.id
+    });
+    res.render("../views/users/profileView", {
+      user: userFound,
+    });
+  },
+  edit: (req, res) => {
+    const data = findAll();
+    const userFound = data.find(function (user) {
+
+      return user.id == req.session.usuarioLogueado.id
+    });
+    res.render("../views/users/profileEdition", {
+      user: userFound,
+    });
+  },
+
+  update: (req, res) => {
+    
+    const data = findAll();
+    const userFound = data.find(function (user) {
+      return user.id == req.session.usuarioLogueado.id
+    });
+      userFound.image = req.file ? req.file.filename : userFound.image
+      userFound.nombre = req.body.nombre,
+      userFound.apellido = req.body.apellido,
+      userFound.fechaDeNacimiento = req.body.fechaDeNacimiento,
+      userFound.genero = req.body.genero,
+      userFound.telefono = req.body.telefono,
+      userFound.email = req.body.email,
+      userFound.deporteFavorito = req.body.deporteFavorito,
+      
+
+    writeFile(data);
+
+    res.redirect('/users/profileView');
+  },
 };
 
 module.exports = usersController;
