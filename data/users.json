@@ -228,7 +228,8 @@
         "telefono": "12345667878",
         "email": "javjazmin@yahoo.com.ar",
         "image": "image-1666302913220.jpg",
-        "password": "$2a$10$Jywhn938Zono66UQ7FIkoeSwK0QY8W6ai12ZPzX4ekrNs3jLyiv0K"
+        "password": "$2a$10$Jywhn938Zono66UQ7FIkoeSwK0QY8W6ai12ZPzX4ekrNs3jLyiv0K",
+        "deporteFavorito": "Tenis"
     },
     {
         "id": 22,

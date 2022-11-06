@@ -198,6 +198,7 @@ button a {
   text-align: center;
   padding-top: 1rem;
   font-size: 16px;
+  text-decoration: none;
 }
 .button-logout-container{
   padding-top: 0.75rem;

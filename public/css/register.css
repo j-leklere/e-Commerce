@@ -137,6 +137,7 @@ form h3 {
 .msg-error{
   color: red;
   outline-color: red;
+  font-size: 14px;
 }
 .inputfile
 {
