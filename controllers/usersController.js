@@ -86,7 +86,7 @@ const usersController = {
         id: userFound.id,
         name: userFound.nombre,
         email: userFound.email,
-        
+        image: userFound.image
       };
 
       if (req.body.remember) {

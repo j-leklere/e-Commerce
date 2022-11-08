@@ -19,7 +19,7 @@ function recordame(req, res, next) {
             id: userFound.id,
             name: userFound.nombre,
             email: userFound.email,
-            image: userFound.Image
+            image: userFound.image
         };
 
     }
