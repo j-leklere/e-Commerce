@@ -103,6 +103,10 @@
 .mas-info:hover a {
   color: #eafa35;
 }
+.img-header{
+  width: 35px;
+  border-radius: 50%;
+}
 
 
 
