@@ -33,3 +33,9 @@ Solo nos quedo pendiente la validación de la imagen del avatar con multer, pero
 Jueves 20 de Octubre de 2022 tuvimos la segunda reunión del sprint #5.
 Todos los integrantes del grupo participamos del meeting. Con el proceso de registro terminado y funcionando decidimos repartirnos las consignas pendientes.
 Javier se encargará del punto 6 o sea el login de usuarios, Valentina del punto 7 (cookies) y Joaquin del punto 8, que es la implementación de rutas de huéspedes y usuarios.
+
+********************************************************************************************************************
+El jueves 24 de Noviembre tuvimos nuestra primera reunión semanal del sprint#6. Todos los integrantes del grupo participamos de la reunión a travéz de discord.
+En la primer parte del meeting hicimos una autocrítica ya que nos relajamos y nos dejamos estar en este sprint y dejamos todas las tareas para último momento.
+Después actualizamos el tablero Trello y al mismo tiempo nos repartimos las consignas. Acordamos la forma de diseñar la base de datos.
+Javier va a realizar el diagrama de entidad relación y el script de estructura y datos, Joaquin se encargará de los modelos y Valentina del CRUD. 
