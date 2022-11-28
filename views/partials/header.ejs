@@ -28,25 +28,25 @@
     <button>
       <a href="#"><ion-icon name="search" class="iconos-header"></ion-icon></a>
     </button>
-    <% if(!locals.usuario){ %>
+    <% if (!locals.usuario){ %>
     <button>
       <a href="/users/login"
         ><ion-icon name="person" class="iconos-header"></ion-icon
       ></a>
     </button>
-    <% }else{ %>
-    <a class="msg-login" href="/users/profileView" name="nombre">Hola <%=usuario.name%>!</a>
+    <% } else { %>
+    <a class="msg-login" href="/users/profileView" name="nombre"
+      >Hola <%=usuario.name%>!</a
+    >
 
     <div>
-    <img
-    class="img-header"
-    src="/images/avatars/<%=usuario.image%>"
-    name="image"
-    id="image"
-    />
-  </div>
-   
-    
+      <img
+        class="img-header"
+        src="/images/avatars/<%=usuario.image%>"
+        name="image"
+        id="image"
+      />
+    </div>
 
     <div class="button-logout-container">
       <form action="/users/logout" method="post">
