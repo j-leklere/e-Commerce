@@ -8,29 +8,29 @@ module.exports = (sequelize, dataTypes) => {
       autoIncrement: true,
     },
     nombre: {
-      type: dataTypes.VARCHAR(45),
+      type: dataTypes.STRING,
     },
     apellido: {
-      type: dataTypes.VARCHAR(45),
+      type: dataTypes.STRING,
     },
     fechaDeNacimiento: {
       type: dataTypes.DATE,
     },
     email: {
-      type: dataTypes.VARCHAR(45),
+      type: dataTypes.STRING,
     },
     password: {
-      type: dataTypes.VARCHAR(45),
+      type: dataTypes.STRING,
     },
     telefono: {
-      type: dataTypes.VARCHAR(45),
+      type: dataTypes.STRING,
     },
     category_id: {
       type: dataTypes.INTEGER,
       foreignKey: true,
     },
     image: {
-      type: dataTypes.VARCHAR(45),
+      type: dataTypes.STRING,
     },
     createdAt: { type: dataTypes.INTEGER, field: "created_at" },
     updatedAt: { type: dataTypes.INTEGER, field: "updated_at" },

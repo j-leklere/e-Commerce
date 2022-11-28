@@ -8,10 +8,10 @@ module.exports = (sequelize, dataTypes) => {
       autoIncrement: true,
     },
     name: {
-      type: dataTypes.VARCHAR(45),
+      type: dataTypes.STRING
     },
     description: {
-      type: dataTypes.VARCHAR(45),
+      type: dataTypes.STRING,
       foreignKey: true,
     },
     year: {
@@ -23,7 +23,7 @@ module.exports = (sequelize, dataTypes) => {
       foreignKey: true,
     },
     status: {
-      type: dataTypes.VARCHAR(45),
+      type: dataTypes.STRING,
       foreignKey: true,
     },
     brand: {
@@ -39,7 +39,7 @@ module.exports = (sequelize, dataTypes) => {
       foreignKey: true,
     },
     image: {
-      type: dataTypes.VARCHAR(45),
+      type: dataTypes.STRING,
       foreignKey: true,
     },
     createdAt: { type: dataTypes.INTEGER, field: "created_at" },
