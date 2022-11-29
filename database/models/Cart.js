@@ -29,5 +29,16 @@ module.exports = (sequelize, dataTypes) => {
 
   const Cart = sequelize.define(alias, cols, config);
 
+  Cart.associate = models => {
+    Cart.belongsTo(models.Product, {
+      as: 'products',
+      foreignKey: 'category_id'
+    });
+    Cart.belongsTo(models.User, {
+      as: 'users',
+      foreignKey: 'category_id'
+    });
+  } 
+
   return Cart;
 };

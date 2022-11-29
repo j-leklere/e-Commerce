@@ -177,7 +177,7 @@ const usersController = {
     // });
   },
   edit: (req, res) => {
-    let userId = req.session.usuarioLogueado.id;
+    let userId = req.session.usuarioLogueado.id
     Users.findByPk(userId)
     .then(function(user){
         res.render('../views/users/profileEdition', {user: userId});

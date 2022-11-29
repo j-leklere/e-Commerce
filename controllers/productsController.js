@@ -42,8 +42,13 @@ const productsController = {
     });
   },
 
+
+
   create: (req, res) => {
-    res.render("../views/products/product-create-form");
+      Categories.findAll()
+      .then(function(categories){
+        res.render("../views/products/product-create-form", {categories});
+      })
   },
 
   store: (req, res) => {
