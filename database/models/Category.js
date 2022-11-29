@@ -11,8 +11,8 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.STRING
     },
     createdAt: { type: dataTypes.INTEGER, field: "created_at" },
-    updatedAt: { type: dataTypes.INTEGER, field: "updated_at" },
-    deletedAt: { type: dataTypes.INTEGER, field: "deleted_at" },
+    updatedAt: { type: dataTypes.INTEGER, field: "updated_at" }
+    
   };
 
   let config = {
