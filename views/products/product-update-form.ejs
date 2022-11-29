@@ -71,9 +71,15 @@
                   required
                 >
                 <% for (let i = 0; i < categories.length; i++) { %>
-                  <option value="<%= categories[i].id %>"> 
-                    <%= categories[i].name %>
-                </option>
+                  <% if (categories[i].id == product.category_id) { %> 
+                      <option value="<%= categories[i].id %>" selected> 
+                          <%= categories[i].name %>
+                      </option>
+                  <% } else { %> 
+                      <option value="<%= categories[i].id %> "> 
+                          <%= categories[i].name %>
+                      </option>
+                  <% } %> 
                 <% }  %>
               </select>
             </div>
