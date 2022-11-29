@@ -36,7 +36,8 @@ const productsController = {
     //   return product.id == req.params.id;
     // });
     // res.render("../views/products/productDetail", { product: productFound });
-    Products.findByPk(req.params.id)
+    Products.findByPk(req.params.id , {include: [{association: 'categories'}
+  ]})
     .then(product => {
         res.render('../views/products/productDetail.ejs', {product});
     });
@@ -74,7 +75,7 @@ const productsController = {
       name: req.body.name,
       description: req.body.description,
       year: Number(req.body.year),
-      category: req.body.category,
+      category_id: req.body.category,
       size: req.body.size,
       price: Number(req.body.price),
       status: true,
@@ -94,9 +95,15 @@ const productsController = {
     //   product: productFound,
     // });
     Products.findByPk(req.params.id)
-        .then(function(product){
-            res.render('../views/products/product-update-form', {product});
-        })
+    let productRequest = Products.findByPk(req.params.id);
+
+    let categoryRequest = Categories.findAll();
+
+    Promise.all([productRequest, categoryRequest])
+    .then(function([product, categories]){
+        res.render("../views/products/product-update-form", {product, categories});
+
+    })
   },
 
   update: (req, res) => {
@@ -123,7 +130,7 @@ const productsController = {
           brand: req.body.brand,
           description: req.body.description,
           year: req.body.year,
-          category: req.body.category,
+          category_id: req.body.category,
           size :req.body.size,
           price: req.body.price,
           image: req.file ? req.file.filename : req.body.image

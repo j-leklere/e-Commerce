@@ -63,14 +63,19 @@
 
             <div class="properties-label" >
               <label>Categoría</label>
-              <input
-                value="<%= product.category %>"
-                type="text"
-                class="inputdescripcion"
-                id="category"
-                name="category"
-                required
-              />
+              <select
+                  type="text"
+                  class="inputdescripcion"
+                  id="category"
+                  name="category"
+                  required
+                >
+                <% for (let i = 0; i < categories.length; i++) { %>
+                  <option value="<%= categories[i].id %>"> 
+                    <%= categories[i].name %>
+                </option>
+                <% }  %>
+              </select>
             </div>
 
             <div class="properties-label">
