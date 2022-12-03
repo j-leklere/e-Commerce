@@ -7,52 +7,8 @@ const sequelize = db.sequelize;
 
 const Users = db.User;
 
-let categorias = [
-  {
-    id: 1,
-    nombre: "Hombres",
-  },
-  {
-    id: 2,
-    nombre: "Mujer",
-  },
-  {
-    id: 3,
-    nombre: "niños",
-  },
-  {
-    id: 4,
-    nombre: "Otros",
-  },
-];
 
-let tallas = [
-  {
-    id: 1,
-    numero: 7,
-  },
-  {
-    id: 2,
-    numero: 8,
-  },
-  {
-    id: 3,
-    numero: 9.5,
-  },
-  {
-    id: 1,
-    numero: 10,
-  },
-];
-
-let usuarios = [
-  {
-    login: "jperezperalta@gmail.com",
-    password: 12345,
-  },
-];
-
-function findAll() {
+/*function findAll() {
   const jsonData = fs.readFileSync(path.join(__dirname, "../data/users.json"));
   const data = JSON.parse(jsonData);
   return data;
@@ -61,7 +17,7 @@ function findAll() {
 function writeFile(data) {
   const stringData = JSON.stringify(data, null, 4);
   fs.writeFileSync(path.join(__dirname, "../data/users.json"), stringData);
-}
+}*/
 
 const usersController = {
   login: (req, res) => {
@@ -74,7 +30,7 @@ const usersController = {
         errors: error.mapped(),
       });
     }
-    const users = findAll();
+    const users = Users.findAll();
     const userFound = users.find(function (user) {
       return (
         user.email == req.body.email &&

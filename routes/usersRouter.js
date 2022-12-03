@@ -36,7 +36,7 @@ const upload = multer({
 router.get("/login", usersController.login);
 router.post("/login", loginValidation, usersController.processLogin);
 router.post("/logout", usersController.logout);
-router.get("/register", authMiddleware, usersController.register);
+router.get("/register", usersController.register);
 
 // Vista de datos del perfil
 router.get('/profileView', authMiddleware, usersController.editView);
