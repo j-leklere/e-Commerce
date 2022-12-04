@@ -2,11 +2,10 @@ const fs = require("fs");
 const path = require("path");
 const bcryptjs = require("bcryptjs");
 const { validationResult } = require("express-validator");
-const db = require('../database/models');
+const db = require("../database/models");
 const sequelize = db.sequelize;
 
 const Users = db.User;
-
 
 /*function findAll() {
   const jsonData = fs.readFileSync(path.join(__dirname, "../data/users.json"));
@@ -21,7 +20,7 @@ function writeFile(data) {
 
 const usersController = {
   login: (req, res) => {
-    res.render("../views/users/login", { usuarios: usuarios });
+    res.render("../views/users/login");
   },
   processLogin: (req, res) => {
     const error = validationResult(req);
@@ -30,31 +29,33 @@ const usersController = {
         errors: error.mapped(),
       });
     }
-    const users = Users.findAll();
-    const userFound = users.find(function (user) {
-      return (
-        user.email == req.body.email &&
-        bcryptjs.compareSync(req.body.password, user.password)
-      );
-    });
-    if (!userFound) {
-      return res.render("../views/users/login", {
-        errorLogin: "Email o contraseña incorrectos",
+    Users.findAll().then((users) => {
+      const userFound = users.find(function (user) {
+        return (
+          user.email == req.body.email &&
+          bcryptjs.compareSync(req.body.password, user.password)
+        );
       });
-    } else {
-      req.session.usuarioLogueado = {
-        id: userFound.id,
-        name: userFound.nombre,
-        email: userFound.email,
-        image: userFound.image
-      };
 
-      if (req.body.remember) {
-        res.cookie("recordame", userFound.id);
+      if (!userFound) {
+        return res.render("../views/users/login", {
+          errorLogin: "Email o contraseña incorrectos",
+        });
+      } else {
+        req.session.usuarioLogueado = {
+          id: userFound.id,
+          name: userFound.nombre,
+          email: userFound.email,
+          image: userFound.image,
+        };
+
+        if (req.body.remember) {
+          res.cookie("recordame", userFound.id);
+        }
+
+        res.redirect("/");
       }
-
-      res.redirect("/");
-    }
+    });
   },
   logout: (req, res) => {
     req.session.destroy();
@@ -79,7 +80,7 @@ const usersController = {
         old: req.body,
       });
     }
-    
+
     Users.create({
       nombre: req.body.nombre,
       apellido: req.body.apellido,
@@ -88,14 +89,13 @@ const usersController = {
       telefono: req.body.telefono,
       email: req.body.email,
       image: req.file.filename,
-      password: bcryptjs.hashSync(req.body.password, 10)
-  }) 
-  .then(function(){
-      res.redirect('/users/login');
-  });
-    
-    // En caso de no usar base de datos: 
-  
+      password: bcryptjs.hashSync(req.body.password, 10),
+    }).then(function () {
+      res.redirect("/users/login");
+    });
+
+    // En caso de no usar base de datos:
+
     // const newUser = {
     //   id: users.length + 1,
     //   nombre: req.body.nombre,
@@ -113,16 +113,14 @@ const usersController = {
     // writeFile(users);
 
     // res.redirect("/users/login");
-    
   },
 
   editView: (req, res) => {
     let userId = req.session.usuarioLogueado.id;
-    Users.findByPk(userId)
-    .then(function(user){
-        res.render('../views/users/profileView', {user});
-    })
-    // En caso de no usar base de datos: 
+    Users.findByPk(userId).then(function (user) {
+      res.render("../views/users/profileView", { user });
+    });
+    // En caso de no usar base de datos:
     // const data = findAll();
     // const userFound = data.find(function (user) {
 
@@ -133,12 +131,11 @@ const usersController = {
     // });
   },
   edit: (req, res) => {
-    let userId = req.session.usuarioLogueado.id
-    Users.findByPk(userId)
-    .then(function(user){
-        res.render('../views/users/profileEdition', {user: userId});
-    })
-    // En caso de no usar base de datos: 
+    let userId = req.session.usuarioLogueado.id;
+    Users.findByPk(userId).then(function (user) {
+      res.render("../views/users/profileEdition", { user: userId });
+    });
+    // En caso de no usar base de datos:
     // const data = findAll();
     // const userFound = data.find(function (user) {
 
@@ -151,25 +148,28 @@ const usersController = {
 
   update: (req, res) => {
     let userId = req.params.id;
-        Users.update({
-          nombre: req.body.nombre,
-          apellido: req.body.apellido,
-          fechaDeNacimiento: req.body.fechaDeNacimiento,
-          genero: req.body.genero,
-          telefono: req.body.telefono,
-          email: req.body.email,
-          image: req.file ? req.file.filename : req.body.image
-        },{
-            where:{
-            id: userId
-            } 
-        })
-        .then(function(){
-          res.redirect('/users/profileView')
-        })
-        .catch(error => res.send(error))
+    Users.update(
+      {
+        nombre: req.body.nombre,
+        apellido: req.body.apellido,
+        fechaDeNacimiento: req.body.fechaDeNacimiento,
+        genero: req.body.genero,
+        telefono: req.body.telefono,
+        email: req.body.email,
+        image: req.file ? req.file.filename : req.body.image,
+      },
+      {
+        where: {
+          id: userId,
+        },
+      }
+    )
+      .then(function () {
+        res.redirect("/users/profileView");
+      })
+      .catch((error) => res.send(error));
 
-    // En caso de no usar base de datos: 
+    // En caso de no usar base de datos:
     // const data = findAll();
     // const userFound = data.find(function (user) {
     //   return user.id == req.session.usuarioLogueado.id
@@ -182,7 +182,7 @@ const usersController = {
     //   userFound.telefono = req.body.telefono,
     //   userFound.email = req.body.email,
     //   userFound.deporteFavorito = req.body.deporteFavorito,
-      
+
     // writeFile(data);
 
     // res.redirect('/users/profileView');

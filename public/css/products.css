@@ -14,7 +14,12 @@ section {
   overflow: hidden;
   max-width: 25rem;
   width: 25rem;
-  margin: 2.4rem auto;
+  margin: 2.4rem;
+  transition: all 450ms;
+}
+.product:hover{
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  transform: scale(1.1);
 }
 .product-info {
   padding: 3.6rem;
@@ -23,6 +28,8 @@ section {
 .image {
   max-height: 16rem;
   width: 25rem;
+  aspect-ratio:inherit;
+  object-fit: contain;
 }
 
 .title {
