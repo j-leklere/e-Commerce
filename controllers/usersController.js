@@ -122,7 +122,7 @@ const usersController = {
   },
 
   editView: (req, res) => {
-    Users.findByPk(req.session.usuarioLogueado.id)
+    Users.findByPk(req.session.usuarioLogueado.id);
     let userId = Users.findByPk(req.session.usuarioLogueado.id);
     let categoryRequest = Categories.findAll();
     Promise.all([userId, categoryRequest]).then(function ([user, categories]) {
@@ -141,9 +141,8 @@ const usersController = {
   edit: (req, res) => {
     let userId = Users.findByPk(req.session.usuarioLogueado.id);
     let categoryRequest = Categories.findAll();
-    Promise.all([userId, categoryRequest])
-    .then(function ([user, categories]) {
-      res.render("../views/users/profileEdition", {user, categories});
+    Promise.all([userId, categoryRequest]).then(function ([user, categories]) {
+      res.render("../views/users/profileEdition", { user, categories });
     });
 
     // En caso de no usar base de datos:
@@ -159,7 +158,8 @@ const usersController = {
 
   update: (req, res) => {
     let userId = Users.findByPk(req.session.usuarioLogueado.id);
-    Users.update({
+    Users.update(
+      {
         nombre: req.body.nombre,
         apellido: req.body.apellido,
         fechaDeNacimiento: req.body.fechaDeNacimiento,
