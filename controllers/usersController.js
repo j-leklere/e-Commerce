@@ -6,6 +6,7 @@ const db = require("../database/models");
 const sequelize = db.sequelize;
 
 const Users = db.User;
+const Categories = db.Category;
 
 /*function findAll() {
   const jsonData = fs.readFileSync(path.join(__dirname, "../data/users.json"));
@@ -63,7 +64,10 @@ const usersController = {
     res.redirect("/");
   },
   register: (req, res) => {
-    res.render("../views/users/register");
+    Categories.findAll().then(function (categories) {
+      res.render("../views/users/register", { categories });
+    });
+    // res.render("../views/users/register");
   },
   // crearEditar: (req, res) => {
   //   res.render("../views/users/crearEditar", {
@@ -89,6 +93,7 @@ const usersController = {
       telefono: req.body.telefono,
       email: req.body.email,
       image: req.file.filename,
+      category_id: req.body.category,
       password: bcryptjs.hashSync(req.body.password, 10),
     }).then(function () {
       res.redirect("/users/login");
@@ -116,9 +121,11 @@ const usersController = {
   },
 
   editView: (req, res) => {
-    let userId = req.session.usuarioLogueado.id;
-    Users.findByPk(userId).then(function (user) {
-      res.render("../views/users/profileView", { user });
+    Users.findByPk(req.session.usuarioLogueado.id)
+    let userId = Users.findByPk(req.session.usuarioLogueado.id);
+    let categoryRequest = Categories.findAll();
+    Promise.all([userId, categoryRequest]).then(function ([user, categories]) {
+      res.render("../views/users/profileView", { user, categories });
     });
     // En caso de no usar base de datos:
     // const data = findAll();
@@ -131,10 +138,17 @@ const usersController = {
     // });
   },
   edit: (req, res) => {
-    let userId = req.session.usuarioLogueado.id;
-    Users.findByPk(userId).then(function (user) {
-      res.render("../views/users/profileEdition", { user: userId });
+    // let userId = req.session.usuarioLogueado.id;
+    // Users.findByPk(userId).then(function (user) {
+    //   res.render("../views/users/profileEdition", { user: userId });
+    // });
+    let userId = Users.findByPk(req.session.usuarioLogueado.id);
+    let categoryRequest = Categories.findAll();
+    Promise.all([userId, categoryRequest])
+    .then(function ([user, categories]) {
+      res.render("../views/users/profileEdition", {user, categories});
     });
+
     // En caso de no usar base de datos:
     // const data = findAll();
     // const userFound = data.find(function (user) {
@@ -147,7 +161,7 @@ const usersController = {
   },
 
   update: (req, res) => {
-    let userId = req.params.id;
+    let userId = Users.findByPk(req.session.usuarioLogueado.id);
     Users.update(
       {
         nombre: req.body.nombre,
@@ -157,6 +171,7 @@ const usersController = {
         telefono: req.body.telefono,
         email: req.body.email,
         image: req.file ? req.file.filename : req.body.image,
+        category_id: req.body.category,
       },
       {
         where: {

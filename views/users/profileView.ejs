@@ -3,6 +3,7 @@
   <head>
     <%- include('../partials/head.ejs') %>
     <link rel="stylesheet" href="\css\creation-edition.css" />
+    <link rel="stylesheet" href="\css\home.css" />
     
   </head>
 
@@ -27,7 +28,8 @@
             <div>
               <img
                 src="/images/avatars/<%= user.image %> "
-                width="170px"
+                width="150px"
+                
               />
           </div>
             
@@ -48,7 +50,7 @@
             </div>
 
             <div class="profile-label">
-              <label>Genero</label>
+              <label>Género</label>
               <p class= profile-text><%=user.genero%></p>
             </div>
 
@@ -64,12 +66,16 @@
             </div>
 
             <div class="profile-label">
-              <label>Deporte favorito</label>
-                <p class= profile-text><%= user.deporteFavorito %></p>
+              <label>Categoria favorita</label>
+              <% for (let i = 0; i < categories.length; i++) { %>
+              <% if (categories[i].id == user.category_id) { %> 
+                <p class= profile-text><%= categories[i].name %></p> 
+                <% } %> 
+                <% } %>
             </div>
-          </div>
 
             
+            </div>
 
             <nav class="bot">
               <center>

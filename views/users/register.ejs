@@ -74,11 +74,6 @@
                 <% if(locals.errors && locals.errors.genero){ %>
                 <p class="msg-error"><%= errors.genero.msg %></p>
                 <% } %>
-                <datalist id="genero">
-                  <option value="Mujer"></option>
-                  <option value="Hombre"></option>
-                  <option value="Otro"></option>
-                </datalist>
               </div>
               <div class="reg-telefono">
                 <input
@@ -139,21 +134,21 @@
                 <% } %>
               </div>
               
-              <div class="deportes-favoritos">
-                <p>¿Cuál es tu deporte favorito?</p>
-                <input
-                  list="deporteFavorito"
-                  name="deporteFavorito"
-                  class="deporte-favorito"
-                  placeholder="Seleccionar"
-                  value="<%= locals.old ? old.deporteFavorito : null %>"
-                />
-                <datalist id="deporteFavorito">
-                  <option value="Futbol"></option>
-                  <option value="Tenis"></option>
-                  <option value="Basquet"></option>
-                  <option value="Running"></option>
-                </datalist>
+              <div class="reg-contraseña" >
+                <label>Elige tu categoría favorita</label>
+                <select
+                  type="text"
+                  class="inputNombre"
+                  id="category"
+                  name="category"
+                  required
+                >
+                <% for (let i = 0; i < categories.length; i++) { %>
+                  <option value="<%= categories[i].id %>"> 
+                    <%= categories[i].name %>
+                </option>
+                <% }  %>
+                </select>
               </div>
             </div>
             <div class="register-radio-button">

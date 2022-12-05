@@ -96,7 +96,6 @@ const productsController = {
     // });
     Products.findByPk(req.params.id)
     let productRequest = Products.findByPk(req.params.id);
-
     let categoryRequest = Categories.findAll();
 
     Promise.all([productRequest, categoryRequest])

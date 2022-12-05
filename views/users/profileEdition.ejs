@@ -3,6 +3,7 @@
   <head>
     <%- include('../partials/head.ejs') %>
     <link rel="stylesheet" href="\css\creation-edition.css" />
+    <link rel="stylesheet" href="\css\home.css" />
   </head>
 
   <body>
@@ -28,9 +29,9 @@
 
             <div>
               <img
-                class="producto-img"
-                src="/images/avatars/<%= user.image %> "
                 width="150px"
+                src="/images/avatars/<%= user.image %> "
+                
               />
           </div>
             
@@ -82,9 +83,9 @@
             </div>
 
             <div class="properties-label" >
-              <label>Genero</label>
+              <label>Género</label>
               <input
-                value="<%= user.genero %>"
+                value="<%= user.genero%>"
                 type="text"
                 class="inputdescripcion"
                 id="genero"
@@ -117,21 +118,27 @@
               />
             </div>
 
-            <div class="properties-label">
-              <label>Deporte favorito</label>
-              <input
-                list="deporteFavorito"
-                name="deporteFavorito"
+            <div class="properties-label" >
+              <label>Categoría</label>
+              <select
+                type="text"
                 class="inputdescripcion"
-                placeholder="Seleccionar"
-                value="<%= user.deporteFavorito %>"
-              />
-              <datalist id="deporteFavorito">
-                <option value="Futbol"></option>
-                <option value="Tenis"></option>
-                <option value="Basquet"></option>
-                <option value="Running"></option>
-              </datalist>
+                id="category"
+                name="category"
+                required
+              >
+              <% for (let i = 0; i < categories.length; i++) { %>
+                <% if (categories[i].id == user.category_id) { %> 
+                    <option value="<%= categories[i].id %>" selected> 
+                        <%= categories[i].name %>
+                    </option>
+                <% } else { %> 
+                    <option value="<%= categories[i].id %> "> 
+                        <%= categories[i].name %>
+                    </option>
+                <% } %> 
+              <% }  %>
+              </select>
             </div>
           </div>
 
