@@ -20,7 +20,6 @@ module.exports = (sequelize, dataTypes) => {
     },
     createdAt: { type: dataTypes.INTEGER, field: "created_at" },
     updatedAt: { type: dataTypes.INTEGER, field: "updated_at" },
-    deletedAt: { type: dataTypes.INTEGER, field: "deleted_at" },
   };
 
   let config = {
@@ -29,16 +28,16 @@ module.exports = (sequelize, dataTypes) => {
 
   const Cart = sequelize.define(alias, cols, config);
 
-  Cart.associate = models => {
+  Cart.associate = (models) => {
     Cart.belongsTo(models.Product, {
-      as: 'products',
-      foreignKey: 'category_id'
+      as: "products",
+      foreignKey: "category_id",
     });
     Cart.belongsTo(models.User, {
-      as: 'users',
-      foreignKey: 'category_id'
+      as: "users",
+      foreignKey: "category_id",
     });
-  } 
+  };
 
   return Cart;
 };

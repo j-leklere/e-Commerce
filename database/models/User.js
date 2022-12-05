@@ -13,6 +13,9 @@ module.exports = (sequelize, dataTypes) => {
     apellido: {
       type: dataTypes.STRING,
     },
+    genero: {
+      type: dataTypes.STRING,
+    },
     fechaDeNacimiento: {
       type: dataTypes.DATE,
     },
@@ -34,7 +37,6 @@ module.exports = (sequelize, dataTypes) => {
     },
     createdAt: { type: dataTypes.INTEGER, field: "created_at" },
     updatedAt: { type: dataTypes.INTEGER, field: "updated_at" },
-    deletedAt: { type: dataTypes.INTEGER, field: "deleted_at" },
   };
 
   let config = {
@@ -44,15 +46,15 @@ module.exports = (sequelize, dataTypes) => {
 
   const User = sequelize.define(alias, cols, config);
 
-  User.associate = models => {
+  User.associate = (models) => {
     User.belongsTo(models.Category, {
-      as: 'categories',
-      foreignKey: 'category_id'
+      as: "categories",
+      foreignKey: "category_id",
     });
     User.hasMany(models.Cart, {
-      as: 'cart'
+      as: "cart",
     });
-  }
+  };
 
   return User;
 };

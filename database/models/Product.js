@@ -10,7 +10,7 @@ module.exports = (sequelize, dataTypes) => {
       autoIncrement: true,
     },
     name: {
-      type: dataTypes.STRING
+      type: dataTypes.STRING,
     },
     description: {
       type: dataTypes.STRING,
@@ -46,7 +46,6 @@ module.exports = (sequelize, dataTypes) => {
     },
     createdAt: { type: dataTypes.INTEGER, field: "created_at" },
     updatedAt: { type: dataTypes.INTEGER, field: "updated_at" },
-    deletedAt: { type: dataTypes.INTEGER, field: "deleted_at" },
   };
 
   let config = {
@@ -56,15 +55,15 @@ module.exports = (sequelize, dataTypes) => {
 
   const Product = sequelize.define(alias, cols, config);
 
-  Product.associate = models => {
+  Product.associate = (models) => {
     Product.belongsTo(models.Category, {
-      as: 'categories',
-      foreignKey: 'category_id'
+      as: "categories",
+      foreignKey: "category_id",
     });
     Product.hasMany(models.Cart, {
-      as: 'cart'
+      as: "cart",
     });
-  }
+  };
 
   return Product;
 };
