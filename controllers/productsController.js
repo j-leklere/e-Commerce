@@ -22,25 +22,27 @@ const Cart = db.Cart;
 
 const productsController = {
   list: (req, res) => {
-    // // const data = findAll();
-    // res.render("../views/products/products", { products: data });
     Products.findAll()
     .then( products => {
       res.render('../views/products/products', {products})
     })
+    // En caso de no usar base de datos
+    // const data = findAll();
+    // res.render("../views/products/products", { products: data });
   },
 
   detail: (req, res) => {
-    // const data = findAll();
-    // const productFound = data.find(function (product) {
-    //   return product.id == req.params.id;
-    // });
-    // res.render("../views/products/productDetail", { product: productFound });
     Products.findByPk(req.params.id , {include: [{association: 'categories'}
   ]})
     .then(product => {
         res.render('../views/products/productDetail.ejs', {product});
     });
+    // En caso de no usar base de datos
+     // const data = findAll();
+    // const productFound = data.find(function (product) {
+    //   return product.id == req.params.id;
+    // });
+    // res.render("../views/products/productDetail", { product: productFound });
   },
 
 
@@ -53,7 +55,23 @@ const productsController = {
   },
 
   store: (req, res) => {
-    // const data = findAll();
+   
+    Products.create({
+      brand: req.body.brand,
+      name: req.body.name,
+      description: req.body.description,
+      year: Number(req.body.year),
+      category_id: req.body.category,
+      size: req.body.size,
+      price: Number(req.body.price),
+      status: true,
+      image: req.file.filename,
+  }) 
+  .then(function(){
+      res.redirect('/products');
+  });
+  // En caso de no usar base de datos
+   // const data = findAll();
     // const newProduct = {
     //   id: data.length + 1,
     //   brand: req.body.brand,
@@ -70,30 +88,9 @@ const productsController = {
     // writeFile(data);
 
     // res.redirect("/products");
-    Products.create({
-      brand: req.body.brand,
-      name: req.body.name,
-      description: req.body.description,
-      year: Number(req.body.year),
-      category_id: req.body.category,
-      size: req.body.size,
-      price: Number(req.body.price),
-      status: true,
-      image: req.file.filename,
-  }) 
-  .then(function(){
-      res.redirect('/products');
-  });
   },
 
   edit: (req, res) => {
-    // const data = findAll();
-    // const productFound = data.find(function (product) {
-    //   return product.id == req.params.id;
-    // });
-    // res.render("../views/products/product-update-form", {
-    //   product: productFound,
-    // });
     Products.findByPk(req.params.id)
     let productRequest = Products.findByPk(req.params.id);
     let categoryRequest = Categories.findAll();
@@ -103,9 +100,37 @@ const productsController = {
         res.render("../views/products/product-update-form", {product, categories});
 
     })
+    // En caso de no usar base de datos
+    // const data = findAll();
+    // const productFound = data.find(function (product) {
+    //   return product.id == req.params.id;
+    // });
+    // res.render("../views/products/product-update-form", {
+    //   product: productFound,
+    // });
   },
 
   update: (req, res) => {
+    let productId = req.params.id;
+    Products.update({
+      name: req.body.name,
+      brand: req.body.brand,
+      description: req.body.description,
+      year: req.body.year,
+      category_id: req.body.category,
+      size :req.body.size,
+      price: req.body.price,
+      image: req.file ? req.file.filename : req.body.image
+    },{
+      where:{
+        id: productId
+      } 
+    })
+    .then(function(){
+      res.redirect("/products")
+    })
+    .catch(error => res.send(error))
+    // En caso de no usar base de datos
     // console.log('llegue hasta aca')
     // const data = findAll();
     // const productFound = data.find(function (product) {
@@ -123,28 +148,19 @@ const productsController = {
     // writeFile(data);
 
     // res.redirect('/products');
-    let productId = req.params.id;
-        Products.update({
-          name: req.body.name,
-          brand: req.body.brand,
-          description: req.body.description,
-          year: req.body.year,
-          category_id: req.body.category,
-          size :req.body.size,
-          price: req.body.price,
-          image: req.file ? req.file.filename : req.body.image
-        },{
-            where:{
-            id: productId
-            } 
-        })
-        .then(function(){
-            res.redirect("/products")
-        })
-        .catch(error => res.send(error))
   },
 
   destroy: (req, res) => {
+    
+    let productId = req.params.id;
+    Products.destroy({
+      where: {id: productId},
+      force: true
+    })
+    .then(function(){
+      res.redirect('/products');
+    })
+    // En caso de no usar base de datos
     // const data = findAll();
     // const productFound = data.findIndex(function (product) {
     //   return product.id == req.params.id;
@@ -152,15 +168,6 @@ const productsController = {
     // data.splice(productFound, 1);
     // writeFile(data);
     // res.redirect("/products");
-
-    let productId = req.params.id;
-    Products.destroy({
-            where: {id: productId},
-            force: true
-        })
-        .then(function(){
-            res.redirect('/products');
-        })
   },
 
   categories: (req, res) => {
