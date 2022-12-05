@@ -69,6 +69,7 @@ const usersController = {
     });
     // res.render("../views/users/register");
   },
+  // En caso de no usar base de datos
   // crearEditar: (req, res) => {
   //   res.render("../views/users/crearEditar", {
   //     categorias: categorias,
@@ -138,10 +139,6 @@ const usersController = {
     // });
   },
   edit: (req, res) => {
-    // let userId = req.session.usuarioLogueado.id;
-    // Users.findByPk(userId).then(function (user) {
-    //   res.render("../views/users/profileEdition", { user: userId });
-    // });
     let userId = Users.findByPk(req.session.usuarioLogueado.id);
     let categoryRequest = Categories.findAll();
     Promise.all([userId, categoryRequest])
@@ -162,8 +159,7 @@ const usersController = {
 
   update: (req, res) => {
     let userId = Users.findByPk(req.session.usuarioLogueado.id);
-    Users.update(
-      {
+    Users.update({
         nombre: req.body.nombre,
         apellido: req.body.apellido,
         fechaDeNacimiento: req.body.fechaDeNacimiento,
