@@ -157,9 +157,8 @@ const usersController = {
     // });
   },
 
-  update: (req, res) => {
-    let userId = Users.findByPk(req.session.usuarioLogueado.id);
-    Users.update({
+  update: async (req, res) => {
+    await Users.update({
         nombre: req.body.nombre,
         apellido: req.body.apellido,
         fechaDeNacimiento: req.body.fechaDeNacimiento,
@@ -171,14 +170,12 @@ const usersController = {
       },
       {
         where: {
-          id: userId,
+          id: req.session.usuarioLogueado.id
         },
       }
     )
-      .then(function () {
-        res.redirect("/users/profileView");
-      })
-      .catch((error) => res.send(error));
+        res.redirect("/users/profileView")
+  
 
     // En caso de no usar base de datos:
     // const data = findAll();
