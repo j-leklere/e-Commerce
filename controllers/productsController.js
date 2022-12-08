@@ -171,19 +171,32 @@ const productsController = {
   },
 
   categories: (req, res) => {
-    res.render("./products/categories");
+    res.render("./products/categories/categories");
   },
 
   productCart: (req, res) => {
     res.render("./products/productCart");
   },
-  // productDetail: (req, res) => {
-  //   res.render("../views/products/productDetail");
-  // },
+
   productFutbol: (req, res) => {
-    res.render("./products/productFutbol");
+    res.render("./products/categories/futbol");
 
   },
+
+  productRunning: (req, res) => {
+    res.render("./products/categories/running");
+
+  },
+
+  productTennis: (req, res) => {
+    res.render("./products/categories/tennis");
+
+  },
+  productBasket: (req, res) => {
+    res.render("./products/categories/basket");
+
+  },
+
 };
 
 module.exports = productsController;

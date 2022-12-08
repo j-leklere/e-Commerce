@@ -47,12 +47,20 @@ router.put(
 
 router.delete("/delete/:id", authMiddleware, productsController.destroy);
 
-// Vista de detalle de producto
-
-router.get("/:id", productsController.detail);
 
 // router.get("/productDetail", productsController.productDetail);
 
-router.get("/productFutbol", productsController.productFutbol);
+router.get("/futbol", productsController.productFutbol);
+
+router.get("/running", productsController.productRunning);
+
+router.get("/tennis", productsController.productTennis);
+
+router.get("/basket", productsController.productBasket);
+
+
+// Vista de detalle de producto
+
+router.get("/:id", productsController.detail);
 
 module.exports = router;
