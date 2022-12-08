@@ -8,11 +8,10 @@ module.exports = (sequelize, dataTypes) => {
       autoIncrement: true,
     },
     name: {
-      type: dataTypes.STRING
+      type: dataTypes.STRING,
     },
     createdAt: { type: dataTypes.INTEGER, field: "created_at" },
-    updatedAt: { type: dataTypes.INTEGER, field: "updated_at" }
-    
+    updatedAt: { type: dataTypes.INTEGER, field: "updated_at" },
   };
 
   let config = {
@@ -21,16 +20,16 @@ module.exports = (sequelize, dataTypes) => {
 
   const Category = sequelize.define(alias, cols, config);
 
-  Category.associate = models => {
+  Category.associate = (models) => {
     Category.hasMany(models.Product, {
-      as: 'products',
-      foreignKey: 'category_id'
+      as: "products",
+      foreignKey: "category_id",
     });
     Category.hasMany(models.User, {
-      as: 'users',
-      foreignKey: 'category_id'
+      as: "users",
+      foreignKey: "category_id",
     });
-  }
+  };
 
   return Category;
 };
