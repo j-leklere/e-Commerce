@@ -30,31 +30,28 @@ const usersController = {
         errors: error.mapped(),
       });
     }
-    Users.findAll().then((users) => {
-      const userFound = users.find(function (user) {
-        return (
-          user.email == req.body.email &&
-          bcryptjs.compareSync(req.body.password, user.password)
-        );
-      });
-
-      if (!userFound) {
-        return res.render("../views/users/login", {
-          errorLogin: "Email o contraseña incorrectos",
-        });
-      } else {
+    console.log('hola')
+    Users.findOne({
+      where: {email: req.body.email}
+    }).then((userFound) => {
+      if (userFound && bcryptjs.compareSync(req.body.password, userFound.password)) {
         req.session.usuarioLogueado = {
           id: userFound.id,
           name: userFound.nombre,
           email: userFound.email,
           image: userFound.image,
-        };
-
+        }
+        console.log('hola 1');
+        console.log(userFound);
         if (req.body.remember) {
+          console.log('hola 2');
           res.cookie("recordame", userFound.id);
         }
-
-        res.redirect("/");
+        res.redirect('/');
+      } else {
+        res.render('users/login', {
+          errorLogin: "Email o contraseña incorrectos",
+        })
       }
     });
   },

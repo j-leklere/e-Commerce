@@ -26,8 +26,8 @@ app.use(
   })
 );
 
-app.use(localsMiddleware);
 app.use(rememberMiddleware);
+app.use(localsMiddleware);
 
 const publicPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicPath));

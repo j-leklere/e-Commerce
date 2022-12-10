@@ -75,9 +75,9 @@ option {
   font-size: 13px;
 }
 
-.inputNombre,
-.inputarticulo,
-.inputdescripcion
+.input-name,
+.input-description,
+.input-general
 
 {
   border-radius: 5px;
@@ -87,7 +87,7 @@ option {
   margin-bottom: 1rem;
   width: 100%;
 }
-.inputfile {
+.input-file {
   border-radius: 5px;
   border: none;
   width: 100%;
