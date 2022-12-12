@@ -30,7 +30,6 @@ const usersController = {
         errors: error.mapped(),
       });
     }
-    console.log('hola')
     Users.findOne({
       where: {email: req.body.email}
     }).then((userFound) => {
@@ -41,10 +40,8 @@ const usersController = {
           email: userFound.email,
           image: userFound.image,
         }
-        console.log('hola 1');
         console.log(userFound);
         if (req.body.remember) {
-          console.log('hola 2');
           res.cookie("recordame", userFound.id);
         }
         res.redirect('/');

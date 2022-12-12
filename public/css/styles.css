@@ -83,6 +83,10 @@ body {
   margin: 0 auto;
 }
 
+.img-header{
+  width: 35px;
+  border-radius: 50%;
+}
 /******************/
 /* Sección Header */
 /******************/
@@ -286,6 +290,13 @@ button a {
   font-size: 1.4rem;
 }
 
+.is-valid {
+  color: #198754;
+}
+
+.is-invalid {
+  color: #842029;
+}
 /***********/
 /* Queries */
 /***********/

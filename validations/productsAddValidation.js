@@ -6,8 +6,8 @@ let form = document.querySelector("form");
         let errores = [];
         let name = document.querySelector("#name");
         let description = document.querySelector("#description");
-        let image = document.querySelector("#file");
-      ;
+        let file = document.querySelector("#file");
+      
         
         if(name.value == ""){
             errores.push("El campo nombre no puede estar vacio");
@@ -33,13 +33,13 @@ let form = document.querySelector("form");
             description.classList.remove("is-invalid");
             description.classList.add("is-valid");
         }
-        if(!image.value == '.jpg' || '.png' || '.gif' || '.jpeg'){
+        if( /.(gif | jpeg |jpg | png )$/i.test(file.value)){
             errores.push("Debes elegir una imagem con formato JPG, JPEG, PNG o GIF");
-            name.classList.add("is-invalid");
-            name.classList.remove("is-valid");
+            file.classList.add("is-invalid");
+            file.classList.remove("is-valid");
         }else{
-            name.classList.remove("is-invalid");
-            name.classList.add("is-valid");
+            file.classList.remove("is-invalid");
+            file.classList.add("is-valid");
         }
         if(errores.length > 0){
             evento.preventDefault();
@@ -49,3 +49,5 @@ let form = document.querySelector("form");
                 ulError.innerHTML += "<li>" + errores[i] + "</li>"   
             }}
     })
+
+    

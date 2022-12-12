@@ -23,7 +23,6 @@ function recordame(req, res, next) {
             where: {id: req.cookies.recordame}
         }) 
         .then((userFound) => {
-            console.log(userFound);
             req.session.usuarioLogueado = {
                 id: userFound.id,
                 name: userFound.nombre,
@@ -32,10 +31,9 @@ function recordame(req, res, next) {
             };
             return next();
         })
-
+    } else {
+        next();
     }
-    next();
-
 }
 
 
