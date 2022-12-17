@@ -106,14 +106,13 @@ option {
 
   .file-select::before {
     background-color: #eafa35;
-    color: gray;
-    font-weight: bold;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2em;
     border-radius: 5px;
-    content: 'Cambiar imagen'; 
+    content: 'Agregar imagen'; 
     position: absolute;
     left: 0;
     right: 0;
@@ -123,8 +122,8 @@ option {
 
   .file-select input[type="file"] {
     opacity: 0;
-    width: 150px;
-    height: 32px;
+    width: 250px;
+    height: 40px;
     display: inline-block;
   }
 
@@ -144,14 +143,15 @@ input[type="submit"] {
   display: inline-block;
   background-color: #eafa35;
   border: none;
-  color: black;
+  color: gray;
+  font-weight: bold;
   padding: 8px 32px;
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
   text-align: center;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 20px;
   text-align: center;
   font-family: "Inter", sans-serif;
 }
@@ -181,4 +181,8 @@ input[type="submit"] {
   font-weight: bold;
   text-align: left;
   padding: 10px;
+}
+
+.errores {
+  
 }

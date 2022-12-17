@@ -26,7 +26,7 @@ let form = document.querySelector("form");
             description.classList.add("is-valid");
         }
         if(description.value < 20){
-            errores.push("El campo descripción debe tener al menos 20 caracteres");
+            alert("El campo descripción debe tener al menos 20 caracteres");
             description.classList.add("is-invalid");
             description.classList.remove("is-valid");
         }else{
