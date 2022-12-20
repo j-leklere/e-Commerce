@@ -183,6 +183,11 @@ input[type="submit"] {
   padding: 10px;
 }
 
-.errores {
-  
+.warnings {
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  color: #eafa35;
+  padding-top: 20px;
 }
+

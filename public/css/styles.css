@@ -297,6 +297,29 @@ button a {
 .is-invalid {
   color: #842029;
 }
+
+.button,
+input[type="submit"] {
+  display: inline-block;
+  background-color: #eafa35;
+  border: none;
+  color: gray;
+  font-weight: bold;
+  padding: 8px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 15px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+.button:hover {
+  background-color: #eefb5d;
+  color: black;
+  font-weight: bold;
+}
 /***********/
 /* Queries */
 /***********/

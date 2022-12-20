@@ -4,6 +4,8 @@
     <%- include('../partials/head.ejs') %>
     <link rel="stylesheet" href="\css\products.css" />
     <link rel="stylesheet" href="\css\home.css" />
+
+
   </head>
   <body>
     <%- include('../partials/header.ejs') %>
@@ -22,6 +24,14 @@
               <p class="product-detail year"><%=products.year%></p>
               <p class="product-detail price">$<%=products.price%></p>
             </div>
+            <form
+          action="/products/delete/<%= products.id %>?_method=DELETE"
+          method="POST">
+          <center>
+          <button type="submit"
+          class="button">Borrar</button>
+        </center>
+      </form>
           </article>
           <% }) %>
         </div>
