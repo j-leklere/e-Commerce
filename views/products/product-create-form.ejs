@@ -14,126 +14,125 @@
     <main>
       <center>
       <div class="form-container">
-        <ul class="errores"></ul>
         <form
-          action="/products/create"
-          enctype="multipart/form-data"
-          method="POST"
-          id="form">
-
-          <div class="register-container">
-            <h1 class="register-title">Crea un nuevo producto</h1>
+        action="/products/create"
+        enctype="multipart/form-data"
+        method="POST"
+        id="form">
         
-            
+        <div class="register-container">
+          <h1 class="register-title">Crea un nuevo producto</h1>
+          
+          
           <div class="data-container">
             <div class="article-data ">
-                  
+              
               <div class="properties-label">
                 <label>Marca</label>
-                  <input
-                    type="text"
-                    class="input-name"
-                    id="brand"
-                    name="brand"
-                    
-                  />
+                <input
+                type="text"
+                class="input-name"
+                id="brand"
+                name="brand"
+
+                />
               </div>
-                  
+              
               <div class="properties-label">
                 <label for="name">Nombre del articulo</label>
                 <input
-                  type="text"
-                  class="input-name"
-                  id="name"
-                  name="name"
+                type="text"
+                class="input-name"
+                id="name"
+                name="name"
                 />
               </div>
-                  
+              
               <div class="properties-label">
                 <label for="description">Descripcion</label>
                 <input
-                  type="text"
-                  class="input-description"
-                  class="field"
-                  id="description"
-                  name="description"
-                  
+                type="text"
+                class="input-description"
+                class="field"
+                id="description"
+                name="description"
                 />
               </div>
-    
+              <p id="errDescription" class="msg-errors hidden"></p>
+              
               <div class="properties-label">
                 <label>Año</label>
                 <input
-                  type="text"
-                  class="input-general"
-                  id="year"
-                  name="year"
-                  
+                type="text"
+                class="input-general"
+                id="year"
+                name="year"
+                
                 />
               </div>
-
+              
               <div class="properties-label" >
                 <label>Categoría</label>
                 <select
-                  type="text"
-                  class="input-general"
-                  id="category"
-                  name="category"
-                  
+                type="text"
+                class="input-general"
+                id="category"
+                name="category"
+                
                 >
                 <% for (let i = 0; i < categories.length; i++) { %>
                   <option value="<%= categories[i].id %>"> 
                     <%= categories[i].name %>
-                </option>
-                <% }  %>
+                  </option>
+                  <% }  %>
                 </select>
               </div>
-                  
+              
               <div class="properties-label">
                 <label>Seleccionar la talla</label>
                 <input 
-                  type="text"
-                  name="size" 
-                  class="input-general" 
-                  id="size"
-                  
+                type="text"
+                name="size" 
+                class="input-general" 
+                id="size"
                 />
               </div>
-                  
+              
               <div class="properties-label">
                 <label>Precio</label>
                 <input
-                  value=""
-                  type="text"
-                  class="input-general"
-                  id="price"
-                  name="price"
-                  
+                value=""
+                type="text"
+                class="input-general"
+                id="price"
+                name="price"
                 />
               </div>
-                  
+              
+              
               <br>
               <div>
+                <div class="file-select" id="src-file2">
+                  <input
+                  class="input-file"
+                  type="file"
+                  accept=".jpeg,.jpg,.png,.gif"
+                  name="image"
+                  id="image"
+                  />
+                </div>
                 
-                  <div class="file-select" id="src-file2">
-                    <input
-                      class="input-file"
-                      type="file"
-                      accept=".jpg,.png"
-                      name="image"
-                      id="image"
-                    />
-                  </div>
               </div>
-                <input
-                class="button"
-                name="Crear"
-                value="Crear"
-                type="submit"/>
+              <input
+              class="button"
+              name="Crear"
+              value="Crear"
+              type="submit"/>
+              
+              <ul class="warnings"></ul>
 
-              <p class="warnings" id="warnings"></p>
-          </form>
-        </div>
+            </form>
+          </div>
       </center>
     </main>
     <%- include('../partials/footer.ejs') %>

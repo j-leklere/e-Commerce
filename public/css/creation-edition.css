@@ -184,10 +184,21 @@ input[type="submit"] {
 }
 
 .warnings {
-  width: 200px;
+  width: 100%;
   text-align: center;
   margin: auto;
-  color: #eafa35;
-  padding-top: 20px;
+  color: red;
+  padding-top: 15px;
+  list-style: none;
+  font-size: 15px;
 }
 
+/* Errores Frontend */
+
+.is-valid {
+  color: #198754;
+}
+
+.is-invalid {
+  color: #842029;
+}
