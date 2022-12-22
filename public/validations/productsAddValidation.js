@@ -1,9 +1,8 @@
-alert('Kati')
 let form = document.getElementById('form');
 
 
 form.addEventListener("submit", (evento) => {
-    evento.preventDefault();
+    // evento.preventDefault();
     let nombre = document.querySelector('#name');
     let description = document.getElementById('description');
     let year = document.getElementById('year');
@@ -55,6 +54,11 @@ form.addEventListener("submit", (evento) => {
         price.classList.add("is-valid");
         price.classList.remove("is-invalid")
     }
+    if(!allowedExtensions.exec(imageValue)){
+        errores.push("La imagen debe tener formato PNG, JPG, JPGE o GIF ");
+        console.log(imageValue) 
+    
+    }
     if(description.value.length < 12){
         errores.push("La descripción debe tener al menos 12 caracteres");
         description.classList.add("is-invalid");
@@ -63,11 +67,8 @@ form.addEventListener("submit", (evento) => {
         description.classList.add("is-valid");
         description.classList.remove("is-invalid")
     }
-    if(!allowedExtensions.exec(imageValue)){
-        errores.push("La imagen debe tener formato PNG, JPG, JPGE o GIF "); 
-        image.focus();
-    }
     if(errores.length > 0){
+        // evento.preventDefault();
         let ulError = document.querySelector(".warnings");
         ulError.innerHTML = "";
         for (let i = 0; i < errores.length; i++) {
