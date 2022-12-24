@@ -53,8 +53,8 @@ form.addEventListener("submit", (evento) => {
     price.classList.remove("is-invalid");
     price.classList.add("is-valid");
   }
-  if (!allowedExtensions.exec(imageValue)) {
-    errores.push("La imagen debe tener formato PNG, JPG, JPGE o GIF ");
+  if (!allowedExtensions.exec(image)) {
+    errores.push("La imagen debe tener formato PNG, JPG, JPEG o GIF ");
     console.log(imageValue);
   }
   if (description.value.length < 12) {

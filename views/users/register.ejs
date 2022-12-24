@@ -71,13 +71,27 @@
               </div>
               <div class="reg-genero">
                 <p>Género</p>
-                <input
-                  list="genero"
+                <select
+                  type="text"
                   class="inputGenero"
+                  id="genero"
                   name="genero"
-                  placeholder="Seleccionar"
-                  value="<%= locals.old ? old.genero : null %>"
-                />
+                  required
+                >
+                  <option value="">
+                    --Seleccionar--
+                  </option>
+                  <option value="Mujer">
+                    --Mujer--
+                  </option>
+                  <option value="Hombre">
+                    --Hombre--
+                  </option>
+                  <option value="Otro">
+                    --Otro--
+                  </option>
+                  
+                </select>
                 <% if(locals.errors && locals.errors.genero){ %>
                 <p class="msg-error"><%= errors.genero.msg %></p>
                 <% } %>
@@ -152,6 +166,7 @@
                   name="category"
                   required
                 >
+                <option value="">--Seleccionar--</option>
                   <% for (let i = 0; i < categories.length; i++) { %>
                   <option value="<%= categories[i].id %>">
                     <%= categories[i].name %>
