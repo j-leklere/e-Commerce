@@ -63,10 +63,13 @@
             </div>
             <a href="#" class="forget-password">¿Olvidaste tu Contraseña?</a>
           </div>
+          <div>
 
           <% if(locals.errorLogin){ %>
           <p class="msg-error"><%= errorLogin %></p>
           <% } %>
+            <ul class="errores"></ul>
+        </div>
 
           <div class="login-buttonIngresar">
             <button type="submit" class="button-ingresar">

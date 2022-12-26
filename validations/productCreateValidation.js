@@ -3,17 +3,21 @@ const fs = require("fs");
 const path = require("path");
 
 const validations = [
-  body("brand").notEmpty().withMessage("Debe ingresar una marca para el producto"),
+  body("brand")
+    .notEmpty()
+    .withMessage("Debe ingresar una marca para el producto"),
   body("name").notEmpty().withMessage("Debe ingresar un nombre al producto"),
   body("description")
     .notEmpty()
-    .isLength({min:5, max:50})
+    .isLength({ min: 5, max: 50 })
     .withMessage("Debe ingresar una descripción al producto"),
-  body("year").notEmpty().withMessage("Debe ingresar el año del modelo del producto"),
-  body("category").notEmpty().withMessage("Debe ingresar la categoria del producto"),
-  body("size")
+  body("year")
     .notEmpty()
-    .withMessage("Debe aclarar el talle del producto"), 
+    .withMessage("Debe ingresar el año del modelo del producto"),
+  body("category")
+    .notEmpty()
+    .withMessage("Debe ingresar la categoria del producto"),
+  body("size").notEmpty().withMessage("Debe aclarar el talle del producto"),
   body("price").notEmpty().withMessage("Debe ingresar un precio al producto"),
   body("image").custom(function (value, { req }) {
     let file = req.file;

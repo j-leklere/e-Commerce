@@ -110,6 +110,10 @@ form {
   color: red;
   font-size: 14px;
 }
+.errores {
+  color: #842029;
+  font-size: 14px;
+}
 
 body {
   background-image: linear-gradient(
