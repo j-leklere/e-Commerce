@@ -14,9 +14,7 @@
         <a href="/products/categories" class="main-nav-link">Categorías</a>
       </li>
       <!-- Dentro de categorias, los 4 deportes elegidos, accesorios e indumentaria -->
-      <li><a href="#" class="main-nav-link">Hombres</a></li>
-      <li><a href="#" class="main-nav-link">Mujeres</a></li>
-      <li><a href="#" class="main-nav-link">Niñxs</a></li>
+      <li><a href="/products" class="main-nav-link">Productos</a></li>
     </ul>
   </nav>
 
@@ -36,7 +34,8 @@
     </button>
     <% } else { %>
     <a class="msg-login" href="/users/profileView" name="name" id="name"
-      >Hola <%=usuario.name%>!</a>
+      >Hola <%=usuario.name%>!</a
+    >
 
     <div>
       <img
@@ -44,7 +43,6 @@
         src="/images/avatars/<%=usuario.image%>"
         name="image"
         id="image"
-        
       />
     </div>
 

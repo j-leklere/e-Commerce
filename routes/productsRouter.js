@@ -26,7 +26,7 @@ router.get("/", productsController.list);
 // Vista de creación de producto
 router.get("/create", authMiddleware, productsController.create);
 router.post(
-  "/create", 
+  "/create",
   upload.single("image"),
   productCreateValidation,
   productsController.store
@@ -37,13 +37,12 @@ router.get("/categories", productsController.categories);
 
 router.get("/productCart", productsController.productCart);
 
+// Vista de edición de todos los productos
+router.get("/admin", authMiddleware, productsController.productsAdmin);
+
 // Vista de edición de producto
 router.get("/edit/:id", authMiddleware, productsController.edit);
-router.put(
-  "/edit/:id", 
-  upload.single("image"),
-  productsController.update
-);
+router.put("/edit/:id", upload.single("image"), productsController.update);
 
 router.delete("/delete/:id", authMiddleware, productsController.destroy);
 
