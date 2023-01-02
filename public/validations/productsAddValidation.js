@@ -1,7 +1,8 @@
 let form = document.getElementById("form");
 
+
 form.addEventListener("submit", (evento) => {
-  evento.preventDefault();
+  // evento.preventDefault();
   const nombre = document.getElementById("name");
   let description = document.getElementById("description");
   let year = document.getElementById("year");
