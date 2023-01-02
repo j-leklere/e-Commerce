@@ -62,7 +62,7 @@ const productsController = {
       status: true,
       image: req.file.filename,
     }).then(function () {
-      res.redirect("/products");
+      res.redirect("/products/admin");
     });
     // En caso de no usar base de datos
     // const data = findAll();
@@ -134,7 +134,7 @@ const productsController = {
       }
     )
       .then(function () {
-        res.redirect("/products");
+        res.redirect("/products/admin");
       })
       .catch((error) => res.send(error));
     // En caso de no usar base de datos
@@ -163,7 +163,7 @@ const productsController = {
       where: { id: productId },
       force: true,
     }).then(function () {
-      res.redirect("/products");
+      res.redirect("/products/admin");
     });
     // En caso de no usar base de datos
     // const data = findAll();

@@ -17,10 +17,40 @@ section {
   margin: 2.4rem;
   transition: all 450ms;
 }
-.product:hover{
+
+ .button {
+  background-color: #eafa35;
+  border: none;
+  color: gray;
+  font-weight: bold;
+  padding: 8px 32px;
+  text-decoration: none;
+  margin: 4px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 15px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  display: block;
+}
+
+article.product:hover{
   box-shadow: 0px 0px 10px rgb(100, 100, 100);
   transform: scale(1.1);
 }
+
+article.product:hover > .button{
+  display: inline-block;
+}
+
+
+.product-detail-name {
+  font-size: 2.3 rem;
+  color: #eafa35;
+  font-weight: 600;
+}
+
 .product-info {
   padding: 3.6rem;
   font-size: 1.6rem;

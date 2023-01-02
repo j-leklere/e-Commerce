@@ -9,25 +9,30 @@
     <%- include('../partials/header.ejs') %>
     <main>
       <section>
-        <h1 class="title">Todos nuestros productos</h1>
+        <h1 class="title">Stock de productos</h1>
         <div class="products">
           <% products.forEach(products => { %>
           <article class="product">
             <img class="image" src="\images\<%=products.image%>" />
             <div class="product-info">
-              <p class="product-detail name"><%=products.name%></p>
+              <p class="product-detail-name"><%=products.name%></p>
               <p class="product-detail"><%=products.brand%></p>
               <p class="product-detail year"><%=products.year%></p>
               <p class="product-detail price">$<%=products.price%></p>
             </div>
-            <form
-              action="/products/delete/<%= products.id %>?_method=DELETE"
-              method="POST"
-            >
               <center>
+              <form
+              action="/products/delete/<%= products.id %>?_method=DELETE"
+              method="POST">
                 <button type="submit" class="button">Borrar</button>
-              </center>
+              </form>
+              <form
+              action="/products/edit/<%= products.id %>?_method=PUT">
+              <button type="submit" class="button">Editar</button>
             </form>
+            <br>
+            <br>
+            </center>
           </article>
           <% }) %>
         </div>

@@ -15,19 +15,21 @@
           <article class="product">
             <img class="image" src="\images\<%=products.image%>" />
             <div class="product-info">
-              <p class="product-detail name"><%=products.name%></p>
+              <p class="product-detail-name"><%=products.name%></p>
               <p class="product-detail"><%=products.brand%></p>
               <p class="product-detail year"><%=products.year%></p>
               <p class="product-detail price">$<%=products.price%></p>
             </div>
             <form
-              action="/products/delete/<%= products.id %>?_method=DELETE"
-              method="POST"
+              action="/products/<%= products.id %>"
+              method="GET"
             >
               <center>
                 <button type="submit" class="button">Comprar</button>
               </center>
             </form>
+            <br>
+            <br>
           </article>
           <% }) %>
         </div>
