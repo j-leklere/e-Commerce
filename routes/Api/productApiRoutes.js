@@ -5,6 +5,8 @@ const productApi = require("../../controllers/Api/productApi");
 
 router.get("/", productApi.products);
 
+router.get("/categories", productApi.categoriesList);
+
 router.get("/search", productApi.search);
 
 router.get("/:id", productApi.productDetail);

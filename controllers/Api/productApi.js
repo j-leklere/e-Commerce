@@ -1,6 +1,7 @@
 let db = require("../../database/models");
 const Op = db.Sequelize.Op;
 const Products = db.Product;
+const Categories = db.Category;
 
 const productApi = {
   products: (req, res) => {
@@ -51,6 +52,20 @@ const productApi = {
       })
       .catch((error) => res.json(error));
   },
+  categoriesList: (req, res) => {
+    Categories.findAll()
+    .then(categories => {
+        let respuesta = {
+            meta: {
+                status : 200,
+                total: categories.length,
+                url: 'api/categories'
+            },
+            data: categories
+        }
+            res.json(respuesta);
+        })
+},
 
   search: (req, res) => {
     Products.findAll({
