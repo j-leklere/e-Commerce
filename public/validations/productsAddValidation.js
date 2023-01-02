@@ -2,7 +2,7 @@ let form = document.getElementById("form");
 
 
 form.addEventListener("submit", (evento) => {
-  // evento.preventDefault();
+  
   const nombre = document.getElementById("name");
   let description = document.getElementById("description");
   let year = document.getElementById("year");
@@ -10,8 +10,6 @@ form.addEventListener("submit", (evento) => {
   let size = document.getElementById("size");
   let brand = document.getElementById("brand");
   let image = document.getElementById("image");
-  let imageValue = document.getElementById("image").value;
-  let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
   let errores = [];
 
   if (nombre.value == "") {
@@ -54,9 +52,13 @@ form.addEventListener("submit", (evento) => {
     price.classList.remove("is-invalid");
     price.classList.add("is-valid");
   }
-  if (!allowedExtensions.exec(imageValue)) {
-    errores.push("La imagen debe tener formato PNG, JPG, JPGE o GIF ");
-    console.log(imageValue);
+  if (image.value == "") {
+    errores.push("Debes agregar una imagen");
+    image.classList.add("is-invalid");
+    image.classList.remove("is-valid");
+  } else {
+    image.classList.remove("is-invalid");
+    image.classList.add("is-valid");
   }
   if (description.value.length < 12) {
     errores.push("La descripción debe tener al menos 12 caracteres");
@@ -67,11 +69,13 @@ form.addEventListener("submit", (evento) => {
     description.classList.add("is-valid");
   }
   if (errores.length > 0) {
-    // evento.preventDefault();
+    evento.preventDefault();
     let ulError = document.querySelector(".warnings");
     ulError.innerHTML = "";
     for (let i = 0; i < errores.length; i++) {
       ulError.innerHTML += "<li>" + errores[i] + "</li>";
     }
+  }else{
+
   }
 });

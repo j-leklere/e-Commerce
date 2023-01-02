@@ -9,15 +9,9 @@
   <body>
     <%- include('../partials/header.ejs') %>
     <main>
-      <section class="top-container">
-        <div class="top-container-left">
-          <h3>Mi Carrito</h3>
-          <a href="/products" class="seguirComprando">Seguir Comprando</a>
-        </div>
-        <div class="top-container-right">
-          <h5>¿Necesitás ayuda? 0800-333-AYUDA</h5>
-        </div>
-      </section>
+      <div class="top-container-left">
+        <h3>Mi Carrito</h3>
+      </div>
       <section class="cart-container">
         <div class="cart-product-container">
           <article class="product1-container">
@@ -34,18 +28,17 @@
                 <li class="numero-producto">N° de producto: 0123456</li>
                 <li class="talle-producto">Talle: XL</li>
               </ul>
-              <a href="#" class="editarProducto">Editar producto</a>
+              <div class="cantidad">
+                <p>Cantidad</p>
+                <input list="cantidad" class="select-cant" />
+                <datalist id="cantidad">
+                  <option value="1"></option>
+                  <option value="2"></option>
+                  <option value="3"></option>
+                </datalist>
+              </div>
             </div>
-            <div class="cantidad">
-              <p>Cantidad</p>
-              <input list="cantidad" class="select-cant" />
-              <datalist id="cantidad">
-                <option value="1"></option>
-                <option value="2"></option>
-                <option value="3"></option>
-              </datalist>
-            </div>
-            <div class="precio">
+            <div class="precio-cart">
               <p>Total</p>
               <h4 class="sumaTotal">$89</h4>
               <button class="button-eliminar">
@@ -68,18 +61,18 @@
                 <li class="numero-producto">N° de producto: 0123457</li>
                 <li class="talle-producto">Talle: 42</li>
               </ul>
-              <a href="#" class="editarProducto">Editar producto</a>
+              <div class="cantidad">
+                <p>Cantidad</p>
+                <input list="cantidad" class="select-cant" />
+                <datalist id="cantidad">
+                  <option value="1"></option>
+                  <option value="2"></option>
+                  <option value="3"></option>
+                </datalist>
+              </div>
             </div>
-            <div class="cantidad">
-              <p>Cantidad</p>
-              <input list="cantidad" class="select-cant" />
-              <datalist id="cantidad">
-                <option value="1"></option>
-                <option value="2"></option>
-                <option value="3"></option>
-              </datalist>
-            </div>
-            <div class="precio">
+
+            <div class="precio-cart">
               <p>Total</p>
               <h4 class="sumaTotal">$75</h4>
               <button class="button-eliminar">
@@ -89,17 +82,6 @@
           </article>
         </div>
         <article class="envio-costoTotal-container">
-          <div class="envio-costoTotal">
-            <h4>Calculá el costo del envio</h4>
-            <div class="costoEnvio">
-              <input
-                type="number"
-                class="post-code"
-                placeholder="Codigo Postal"
-              />
-              <button type="submit" class="button-costo-envio">Calcular</button>
-            </div>
-          </div>
           <div class="costo-producto-total">
             <div class="costo-producto">
               <ul class="subtotal-box">
@@ -109,8 +91,17 @@
                   <strong>Total..............................$169</strong>
                 </li>
               </ul>
+              <div class="button-seguirComprando">
+                <button class="button-btn-seguirComprando">
+                  <a href="/products" class="seguirComprando"
+                    >Seguir Comprando</a
+                  >
+                </button>
+              </div>
               <div class="button-comprar">
-                <button type="submit" class="button-comprar">Comprar</button>
+                <button type="submit" class="button-comprar">
+                  <a href="#" class="comprar-producto">Comprar</a>
+                </button>
               </div>
             </div>
           </div>

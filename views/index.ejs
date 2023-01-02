@@ -8,60 +8,50 @@
   <body>
     <%- include('partials/header.ejs') %>
     <main>
-      <section class="carrusel">
-        <img
-          class="botines"
-          src="\images\messi_argentin.jpg"
-          alt="Imagen de botines"
-        />
-
-        <button class="botones boton--izquierdo">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="boton-icono"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-        </button>
-
-        <button class="botones boton--derecho">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="boton-icono"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </button>
-
-        <div class="comprar">
-          <a href="/products/22">
-          <p>Comprar</p>
-          </a>
+      <section class="slider">
+        <div class="slide">
+          <img src="/images/SLIDER-1.jpg" alt="Photo 1" />
+          <div class="comprar">
+            <a href="/products/22">
+              <p>Comprar</p>
+            </a>
+          </div>
         </div>
-        <div class="mas-info">
-          <a href="/products/22">
-          <p>Más Info</p>
-          </a>
+        <div class="slide">
+          <img src="/images/SLIDER-2.jpg" alt="Photo 2" />
+          <div class="comprar">
+            <a href="/products/22">
+              <p>Comprar</p>
+            </a>
+          </div>
         </div>
-
-        <div class="puntos">
-          <button class="punto punto--relleno"></button>
-          <button class="punto"></button>
-          <button class="punto"></button>
-          <button class="punto"></button>
+        <div class="slide">
+          <img src="/images/SLIDER-3.jpg" alt="Photo 3" />
+          <div class="comprar">
+            <a href="/products/22">
+              <p>Comprar</p>
+            </a>
+          </div>
         </div>
+        <div class="slide">
+          <img src="/images/SLIDER-4.jpg" alt="Photo 4" />
+          <div class="comprar">
+            <a href="/products/22">
+              <p>Comprar</p>
+            </a>
+          </div>
+        </div>
+        <!-- <button class="slider-btn slider-btn--left">&larr;</button>
+        <button class="slider-btn slider-btn--right">&rarr;</button> -->
+        <ion-icon
+          name="chevron-back-circle"
+          class="slider-btn slider-btn--left"
+        ></ion-icon>
+        <ion-icon
+          name="chevron-forward-circle"
+          class="slider-btn slider-btn--right"
+        ></ion-icon>
+        <div class="dots"></div>
       </section>
 
       <section class="seccion-productos">
@@ -165,5 +155,6 @@
       </section>
     </main>
     <%- include('partials/footer.ejs') %>
+    <script src="/js/home.js"></script>
   </body>
 </html>

@@ -36,11 +36,17 @@ app.use(express.static(publicPath));
 const mainRoutes = require("./routes/indexRouter");
 const usersRoutes = require("./routes/usersRouter");
 const productsRoutes = require("./routes/productsRouter");
+// Api routes
+const productsApiRoutes = require("./routes/Api/productApiRoutes");
+const usersApiRoutes = require("./routes/Api/userApiRoutes");
 
 // app.use("/products", productsRouter);
 app.use("/", mainRoutes);
 app.use("/users", usersRoutes);
 app.use("/products", productsRoutes);
+app.use("/api/users", usersApiRoutes);
+app.use("/api/products", productsApiRoutes);
+
 
 // ************ Catch 404 and forward to error handler ************
 app.use((req, res, next) => next(createError(404)));

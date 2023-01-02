@@ -15,10 +15,17 @@
             <li>
               <a href="/users/login" class="iniciar-sesion"> Iniciar Sesión </a>
             </li>
-            <li><a href="/users/register" class="registrarme"> Registrarme </a></li>
+            <li>
+              <a href="/users/register" class="registrarme"> Registrarme </a>
+            </li>
           </ul>
         </div>
-        <form action="/users/register" method="post" enctype="multipart/form-data">
+        <form
+          action="/users/register"
+          method="post"
+          enctype="multipart/form-data"
+          class="register-form"
+        >
           <div class="data-container">
             <div class="datos-personales">
               <h3>Datos personales</h3>
@@ -64,13 +71,27 @@
               </div>
               <div class="reg-genero">
                 <p>Género</p>
-                <input
-                  list="genero"
+                <select
+                  type="text"
                   class="inputGenero"
+                  id="genero"
                   name="genero"
-                  placeholder="Seleccionar"
-                  value="<%= locals.old ? old.genero : null %>"
-                />
+                  required
+                >
+                  <option value="">
+                    --Seleccionar--
+                  </option>
+                  <option value="Mujer">
+                    Mujer
+                  </option>
+                  <option value="Hombre">
+                    Hombre
+                  </option>
+                  <option value="Otro">
+                    Otro
+                  </option>
+                  
+                </select>
                 <% if(locals.errors && locals.errors.genero){ %>
                 <p class="msg-error"><%= errors.genero.msg %></p>
                 <% } %>
@@ -105,7 +126,7 @@
                 <p class="msg-error"><%= errors.email.msg %></p>
                 <% } %>
               </div>
-              
+
               <div class="reg-contraseña">
                 <input
                   type="password"
@@ -120,7 +141,9 @@
                 <% } %>
               </div>
               <div class="file-select">
-                <label class="form-img-avatar" for="files"><p>Seleccionar imagen de perfil</p></label>
+                <label class="form-img-avatar" for="files"
+                  ><p>Seleccionar imagen de perfil</p></label
+                >
                 <input
                   type="file"
                   name="image"
@@ -133,8 +156,8 @@
                 <p class="msg-error"><%= errors.image.msg %></p>
                 <% } %>
               </div>
-              
-              <div class="reg-contraseña" >
+
+              <div class="reg-contraseña">
                 <label>Elige tu categoría favorita</label>
                 <select
                   type="text"
@@ -143,11 +166,12 @@
                   name="category"
                   required
                 >
-                <% for (let i = 0; i < categories.length; i++) { %>
-                  <option value="<%= categories[i].id %>"> 
+                <option value="">--Seleccionar--</option>
+                  <% for (let i = 0; i < categories.length; i++) { %>
+                  <option value="<%= categories[i].id %>">
                     <%= categories[i].name %>
-                </option>
-                <% }  %>
+                  </option>
+                  <% } %>
                 </select>
               </div>
             </div>
@@ -163,9 +187,12 @@
               Crear mi cuenta
             </button>
           </div>
+
+          <ul class="errores"></ul>
         </form>
       </div>
     </main>
     <%- include('../partials/footer.ejs') %>
+    <script src="/validations/registerValidation.js"></script>
   </body>
 </html>

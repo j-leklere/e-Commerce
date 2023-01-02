@@ -3,6 +3,7 @@ const router = express.Router();
 const productsController = require("../controllers/productsController");
 const multer = require("multer");
 const path = require("path");
+const productCreateValidation = require("../validations/productCreateValidation");
 const authMiddleware = require("../middlewares/authMiddleware");
 
 const storage = multer.diskStorage({
@@ -26,8 +27,8 @@ router.get("/", productsController.list);
 router.get("/create", authMiddleware, productsController.create);
 router.post(
   "/create",
-  authMiddleware,
   upload.single("image"),
+  productCreateValidation,
   productsController.store
 );
 
@@ -36,19 +37,14 @@ router.get("/categories", productsController.categories);
 
 router.get("/productCart", productsController.productCart);
 
+// Vista de edición de todos los productos
+router.get("/admin", authMiddleware, productsController.productsAdmin);
+
 // Vista de edición de producto
 router.get("/edit/:id", authMiddleware, productsController.edit);
-router.put(
-  "/edit/:id",
-  authMiddleware,
-  upload.single("image"),
-  productsController.update
-);
+router.put("/edit/:id", upload.single("image"), productsController.update);
 
 router.delete("/delete/:id", authMiddleware, productsController.destroy);
-
-
-// router.get("/productDetail", productsController.productDetail);
 
 router.get("/futbol", productsController.productFutbol);
 
@@ -57,7 +53,6 @@ router.get("/running", productsController.productRunning);
 router.get("/tennis", productsController.productTennis);
 
 router.get("/basket", productsController.productBasket);
-
 
 // Vista de detalle de producto
 

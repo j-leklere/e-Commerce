@@ -66,15 +66,10 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
+
   font-weight: 400;
   color: #ffffffff;
-
-  background-image: linear-gradient(
-      rgba(34, 34, 34, 0.6),
-      rgba(34, 34, 34, 0.6)
-    ),
-    url(https://images.unsplash.com/photo-1496147539180-13929f8aa03a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-  background-size: cover;
+  background-color: #111;
 }
 
 .container {
@@ -83,7 +78,7 @@ body {
   margin: 0 auto;
 }
 
-.img-header{
+.img-header {
   width: 35px;
   border-radius: 50%;
 }
@@ -187,7 +182,7 @@ button a {
   width: 3rem;
   height: 3rem;
 }
-.logout-button{
+.logout-button {
   padding: 0.4rem 0.8rem;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -197,14 +192,14 @@ button a {
   color: #eafa35;
   border: solid 1px #fdffeb;
 }
-.msg-login{
+.msg-login {
   color: #eafa35;
   text-align: center;
   padding-top: 1rem;
   font-size: 16px;
   text-decoration: none;
 }
-.button-logout-container{
+.button-logout-container {
   padding-top: 0.75rem;
 }
 
@@ -217,7 +212,7 @@ button a {
 /******************/
 
 .footer {
-  padding: 12.8rem 0;
+  padding: 9.2rem 0;
   display: flex;
   align-items: center;
   justify-content: center;

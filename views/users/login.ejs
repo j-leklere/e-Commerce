@@ -3,7 +3,6 @@
   <head>
     <%- include('../partials/head.ejs') %>
     <link rel="stylesheet" href="\css\login.css" />
-    <link rel="stylesheet" href="\css\home.css" />
   </head>
   <body>
     <%- include('../partials/header.ejs') %>
@@ -15,34 +14,42 @@
             <li>
               <a href="/users/login" class="iniciar-sesion"> Iniciar Sesión </a>
             </li>
-            <li><a href="/users/register" class="registrarme"> Registrarme </a></li>
+            <li>
+              <a href="/users/register" class="registrarme"> Registrarme </a>
+            </li>
           </ul>
         </div>
-        <form action="/users/login" method="post" autocomplete="on" id="form">
+        <form
+          action="/users/login"
+          method="post"
+          autocomplete="on"
+          id="form"
+          class="login-form"
+        >
           <div class="login-nombreUsuario">
             <input
               type="email"
               class="inputUsuario"
               placeholder="Email"
               autocomplete="username"
-              id = "email"
-              name = "email"
+              id="email"
+              name="email"
             />
-            <% if(locals.errors && locals.errors.email){%> 
-              <p class="msg-error"><%= locals.errors.email.msg %></p>
-              <% } %> 
+            <% if(locals.errors && locals.errors.email){%>
+            <p class="msg-error"><%= locals.errors.email.msg %></p>
+            <% } %>
           </div>
           <div class="login-contraseña">
             <input
               type="password"
               class="inputPassword"
               placeholder="Contraseña"
-              id = "password"
-              name = "password"
+              id="password"
+              name="password"
             />
-            <% if(locals.errors && locals.errors.password){%> 
-              <p class="msg-error"><%= locals.errors.password.msg %> </p>
-              <% } %> 
+            <% if(locals.errors && locals.errors.password){%>
+            <p class="msg-error"><%= locals.errors.password.msg %></p>
+            <% } %>
           </div>
           <div class="login-recordarme-contraseñaOlvidada">
             <div class="login-recordarme">
@@ -56,10 +63,13 @@
             </div>
             <a href="#" class="forget-password">¿Olvidaste tu Contraseña?</a>
           </div>
+          <div>
 
-          <% if(locals.errorLogin){ %> 
-            <p class="msg-error"><%= errorLogin %> </p>
+          <% if(locals.errorLogin){ %>
+          <p class="msg-error"><%= errorLogin %></p>
           <% } %>
+            <ul class="errores"></ul>
+        </div>
 
           <div class="login-buttonIngresar">
             <button type="submit" class="button-ingresar">
@@ -70,6 +80,7 @@
       </div>
     </main>
     <%- include('../partials/footer.ejs') %>
-    
-    </body>
+    <!-- <script type="text/javascript" src="/js/login.js"></script> -->
+    <script src="/validations/loginValidation.js"></script>
+  </body>
 </html>
