@@ -54,18 +54,18 @@ const productApi = {
   },
   categoriesList: (req, res) => {
     Categories.findAll()
-    .then(categories => {
+      .then(categories => {
         let respuesta = {
-            meta: {
-                status : 200,
-                total: categories.length,
+                data: categories,
+                status: 200,
+                count: categories.length,
                 url: 'api/categories'
-            },
-            data: categories
+
+
         }
-            res.json(respuesta);
-        })
-},
+        res.json(respuesta);
+      })
+  },
 
   search: (req, res) => {
     Products.findAll({

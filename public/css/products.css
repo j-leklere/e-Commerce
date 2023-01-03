@@ -21,7 +21,7 @@ section {
  .button {
   background-color: #eafa35;
   border: none;
-  color: gray;
+  color: #000;
   font-weight: bold;
   padding: 8px 32px;
   text-decoration: none;
