@@ -1,6 +1,7 @@
 // Módulos
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const path = require("path");
 const methodOverride = require("method-override");
 const createError = require("http-errors");
@@ -26,6 +27,8 @@ app.use(
   })
 );
 
+app.use(cors());
+
 app.use(rememberMiddleware);
 app.use(localsMiddleware);
 
@@ -46,7 +49,6 @@ app.use("/users", usersRoutes);
 app.use("/products", productsRoutes);
 app.use("/api/users", usersApiRoutes);
 app.use("/api/products", productsApiRoutes);
-
 
 // ************ Catch 404 and forward to error handler ************
 app.use((req, res, next) => next(createError(404)));
