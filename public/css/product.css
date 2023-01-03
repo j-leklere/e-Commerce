@@ -70,6 +70,7 @@ main section article:hover {
   color: #fff;
 }
 
+ 
 @media (min-width: 361px) {
   main section article {
     display: block;

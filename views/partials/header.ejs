@@ -15,9 +15,10 @@
       </li>
       <!-- Dentro de categorias, los 4 deportes elegidos, accesorios e indumentaria -->
       <li><a href="/products" class="main-nav-link">Productos</a></li>
+      <% if (locals.usuario){ %>
       <li><a href="/products/admin" class="main-nav-link">Administar</a></li>
-      <li><a href="/products/create" class="main-nav-link">Crear</a></li>
     </ul>
+    <% } %>
   </nav>
 
   <div class="boton-nav">

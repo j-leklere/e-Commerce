@@ -4,13 +4,23 @@
     <%- include('../partials/head.ejs') %>
     <link rel="stylesheet" href="\css\products.css" />
     <link rel="stylesheet" href="\css\home.css" />
+    
   </head>
   <body>
     <%- include('../partials/header.ejs') %>
     <main>
       <section>
         <h1 class="title">Stock de productos</h1>
+        
         <div class="products">
+          <article class="product">
+            <center>
+                  <a class="icon-create" href="/products/create">+</a>
+                  <a class="create-product" href="/products/create">Crea un nuevo producto</a>
+            <br>
+            <br>
+            </center>
+          </article>
           <% products.forEach(products => { %>
           <article class="product">
             <img class="image" src="\images\<%=products.image%>" />

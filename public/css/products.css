@@ -44,6 +44,45 @@ article.product:hover > .button{
   display: inline-block;
 }
 
+.create-product {
+  background-color: none;
+    border: none;
+    color:#eafa35;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 25px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    align-content: center;
+    display: flex;
+    height: 100%;
+    width: 90%;
+    
+  }
+  .icon-create {
+    background-color: none;
+    margin-top: 40%;
+    border: none;
+    color:#eafa35;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 80px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    align-content: center;
+    display: flex;
+    height: 100%;
+    width: 90%;
+    
+}
+
+
 
 .product-detail-name {
   font-size: 2.3 rem;
