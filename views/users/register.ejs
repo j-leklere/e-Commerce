@@ -120,6 +120,7 @@
                   name="email"
                   class="inputEmail"
                   placeholder="Email"
+                  value="<%= locals.old ? old.email : null %>"
                 />
                 <% if(locals.errors && locals.errors.email){ %>
                 <p class="msg-error"><%= errors.email.msg %></p>
@@ -132,6 +133,7 @@
                   name="password"
                   class="inputPassword"
                   placeholder="Contraseña"
+                  value="<%= locals.old ? old.password : null %>"
                 />
                 <% if(locals.errors && locals.errors.password){ %>
                 <p class="msg-error"><%= errors.password.msg %></p>

@@ -4,7 +4,7 @@ let form = document.querySelector(".register-form");
 form.nombre.focus();
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
+  //e.preventDefault();
 
   let errores = [];
 
@@ -39,7 +39,7 @@ form.addEventListener("submit", (e) => {
   }
 
   if (errores.length > 0) {
-    // e.preventDefault();
+     e.preventDefault();
     let ulError = document.querySelector(".errores");
     ulError.innerHTML = "";
     for (let i = 0; i < errores.length; i++) {
