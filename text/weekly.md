@@ -39,3 +39,9 @@ El jueves 24 de Noviembre tuvimos nuestra primera reunión semanal del sprint#6.
 En la primer parte del meeting hicimos una autocrítica ya que nos relajamos y nos dejamos estar en este sprint y dejamos todas las tareas para último momento.
 Después actualizamos el tablero Trello y al mismo tiempo nos repartimos las consignas. Acordamos la forma de diseñar la base de datos.
 Javier va a realizar el diagrama de entidad relación y el script de estructura y datos, Joaquin se encargará de los modelos y Valentina del CRUD. 
+
+****************************************************************************************************************
+Hoy 4 de Enero de 2023, tuvimos nuestra última reunión semanal. Todos los integrantes del grupo participamos de la reunión. Damos por  finalizados los sprints #7 y #8. No tuvimos reuniones durante el sprint #7 porque las validaciones del backend ya estaban hechas y solo nos quedaban por realizar las validaciones del frontend.
+Dividimos las tareas a travéz de whatsapp. Valentina hizo las validaciones de productos, Joaquin las del register y Javier las del formulario de login.
+El sprint #8 Valentina creo las apis; joaquin y yo trabajamos en el dashboard.
+Ahora estamos trabajando en los detalles y en las vistas para llegar a la presentación del trabajo integrador de la mejor manera posible.

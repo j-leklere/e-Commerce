@@ -7,7 +7,7 @@ router.get("/", productApi.products);
 
 router.get("/categories", productApi.categoriesList);
 
-router.get("/search", productApi.search);
+router.get("/lastProduct", productApi.lastProduct);
 
 router.get("/:id", productApi.productDetail);
 

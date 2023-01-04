@@ -55,7 +55,7 @@ const productApi = {
   categoriesList: (req, res) => {
     Categories.findAll()
       .then(categories => {
-        let respuesta = {
+        let response = {
                 data: categories,
                 status: 200,
                 count: categories.length,
@@ -63,39 +63,26 @@ const productApi = {
 
 
         }
-        res.json(respuesta);
+        res.json(response);
       })
   },
 
-  search: (req, res) => {
+  lastProduct: (req, res) => {
     Products.findAll({
-      where: {
-        productName: { [Op.like]: "%" + req.query.keyword + "%" },
-      },
+      limit: 1,
+      order: [["id", "DESC"]]     
+     
     })
-      .then((products) => {
-        if (products.length > 0) {
-          /* Imprime url de la foto para consumir */
-          for (let i = 0; i < products.length; i++) {
-            products[i].setDataValue(
-              "image_url",
-              `http://localhost:3000/images/${products[i].image}`
-            );
-          }
-          res.status(200).json({
-            data: products,
-            status: 200,
-          });
-        } else {
-          res.status(200).json({
-            data: "No existen productos con ese nombre",
-            status: 200,
-          });
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    .then((product) => {
+      let response = {
+        meta: {
+          status: 200,
+          url: "/api/product/lastItem/",
+        },
+        data: product,
+      };
+      res.json(response);
+    });
   },
 };
 
