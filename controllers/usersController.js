@@ -59,28 +59,24 @@ const usersController = {
   },
   register: (req, res) => {
     Categories.findAll().then(function (categories) {
-      res.render("../views/users/register", { categories });
+      res.render("users/register", { categories });
     });
-    // res.render("../views/users/register");
   },
-  // En caso de no usar base de datos
-  // crearEditar: (req, res) => {
-  //   res.render("../views/users/crearEditar", {
-  //     categorias: categorias,
-  //     tallas: tallas,
-  //   });
-  // },
-  processRegister: (req, res) => {
+  
+  processRegister: async (req, res) => {
     const error = validationResult(req);
-    console.log(error);
     if (!error.isEmpty()) {
-      return res.render("../views/users/register", {
+      
+
+      const categories = await Categories.findAll()
+      return res.render("users/register", {
         errors: error.mapped(),
         old: req.body,
+        categories
       });
     }
 
-    Users.create({
+    await Users.create({
       nombre: req.body.nombre,
       apellido: req.body.apellido,
       fechaDeNacimiento: req.body.fechaDeNacimiento,
@@ -90,9 +86,10 @@ const usersController = {
       image: req.file.filename,
       category_id: req.body.category,
       password: bcryptjs.hashSync(req.body.password, 10),
-    }).then(function () {
-      res.redirect("/users/login");
-    });
+    })
+
+    return res.redirect("/users/login");
+    ;
 
     // En caso de no usar base de datos:
 

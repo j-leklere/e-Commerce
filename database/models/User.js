@@ -37,15 +37,15 @@ module.exports = (sequelize, dataTypes) => {
     },
     image: {
       type: dataTypes.STRING,
-    },
-    createdAt: { type: dataTypes.INTEGER, field: "created_at" },
-    updatedAt: { type: dataTypes.INTEGER, field: "updated_at" },
+    }
   };
 
   let config = {
     tableName: "users",
     timestamps: true,
-  };
+    createdAt: "created_at",
+    updatedAt: "updated_at"
+  }
 
   const User = sequelize.define(alias, cols, config);
 

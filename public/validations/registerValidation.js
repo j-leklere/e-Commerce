@@ -38,6 +38,15 @@ form.addEventListener("submit", (e) => {
     errores.push("El campo Contraseña debe tener un mínimo de 8 caracteres");
   }
 
+  if (telefono.value == "") {
+    errores.push("El campo telefono es obligatorio");
+  } else if (telefono.value.length < 8) {
+    errores.push("El campo telefono debe tener un mínimo de 8 caracteres");
+  }
+  if (fechaDeNacimiento.value == "") {
+    errores.push("El campo Fecha de nacimiento es obligatorio");
+  }
+
   if (errores.length > 0) {
      e.preventDefault();
     let ulError = document.querySelector(".errores");

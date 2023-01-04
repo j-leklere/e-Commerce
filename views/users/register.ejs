@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">console.log
   <head>
     <%- include('../partials/head.ejs') %>
-    <link rel="stylesheet" href="\css\register.css" />
+    <link rel="stylesheet" href="/css/register.css" />
   </head>
 
   <body>
@@ -37,7 +37,6 @@
                   class="inputNombre"
                   placeholder="Nombre"
                   value="<%= locals.old ? old.nombre : null %>"
-                  
                 />
                 <% if(locals.errors && locals.errors.nombre){ %>
                 <p class="msg-error"><%= errors.nombre.msg %></p>
@@ -50,7 +49,6 @@
                   class="inputApellido"
                   placeholder="Apellido"
                   value="<%= locals.old ? old.apellido : null %>"
-                 
                 />
                 <% if(locals.errors && locals.errors.apellido){ %>
                 <p class="msg-error"><%= errors.apellido.msg %></p>
@@ -64,7 +62,7 @@
                   class="inputFecha"
                   id="fechaNac"
                   value="<%= locals.old ? old.fechaDeNacimiento : null %>"
-                  required/>
+                />
                 <% if(locals.errors && locals.errors.fechaDeNacimiento){ %>
                 <p class="msg-error"><%= errors.fechaDeNacimiento.msg %></p>
                 <% } %>
@@ -76,21 +74,11 @@
                   class="inputGenero"
                   id="genero"
                   name="genero"
-                  required
                 >
-                  <option value="">
-                    --Seleccionar--
-                  </option>
-                  <option value="Mujer">
-                    Mujer
-                  </option>
-                  <option value="Hombre">
-                    Hombre
-                  </option>
-                  <option value="Otro">
-                    Otro
-                  </option>
-                  
+                  <option value="">--Seleccionar--</option>
+                  <option value="Mujer">Mujer</option>
+                  <option value="Hombre">Hombre</option>
+                  <option value="Otro">Otro</option>
                 </select>
                 <% if(locals.errors && locals.errors.genero){ %>
                 <p class="msg-error"><%= errors.genero.msg %></p>
@@ -103,7 +91,6 @@
                   class="inputTelefono"
                   placeholder="Telefono"
                   value="<%= locals.old ? old.telefono : null %>"
-                  required
                 />
                 <% if(locals.errors && locals.errors.telefono){ %>
                 <p class="msg-error"><%= errors.telefono.msg %></p>
@@ -149,7 +136,6 @@
                   accept=".jpg,.png,.gif"
                   class="inputfile"
                   id="files"
-                  required
                 />
                 <% if(locals.errors && locals.errors.image){ %>
                 <p class="msg-error"><%= errors.image.msg %></p>
@@ -163,9 +149,8 @@
                   class="inputNombre"
                   id="category"
                   name="category"
-                  required
                 >
-                <option value="">--Seleccionar--</option>
+                  <option value="">--Seleccionar--</option>
                   <% for (let i = 0; i < categories.length; i++) { %>
                   <option value="<%= categories[i].id %>">
                     <%= categories[i].name %>
