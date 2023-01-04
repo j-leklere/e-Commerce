@@ -149,8 +149,11 @@ form h3 {
 }
 
 .errores {
-  color: #842029;
+  color: red;
+  font-weight: 600;
   font-size: 14px;
+  list-style: none;
+  text-align: center;
 }
 
 body {
