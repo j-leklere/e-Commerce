@@ -37,7 +37,7 @@
                   class="inputNombre"
                   placeholder="Nombre"
                   value="<%= locals.old ? old.nombre : null %>"
-                  required
+                  
                 />
                 <% if(locals.errors && locals.errors.nombre){ %>
                 <p class="msg-error"><%= errors.nombre.msg %></p>
@@ -50,7 +50,7 @@
                   class="inputApellido"
                   placeholder="Apellido"
                   value="<%= locals.old ? old.apellido : null %>"
-                  required
+                 
                 />
                 <% if(locals.errors && locals.errors.apellido){ %>
                 <p class="msg-error"><%= errors.apellido.msg %></p>
@@ -64,7 +64,7 @@
                   class="inputFecha"
                   id="fechaNac"
                   value="<%= locals.old ? old.fechaDeNacimiento : null %>"
-                />
+                  required/>
                 <% if(locals.errors && locals.errors.fechaDeNacimiento){ %>
                 <p class="msg-error"><%= errors.fechaDeNacimiento.msg %></p>
                 <% } %>
@@ -103,6 +103,7 @@
                   class="inputTelefono"
                   placeholder="Telefono"
                   value="<%= locals.old ? old.telefono : null %>"
+                  required
                 />
                 <% if(locals.errors && locals.errors.telefono){ %>
                 <p class="msg-error"><%= errors.telefono.msg %></p>
@@ -119,8 +120,6 @@
                   name="email"
                   class="inputEmail"
                   placeholder="Email"
-                  value="<%= locals.old ? old.email : null %>"
-                  required
                 />
                 <% if(locals.errors && locals.errors.email){ %>
                 <p class="msg-error"><%= errors.email.msg %></p>
@@ -133,8 +132,6 @@
                   name="password"
                   class="inputPassword"
                   placeholder="Contraseña"
-                  value="<%= locals.old ? old.password : null %>"
-                  required
                 />
                 <% if(locals.errors && locals.errors.password){ %>
                 <p class="msg-error"><%= errors.password.msg %></p>
