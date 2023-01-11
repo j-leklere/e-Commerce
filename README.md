@@ -25,3 +25,6 @@ Link Trello:
 
 Link Repositorio:
 - https://github.com/j-leklere/grupo_6_SportsWear
+ 
+Link del Dashboard:
+- https://github.com/javierjazmin/grupo6-sportswears-dashboard.git
